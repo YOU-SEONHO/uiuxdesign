@@ -45,6 +45,12 @@ a { /* a태그는 파란색에 underline이 기본적으로 생성됨 */
     color: inherit; 
     /* 색상은 상속받아 - 파란색 말고 누군가가 상속해준 스타일을 적용  */
 }
+address, em {
+    /* em태그와 address태그는 기본적으로 글자가 기울어짐
+       디자인상 기울어짐을 사용하기 위해서 쓰지 않음
+       기울어짐 디자인을 하지 않음 */
+    font-style: normal;
+}
 
 .header {
     height: 100px;
@@ -137,8 +143,153 @@ a { /* a태그는 파란색에 underline이 기본적으로 생성됨 */
     display: block;
 }
 .biz .art .btn_wrap a { /* 아트센터의 버튼은 오른쪽 여백 */
-    margin: 0 8px 0 0;
+    margin: 14px 8px 0 0;
 }
 .biz .edu .btn_wrap a {/* 이우열의 버튼은 왼쪽 여백 */
-    margin: 0 0 0 8px;
+    margin: 14px 0 0 8px;
+}
+
+.bbs {
+    /* 배경이 콘텐츠 높이보다 짧음. 배경 이미지만큼 높이 못줌 - visual하고 다름 */
+    background: url(../images/bbs_bg.png) center top no-repeat;
+    color: #fff;
+}
+.bbs .notice {
+    display: flex;
+    justify-content: space-between;
+    /* 하위 요소 두개를 좌우로 나란히 배치 flex
+       하위 요소를 균등하게 영역에 좌우에 딱맞게 배치 space-between */
+}
+.bbs .notice .tit {
+    margin: 109px 0 0 0;
+}
+.bbs .notice .tit h2 {
+    font-size: 40px;
+    font-weight: 900;
+}
+.bbs .notice .tit p {
+    /* 글자의 색상을 opacity를 조절했다면 rgba로 투명한 색상을 표현한다
+       흰색은 rgb 255
+       검은색은 rgb 0
+       a는 alpha로 opacity값을 나타냄
+       100% - 1
+       80% - 0.8 */
+    color: rgba(255, 255, 255, 0.8);
+    margin: 1px 0 12px 0;
+}
+.bbs .notice .tit a {
+    color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 8px 25px 7px 24px;
+    display: inline-block;
+}
+.bbs .notice ul {
+    margin: 96px 0 0 0;
+    width: 735px;
+    /* ul의 넓이가 디자인보다 작아서 넓이를 줌 */
+}
+.bbs .notice ul li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+/* li가 몇개인지는 모르겠지만 무조건 마지막 li */
+.bbs .notice ul li:last-child {
+    border-bottom: 0;
+    /* border를 빼기 = 두께를 0을 준다. */
+    /* 마지막 li도 밑줄로 닫혀있을때는 
+       border-bottom: 1px solid rgba(255, 255, 255, 0.5); */
+}
+.bbs .notice ul li a {
+    display: flex;
+    justify-content: space-between;
+    /* 제목과 날짜가 왼쪽끝 오른쪽끝에 배치 */
+    line-height: 60px;
+    /* 공지사항 리스트 디자인을 할때 정확하게 줄간격을 주려고 행간으로 떨어뜨려 디자인
+       코딩도 정확하게 줄간격을 주기 위해서 line-height을 고정값으로 줌 */
+    font-size: 20px;
+}
+.bbs .notice ul li a strong {
+    font-weight: inherit;
+    /* strong 태그에 브라우저가 주는 스타일 말고
+       내가 strong태그를 감싸는 요소에 준 스타일을 상속
+       브라우저가 주는 스타일 무시 */
+}
+.bbs .notice ul li a span {
+    color: rgba(255, 255, 255, 0.8);
+}
+.bbs .video {
+    margin: 109px 0 0 0;
+}
+.bbs .video h2 {
+    font-size: 40px;
+    font-weight: 900;
+}
+.bbs .video ul {
+    display: flex;
+    justify-content: space-between;
+}
+.bbs .video ul li {
+    width: 408px;
+    /* li안에 콘텐츠가 많고 넓으면 넓이 제한해줘야 알아서 글에는 줄바꿈이 들어감
+       웬만하면 li에는 넓이를 주는편 (li가 나란히 들어갈 경우) */    
+}
+.bbs .video ul li a strong {
+    color: #1d1d1d;
+    font-weight: inherit;
+    font-size: 20px;
+    margin: 9px 0 0 0;
+    display: block;
+}
+.bbs .video ul li a img {
+    border: 5px solid #FF4A50;
+    /* 이미지에 테두리를 주면 무조건 밖으로 테두리가 생김 */
+    box-shadow: 3px -3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+    background-color: #2d2d2d;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 101px 0 0 0;
+    padding: 54px 0 60px 0;
+    /* footer는 내부요소의 상단여백 하단여백으로 하지 않고
+       footer에 padding을 준다. */
+}
+.footer .f_nav {
+    display: flex;
+}
+.footer .f_nav li {
+    margin: 0 37px 0 0;
+    /* border-left : 1px solid rgba(255, 255, 255, 0.4
+       메뉴 사이의 선은 border로 처리가 안됨
+       높이 조절이 불가 위아래 위치 조정이 안됨 */
+    position: relative;
+    /* 정렬의 기준 - li:after의 정렬기준 */
+}
+.footer .f_nav li::after {
+    position: absolute;
+    right: -19px; /* li 기준 오른쪽 */
+    top: 5px; /* li 기준 위쪽 */
+    display: block;
+    width: 1px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    content: ""; /* after를 보이게하는 값 */
+}
+.footer .f_nav li:last-child::after {
+    display: none;
+    /* 숨김 */
+}
+/* li들 중에서 privacy러는 class명을 갖은 li */
+.footer .f_nav li.privacy {
+    font-weight: 900;
+}
+.footer .f_info {
+    display: flex;
+    margin: 25px 0 26px 0;
+}
+.footer .f_info span,
+.footer .f_info address {
+    margin: 0 35px 0 0;
+}
+.footer .copyright {
+    color: rgba(255, 255, 255, 0.6);
 }
