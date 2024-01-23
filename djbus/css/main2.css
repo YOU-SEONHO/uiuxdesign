@@ -115,6 +115,7 @@ a { /* a태그는 파란색에 underline이 기본적으로 생성됨 */
     color: #1d1d1d;
     font-size: 40px;
     font-weight: 900;
+    margin: 96px 0 0 0;
 }
 .biz .art .sub_tit,
 .biz .edu .sub_tit {
