@@ -1,9 +1,16 @@
-@font-face { font-family:'Pretendard'; src:url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff'); font-weight:400; font-style:normal; }
-@font-face { font-family:'Pretendard'; src:url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff'); font-weight:700; font-style:normal; }
-@font-face { font-family:'Pretendard'; src:url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff') format('woff'); font-weight:800; font-style:normal; }
-@font-face { font-family:'Pretendard'; src:url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff') format('woff'); font-weight:900; font-style:normal; }
-
-html, body {
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-display: swap;
+    src: local('Pretendard Regular'), url(../fonts/Pretendard-Regular.woff2) format('woff2'), url(../fonts/Pretendard-Regular.woff) format('woff');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 900;
+    font-display: swap;
+    src: local('Pretendard Black'), url(../fonts/Pretendard-Black.woff2) format('woff2'), url(../fonts/Pretendard-Black.woff) format('woff');
+}
+body {
     font-family: 'Pretendard', sans-serif; /* 서체 */
     font-size: 15px; /* 크기 */
     color: #3d3d3d; /* 글자색상 */
@@ -45,41 +52,26 @@ address, em {
     font-style: normal;
 }
 
-
-.container .tit {
-    float: left;
-}
-.container .tit h1 {
-    padding: 72px 0 0 0;
-    display: block;
-}
 .tit h2 {
-    font-weight: inherit;
     font-size: 30px;
-    font-weight: 700;
+    font-weight: 900;
 }
 .tit strong {
-    font-weight: inherit;
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 900;
     color: #07B53B;
+    display: block;
     margin: 24px 0 15px 0;
-    display: block;
 }
-.tit p {
-    margin: 0 0 20px 0;
-    display: block;
+.tit .btn_wrap ul {
+    display: flex;
 }
 .tit .btn_wrap a {
     border: 1px solid #666;
     padding: 9px 43px 9px 43px;
     display: inline-block;
-    margin: 0 5px 40px 0;
-}
-.tit .btn_wrap ul {
-    display: flex;
-    justify-content: left;
-}
+    margin: 20px 5px 40px 0;
+} 
 .tit .btn_wrap .down {
     color: #07B53B;
 }
@@ -88,21 +80,20 @@ address, em {
 }
 
 .visual {
-    height: 598px;
-    background: url(../images/visual_bg.png) center center no-repeat;
-    color: #fff;
+    background: url(../images/visual_bg.png);
     margin: 70px 0 0 0;
+    height: 598px;
+    color: #fff;
     text-align: center;
 }
 .visual h2 {
-    padding: 59px 0 20px 0;
-    font-weight: inherit;
     font-size: 30px;
-    font-weight: 700;
+    font-weight: 900;
+    padding: 59px 0 20px 0;
 }
-.visual a {
+.visual .btn_wrap a {
     border: 1px solid #fff;
-    padding: 11px 43px 12px 43px;
+    padding: 9px 43px 9px 43px;
     display: inline-block;
-    margin: 25px 0 41px 0;
+    margin: 20px 5px 40px 0;
 }
