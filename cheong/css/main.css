@@ -64,6 +64,13 @@ h1, h2, h3, h4, h5, h6, strong {
     font-size: inherit;
     font-weight: inherit;
 }
+/* button태그는 기본스타일이 많음 */
+button {
+    background-color: transparent; /* 배경투명 */
+    border: 0; /* 테두리 삭제 */
+    color: inherit; /* 브라우저가 주는 값 삭제 */
+    font-family: inherit; /* button은 서체도 바뀜 - 상속 */
+}
 
 .header {
     /* body를 기준으로 정렬
@@ -393,6 +400,23 @@ h1, h2, h3, h4, h5, h6, strong {
 }
 .footer .f_nav li {
     margin-right: 35px;
+    /* border-right: 1px solid rgba(255, 255, 255, 0.3);
+       li메뉴 사이에 선은 border로 코딩 불가
+       높이가 제어가 안됨. 위에서 아래로 위치조정 안됨
+       그래서 before after 선택자를 이용해서 선을 그어줌 */
+    position: relative; /* after 가상선택자 정렬의 기준 */
+}
+.footer .f_nav li::after {
+    position: absolute; /* 위치를 자유롭게 선을 긋기 위해서 absolute - li를 기준으로 정렬 */
+    right: -19px;
+    top: 5px;
+    width: 1px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    content: ""; /* before after 가상선택자는 content 필수 */
+}
+.footer .f_nav li:last-child:after {
+    display: none; /* 마지막 li의 선을 숨기기 */
 }
 .footer .f_nav li.privacy {
     font-weight: 900;
@@ -404,4 +428,17 @@ h1, h2, h3, h4, h5, h6, strong {
 .footer .f_info address,
 .footer .f_info span {
     margin-right: 35px;
+}
+.footer .family_site button {
+    width: 150px;
+    line-height: 28px;
+    /* 버튼의 높이를 행각으로 줌
+    버튼은 그 높이를 갖어야하고 글자는 그 높이에 위아래 가운데 배치
+    그걸 한번에 해결하는게 line-height
+    만약 내가 그냥 heingt로 줬다면 글자에 상단여백을 추가로 줘야함 */
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 11px; /* 위아래 - 좌우 */
 }
