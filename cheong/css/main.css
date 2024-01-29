@@ -441,5 +441,9 @@ button {
     display: flex;
     justify-content: space-between;
     padding: 0 11px; /* 위아래 - 좌우 */
-    
+
+}
+.footer .family_site button i {
+    font-size: 0;
+    line-height: 0;
 }
