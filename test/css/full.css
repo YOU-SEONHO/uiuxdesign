@@ -123,8 +123,8 @@ p {
         height: 300px; /*모바일의 고정값*/
         min-height: auto; /* 최소사이즈 */
         display: block; /* 모바일에서 flex로 정렬한거 취소 */
-        text-align: center;
-        padding-top: 50px;
+        text-align: left;
+        padding-top: 100px;
     }
 }
 
@@ -145,9 +145,9 @@ p {
         height: 300px;
         min-height: auto;
         display: block;
-        text-align: right;
+        text-align: center;
         padding-bottom: 0;
-        padding-top: 100px;
+        padding-top: 50px;
     }
 }
 
@@ -176,8 +176,8 @@ p {
         left: auto;
         top: auto; 
         transform: translate(0, 0);  
-        text-align: center;
-        padding-top: 50px;
+        text-align: left;
+        padding-top: 100px;
     }
 }
 
@@ -207,8 +207,8 @@ p {
         top: auto;
         /* absolute 정렬의 기준이 되는 요소의 높이 50% */
         transform: translate(0,0);
-        text-align: left;
-        padding-top: 50px;
+        text-align: right;
+        padding-top: 100px;
     }
 }
 
