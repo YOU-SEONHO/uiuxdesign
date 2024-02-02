@@ -101,7 +101,7 @@ p {
 }
 
 .flex_center {
-    background: url(../images/full_bg1.png) no-repeat center center / cover;
+    background: url(../images/full_bg01.png) no-repeat center center / cover;
 }
 /* 
     <section class="flex_center">
@@ -129,7 +129,7 @@ p {
 }
 
 .flex_btm {
-    background: url(../images/full_bg3.png) no-repeat center center / cover;
+    background: url(../images/full_bg03.png) no-repeat center center / cover;
 }
 .flex_btm .inner {
     height: 100vh;
@@ -152,7 +152,7 @@ p {
 }
 
 .abs_center {
-    background: url(../images/full_bg1.png) no-repeat center center / cover;
+    background: url(../images/full_bg01.png) no-repeat center center / cover;
     height: 100vh;
     min-height: 400px;
     position: relative;
@@ -182,7 +182,7 @@ p {
 }
 
 .abs_left {
-    background: url(../images/full_bg2.png) no-repeat center center / cover;
+    background: url(../images/full_bg02.png) no-repeat center center / cover;
 }
 .abs_left .wrapper {
     position: relative;
@@ -213,7 +213,7 @@ p {
 }
 
 .abs_btm {
-    background: url(../images/full_bg3.png) no-repeat center center / cover;
+    background: url(../images/full_bg03.png) no-repeat center center / cover;
 }
 .abs_btm .wrapper {
     position: relative;

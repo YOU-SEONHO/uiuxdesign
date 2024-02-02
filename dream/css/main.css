@@ -47,7 +47,7 @@ html, body {
 
 .header {
     /* body를 기준으로 정렬 */
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     width: 100%;
@@ -113,6 +113,22 @@ html, body {
     font-size: 0;
     line-height: 0;
 }
+/* header가 스크롤이 되면 jquery에서 herder에 fixed라는 클래스를 추가할 예정. 그때의 스타일 */
+.header.fixed {
+    color: #1d1d1d;
+    border-bottom: 0;
+    background-color: #fff;
+    }
+.header.fixed .logo a {
+    background: url(../images/logo.svg) no-repeat center center / contain;
+    /* a태그에 써준 글자를 안보이게 하는 방법 */
+}
+.header.fixed .login {
+    background: url(../images/login.svg) no-repeat center center;
+}
+.header.fixed .lang {
+    background: url(../images/lang.svg) no-repeat center center;
+}
 @media screen and (max-width:640px){
     .header {
         height: 50px;
@@ -127,7 +143,7 @@ html, body {
     /* 모바일에서는 사용할 메뉴 열기 버튼
        - pc 버전에서는 숨김 처리 - 모바일에서는 보이도록
        display:none; 으로 숨긴 요소는 display에 none을 제외하고 무엇을 주던지 나타남 */
-    .header .gnb_open {
+    .header .gnb .gnb_open {
         display: block;
         width: 19px;
         height: 19px;
@@ -135,6 +151,9 @@ html, body {
         font-size: 0;
         line-height: 0;
         margin-top: 12px;
+    }
+    .header.fixed .gnb .gnb_open {
+        background: url(../images/gnb_open.svg) no-repeat center center;
     }
     .header .gnb ul {
         display: none;
@@ -147,6 +166,7 @@ html, body {
         display: none;
     }
 } /* media */
+
 
 .visual {
     /* background 사이즈 조절
@@ -197,3 +217,104 @@ html, body {
         display: none; /* 숨김 */
     }
 } /* media */
+
+.servirce {
+    margin-top: 66px;
+}
+.servirce h2 {
+    display: none; /* 웹표준상 제목을 썼지만 디자인에 없는 요소라 숨김 */
+}
+.servirce ul {
+    display: flex;
+}
+.servirce ul li {
+    width: 16.66%;
+    /* li가 6개라서 100/6 = 16.66 나눈값 */
+    text-align: center;
+}
+.servirce ul li a {
+    padding-top: 60px; /* 아이콘이 들어갈 자리 */
+    color: #1d1d1d;
+    font-weight: 700;
+    display: inline-block;
+    position: relative; /* before 정렬 기준 */
+    word-break: normal; /* 한줄짜리 줄바꿈 */
+}
+.servirce ul li a:before {
+    position: absolute; /* a를 기준으로 정렬 */
+    left: calc(50% - 28px);
+    top: 0;
+    content: "";
+    width: 57px;
+    height: 60px;
+}
+.servirce ul li.servirce01 a:before {
+    background: url(../images/service01.svg) no-repeat center center;
+}
+.servirce ul li.servirce02 a:before {
+    background: url(../images/service02.svg) no-repeat center center;
+}
+.servirce ul li.servirce03 a:before {
+    background: url(../images/service03.svg) no-repeat center center;
+}
+.servirce ul li.servirce04 a:before {
+    background: url(../images/service04.svg) no-repeat center center;
+}
+.servirce ul li.servirce05 a:before {
+    background: url(../images/service05.svg) no-repeat center center;
+}
+.servirce ul li.servirce06 a:before {
+    background: url(../images/service06.svg) no-repeat center center;
+}
+@media screen and (max-width:640px){
+    .servirce {
+        margin-top: 48px;
+    }
+    .servirce ul {
+        flex-wrap: wrap; /* 두줄 허용 */
+    }
+    .servirce ul li {
+        width: 33.33%;
+        margin-bottom: 28px;
+    }
+    .servirce ul li a {
+        padding-top: 40px; /* 아이콘이 들어갈 자리 */
+    }
+    .servirce ul li a span {
+        display: none;
+    }
+    .servirce ul li a:before {
+        background-size: 42px auto;
+        position: absolute; /* a를 기준으로 정렬 */
+        left: calc(50% - 21px);
+        top: 0;
+        content: "";
+        width: 42px;
+        height: 40px;
+    }
+    .servirce ul li.servirce01 a:before {
+        background-size: 39.35px auto;
+    }
+    .servirce ul li.servirce02 a:before {
+        background-size: 19px auto;
+    }
+    .servirce ul li.servirce03 a:before {
+        background-size: 41.43px auto;
+    }
+    .servirce ul li.servirce04 a:before {
+        background-size: 32.04px auto;
+    }
+    .servirce ul li.servirce05 a:before {
+        background-size: 30.43px auto;
+    }
+    .servirce ul li.servirce06 a:before {
+        background-size: 30.19px auto;
+    }
+}
+
+
+
+
+.footer {
+    height: 500px;
+}
