@@ -146,13 +146,32 @@ header.menu_open .gnb>ul>li>ul {
     display: block;
     /* 숨겼던 2차메뉴 보이게 */
 }
+.visual {
+    height: 1000px;
+    background: url(../images/menu_visual_bg.png) no-repeat center center;
+}
 
 @media screen and (max-width:640px){
     .header {
         height: 50px;
     }
-    .header .gnb {
-        float: left;
+    .header .gnb .gnb_open {
+        display: block;
+        width: 24px; /* 아이콘 사이즈 */
+        height: 17px;
+        font-size: 0; /* 기존 글자 숨김 */
+        line-height: 0;
+        background: url(../images/menu_gnb_open.svg) no-repeat center center;
+        margin-top: 15px;
+    }
+    .header .gnb>ul {
+        display: none; /* 모바일에서는 메뉴는 클릭해야 보임*/
+    }
+    /* 어차피 메뉴스타일 모바일에서는 안보이다가 메뉴를 클릭해야 나옴
+       그럼 메뉴를 pisplay:none, block 보이고 안보이고 상태만 변환하고
+       기본 스타일은 열린 스타일로 적용 */
+    .header.menu_mobile .gnb>ul {
+        display: block;
     }
     .header.menu_mobile .gnb .gnb_close {
         display: block; /* pc에서는 안보임 */
@@ -160,6 +179,7 @@ header.menu_open .gnb>ul>li>ul {
         height: 17px;
         font-size: 0; /* 기존 글자 숨김 */
         line-height: 0;
+        background: url(../images/menu_gnb_close.svg) no-repeat center center;
         margin-top: 15px;
         /* .gnb>ul보다 위에 존재해야함
            z-index로 위로 올려야 하는데 z-index는 position값이 필수 */
@@ -172,14 +192,15 @@ header.menu_open .gnb>ul>li>ul {
     .header .gnb>ul {
         position: absolute;
         left: 0;
-        top: 101;
+        top: 0;
+        z-index: 101;
         width: 100%;
-        height: 100vh;
-        /* 높이를 100%를 주면 header가 position이 있어서 header 높이만큼만 들어감
-           화면을 모두 덮는것을 원함 100vh */
+        height: 100hv;
+        /* 높이를 100%를 주면 header가 position이 있어서 header 높이만큼 들어감
+           화면을 모두 덮는 높이를 원함 100hv */
         background-color: #fff;
         color: #1d1d1d;
-        padding: 58px 20px 0 20px;
+        padding: 47px 20px 0 20px;
     }
     .header .gnb>ul>li {
         width: auto;
@@ -200,7 +221,7 @@ header.menu_open .gnb>ul>li>ul {
         content: "";
     }
     .header .gnb>ul>li>ul {
-        margin: 10px 0 5px 0;
+        margin: 10px 0 5px 28px;
         display: none;
         /* 2차 메뉴는 기본 숨겨진 상태이고
            1차 메뉴를 클릭했을때 나타남 */
@@ -210,8 +231,6 @@ header.menu_open .gnb>ul>li>ul {
         font-size: 15px;
     }
     .visual {
-        height: 1000px;
-        background: url(../images/menu_visual_bg.png) no-repeat center center;
+        height: 300px;
     }
-}
-     /* media */
+} /* media */

@@ -17,6 +17,7 @@ $(document).ready(function(){
         }
         console.log(device_status)
     })
+
 	/* 메뉴에 마우스를 오버하면
        .header .gnb
        header에 menu_open이라는 클래스를 추가
@@ -38,10 +39,11 @@ $(document).ready(function(){
        $('.header .gnb>ul>li:last-child>ul>li:last-child>a').on('focusout', function(){
             $(".header").removeClass("menu_open");
        })
+
        $('.header .gnb .gnb_open').on('click', function(){
-            $(".header").addClass("menu_mobile")
+            $(".header").addClass("menu_mobile");
        })
        $('.header .gnb .gnb_close').on('click', function(){
-            $(".header").removeClass("menu_mobile")
+            $(".header").removeClass("menu_mobile");
        })
 }); /* $(document).ready */
