@@ -1,0 +1,291 @@
+@charset "UTF-8";
+@import url(default.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+html, body {
+    font-family: 'Noto Sans KR', sans-serif; /* 서체 */
+    font-size: 15px; /* 크기 */
+    color: #3d3d3d; /* 글자색상 */
+    font-weight: 400; /* 글자의 두께 */
+    line-height: 1.4; /* auto */
+    word-break: keep-all; /* 단어를 묶어서 줄바꿈 */
+    word-wrap: break-word; /* 단어별로 줄바꿈을 하는데 단어가 긴 경우 강제 줄바꿈 허용 */
+}
+.wrapper { /* 홈페이지의 넓이를 제한하고 가운데 정렬 */
+    width: 1280px; /* 홈페이지 넓이 */
+    margin: 0 auto;  /* 가운데 정렬 */
+}
+#wrap { /* id="wrap"에 적용되는 스타일 */
+    min-width: 1280px;
+    /* PC형에서 wrapper사이즈보다 브라우저 넓이가 작을때
+       가로스크롤바가 생성되는데 오른쪽에 background가 
+       짤리는 현상이 생김.  
+       가로스크롤바가 생성되었을때도 홈페이지를 정상적으로 
+       서비스 하기 위해서 최소 넓이를 입력 */
+    position: relative;
+    /* 브라우저 가로 스크롤바가 생성되었을때 body를 기준으로 정렬하는 요소는 깨짐
+       그래서 모든 요소는 기본적으로 body가 아닌 wrap를 기준으로 정렬하도록
+       position:relative를 줌 */
+}
+
+/* 640px 이하일때 스타일 - 640이하는 모바일 초과는 탭 */
+@media screen and (max-width:640px){
+    html, body {
+        font-family: 'Noto Sans KR', sans-serif; /* 서체 */
+        font-size: 13px; /* 크기 */
+        word-break: keep-all; /* 단어를 묶어서 줄바꿈 */
+    }
+    .wrapper { /* 홈페이지의 넓이를 제한하고 가운데 정렬 */
+        width: auto; 
+        /* 홈페이지 넓이를 제한하면 안됨
+           디바이스의 넓이에 맞춰서 꽊차게 나와야 하기 때문에
+           그 안쪽으로 좌우 여백이 20px씩 들어가게 함 */
+        margin: 0 20px;  /* 가운데 정렬 */
+    }
+    #wrap { /* id="wrap"에 적용되는 스타일 */
+        min-width: auto; /* 홈페이지 최소 넓이 제한하지 않음 */
+    }
+} /* media */
+
+.header {
+    position: absolute; /* body를 기준으로 정렬 */
+    left: 0;
+    top: 0;
+    z-index: 100; /* 다른 요소보다 100만큼 위 */
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+.header .logo {
+    float: left;
+    margin-top: 21px;
+}
+.header .logo a {
+    width: 158px;
+    height: 52px;
+    display: block;
+    /* 이미지를 저장해서 부르지 않고 코드로 변환해서 입력하는 방식 (base64방식) */
+    background: url(data:image/png;base64,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) no-repeat center center / contain;
+    font-size: 0; /* 기존 글자 숨김 */
+    line-height: 0;
+}
+.header .gnb {
+    float: right;
+}
+.header .gnb .gnb_open,
+.header .gnb .gnb_close {
+    display: none;
+}
+.header .gnb ul.depth1 {
+    display: flex;
+}
+/* <ul class="depth1">
+       <li>                 ----- .depth1 > li
+           <a></a>
+           <ul class="depth2">
+               <li></li>           ----- .depth1 > li > ul > li
+                                   ----- .depth2 > li
+           </ul>
+       </li>
+   </ul> */
+.header .gnb ul.depth1 > li {
+    width: 190px;
+    text-align: center;
+}
+.header .gnb ul.depth1 > li > a {
+    line-height: 100px;
+    display: block;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: -0.08em;
+}
+/* 1차메뉴의 하위 메뉴에 마우스를 오버했을때도 오버스타일을 적용하기 위해서
+   li에 오버했을때 a스타일을 적용 */
+.header .gnb ul.depth1 > li:hover > a {
+    color: #009FE3;
+    position: relative; /* after 정렬의 기준 */
+}
+.header .gnb ul.depth1 > li:hover > a::after {
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 5px;
+    background-color: #009FE3;
+    content: "";
+}
+.header .gnb ul.depth2 {
+    margin-top: 12px;
+    display: none; /* 2차 메뉴는 마우스를 오버했을때만 나타남 */
+}
+.header .gnb ul.depth2 > li > a {
+    display: block;
+    line-height: 32px;
+    font-size: 20px;
+}
+.header .gnb ul.depth2 > li > a:hover {
+    color: #009FE3;
+    font-weight: 700;
+}
+
+/* 메뉴에 마우스를 올렸을때의 스타일 */
+.header.menu_over {
+    color: #1d1d1d;
+}
+.header.menu_over::after {
+    position: absolute; /* header 기준 */
+    left: 0;
+    top: 0;
+    z-index: -1;
+    /* position을 준 요소는 원래 콘텐츠 위로 올라가지만 z-index: -1;을 주면 해당 요소가
+       정렬의 기준이 되는 요소를 기준으로 맨 아래로 내려감 */
+    width: 100%;
+    height: 350px;
+    background-color: #fff;
+    content: "";
+}
+.header.menu_over .logo a {
+    background-image: url(data:image/png;base64,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);
+}
+.header.menu_over .gnb ul.depth2 {
+    display: block; /* 2차 메뉴는 마우스를 오버했을때만 나타남 */
+}
+.header.menu_over::before {
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 100%;
+    height: 1px;
+    background-color: #ededed;
+    content: "";
+} 
+
+.visual {
+    height: 1000px;
+    background: url(../images/menu_visual_bg.png) no-repeat center center / cover;
+}
+
+@media screen and (max-width:640px){
+    .header {
+        height: 50px;
+    }
+    .header .logo {
+        margin-top: 10px;
+    }
+    .header .logo a {
+        width: 89px;
+        height: 29.29px;
+    }
+    .header .gnb .gnb_open {
+        display: block;
+    }
+    .header .gnb .gnb_open,
+    .header .gnb .gnb_close {
+        position: absolute; /* header 기준 */
+        right: 0;
+        top: 0;
+        width: 50px;
+        height: 50px;
+        /* button태그는 원래 안에 입력한 태그가 위아래 가운데, 좌우 가운데 배치 */
+    }
+    .header .gnb .gnb_open i,
+    .header .gnb .gnb_close i {
+        font-size: 24px; /* 아이콘의 크기 */
+    }
+    .header .gnb .gnb_open span,
+    .header .gnb .gnb_close span {
+        display: none;
+    }
+    /* 메뉴가 열렸을때 */
+    .header .gnb ul.depth1 {
+        display: none;
+    }
+    .header.menu_open .gnb .gnb_open {
+        display: none;
+    }
+    .header.menu_open .gnb .gnb_close {
+        display: block; /* 모바일에서만 구현 */
+        background-color: #fff;
+    }
+    .header.menu_open .gnb .gnb_close i {
+        color: #1d1d1d;
+    }
+    .header.menu_open .gnb ul.depth1 {
+        display: block; /* 숨겼다가 보이기 */
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        /* 높이 100%를 주면 정렬의 중심이되는 header의 높이와 동일하게 적용
+           근데 화면을 꽉 채울 예정 100vh - 화면사이즈만하게 */
+        background-color: #fff;
+        color: #1d1d1d;
+        padding-top: 50px;
+        overflow-y: scroll;
+    }
+    .header .gnb ul.depth1 > li {
+        width: auto;
+        text-align: left;
+        border-bottom: 1px solid #ededed;
+    }
+    .header .gnb ul.depth1 > li:first-child {
+        border-top: 1px solid #ededed;
+    }
+    .header .gnb ul.depth1 > li > a {
+        line-height: 50px;
+        font-size: 20px;
+        padding: 0 20px;
+        position: relative;
+    }
+    .header .gnb ul.depth1 > li > a::after {
+        position: absolute;
+        right: 9px;
+        top: 20px;
+        width: 30px;
+        height: 30px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' fill='1d1d1d' viewBox='0 -960 960 960' width='24'%3E%3Cpath d='M480-373.539q-7.231 0-13.461-2.308-6.231-2.308-11.846-7.923L274.924-563.539q-8.308-8.307-8.5-20.884-.193-12.577 8.5-21.269 8.692-8.692 21.076-8.692t21.076 8.692L480-442.768l162.924-162.924q8.307-8.307 20.884-8.5 12.576-.192 21.268 8.5 8.693 8.692 8.693 21.077 0 12.384-8.693 21.076L505.307-383.77q-5.615 5.615-11.846 7.923-6.23 2.308-13.461 2.308Z'/%3E%3C/svg%3E");
+        background-position: center center;
+        background-size: cover;
+        content: "";
+    }
+    /* 2차 메뉴가 열렸을때 */
+    .header .gnb ul.depth1 > li.sub_open > a::before {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 -960 960 960' width='24' fill='%231d1d1d'%3E%3Cpath d='M480-542.463 317.076-379.539q-8.307 8.308-20.884 8.5-12.576.192-21.268-8.5-8.693-8.692-8.693-21.076 0-12.385 8.693-21.077l179.769-179.769q5.615-5.615 11.846-7.923 6.23-2.307 13.461-2.307t13.461 2.307q6.231 2.308 11.846 7.923l179.769 179.769q8.308 8.308 8.5 20.884.193 12.577-8.5 21.269-8.692 8.692-21.076 8.692t-21.076-8.692L480-542.463Z'/%3E%3C/svg%3E");
+    }
+    /* hover 스타일은 클릭했을때도 들어감 */
+    .header .gnb ul.depth1 > li:hover > a {
+        color: #1d1d1d;
+    }
+    .header .gnb ul.depth1 > li:hover > a::after {
+        display: none;
+    }
+    .header .gnb ul.depth2 {
+        margin: 0;
+        padding: 7px 0 7px 47px;
+        background-color: #ededed;
+        /* 모바일에서 메뉴가 길면 메뉴는 스크롤 되어야 함 */
+    }
+    /* 2차 메뉴가 열렸을때 */
+    .header .gnb .sub_open ul.depth2 {
+        display: block; /* 숨겼다가 나타남 */
+    }
+    .header .gnb ul.depth2 > li > a {
+        line-height: 32px;
+        font-size: 15px;
+    }
+    .header .gnb ul.depth2 > li > a:hover {
+        color: #009FE3;
+        font-weight: 700;
+    }
+    
+    .visual {
+        height: 300px;
+    }
+} /* media */
+
+.test {
+    font-size: 100px;
+    color: #666;
+}
