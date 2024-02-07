@@ -155,7 +155,7 @@ header.menu_open .gnb>ul>li>ul {
     .header {
         height: 50px;
     }
-    .header .gnb .gnb_open {
+    .header .gnb .gnb_open {    
         display: block;
         width: 24px; /* 아이콘 사이즈 */
         height: 17px;

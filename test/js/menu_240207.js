@@ -52,7 +52,7 @@ $(document).ready(function(){
        -- pc버전에서는 1차메뉴를 클릭하면 페이지 이동을 하고
           모바일버전에서는 하위메뉴를 열어줌 */
 
-    $("a .header .gnb ul.depth1 > li > a").on("click", function(e){
+    $(".header .gnb ul.depth1 > li > a").on("click", function(e){
         if(device_status == 'mobile'){
             e.preventDefault();		/* a 태그의 href를 작동 시키지 않음 */
             // 클릭한 a 자기자신을 감싸는 li를 선택
