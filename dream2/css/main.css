@@ -245,43 +245,73 @@ html, body {
         background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.7'%3E%3Cline y1='-1' x2='19.2569' y2='-1' transform='matrix(0.727013 0.686624 -0.842071 0.539366 0 1.77783)' stroke='%231D1D1D' stroke-width='2'/%3E%3Cpath d='M13.9648 1L1.00028 14.8462' stroke='%231D1D1D' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E ");
         background-size: 14px auto;
     }
+    .header.menu_open .gnb .gnb_wrap {
+        /* 메뉴가 열렸을때 background-color */
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #fff;   
+    }
     .header .gnb ul.depth1 { /* 1차메뉴*/
         display: none; /* 메뉴는 버튼을 클릭해야 보임 */
     }
+    /* 메뉴가 디바이스 높이보다 길어지면 스크롤이 되어야함 */
+    .header.menu_open .gnb ul.depth1 {
+        display: block;
+        color: #1d1d1d;
+        overflow-y: scroll;
+        margin-top: 50px;
+        height: calc(100vh - 50px);
+        /* 상단에 스크롤 될 영역 빼고 높이를 꽉 채워줘야함  */
+    } 
     .header .gnb ul.depth1 > li {
-        width: 124px;
-        text-align: center;
+        width: auto;
+        text-align: left;
+        border-bottom: 1px solid #ededed;
+    }
+    .header .gnb ul.depth1 > li:first-child {
+        border-top: 1px solid #ededed;
     }
     .header .gnb ul.depth1 > li > a {
-        display: block;
-        line-height: 100px;
+        line-height: 50px;
         font-size: 20px;
         font-weight: 700;
+        padding: 0 20px 0 16px;
+        position: relative; /* after 정렬의 기준*/
     }
-    .header .gnb ul.depth1 > li > a > span {
-        position: relative; /* after 정렬의 기준 */
-    }
-    .header .gnb ul.depth1 > li:hover > a {
-        color: #009FE3;
-    }
-    .header .gnb ul.depth1 > li:hover > a > span::after {
+    .header .gnb ul.depth1 > li > a::after {
         position: absolute;
-        left: 0;
-        bottom: -37px;
-        width: 100%;
-        height: 3px;
-        background-color: #009FE3;
+        right: 14px;
+        top: 14px;
+        width: 22px;
+        height: 22px;
+        background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.7'%3E%3Cpath d='M11.0003 13.5947L17.9053 6.68972C18.0875 6.50756 18.3043 6.41883 18.5558 6.42352C18.8073 6.42822 19.0241 6.52165 19.2063 6.70381C19.3884 6.88597 19.4795 7.10279 19.4795 7.35428C19.4795 7.60576 19.3884 7.82259 19.2063 8.00474L12.1744 15.0225C12.0087 15.1882 11.823 15.3111 11.6173 15.391C11.4117 15.4709 11.206 15.5108 11.0003 15.5108C10.7947 15.5108 10.589 15.4709 10.3834 15.391C10.1777 15.3111 9.99203 15.1882 9.82633 15.0225L2.79444 7.99065C2.61229 7.80849 2.52355 7.59401 2.52824 7.34722C2.53295 7.10044 2.62638 6.88597 2.80854 6.70381C2.99069 6.52165 3.20751 6.43057 3.459 6.43057C3.71049 6.43057 3.92731 6.52165 4.10947 6.70381L11.0003 13.5947Z' fill='%231D1D1D'/%3E%3C/g%3E%3C/svg%3E ");
+        background-repeat: no-repeat;
+        background-position: center center;
         content: "";
     }
+    /* 서브메뉴가 열리면 배경 변경 */
+    .header .gnb ul.depth1 > li.sub_open > a::after {
+        background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.7'%3E%3Cpath d='M10.9997 8.40531L4.09468 15.3103C3.91252 15.4924 3.6957 15.5812 3.44421 15.5765C3.19271 15.5718 2.97589 15.4783 2.79374 15.2962C2.61159 15.114 2.52051 14.8972 2.52051 14.6457C2.52051 14.3942 2.61159 14.1774 2.79374 13.9953L9.82563 6.97746C9.99133 6.81176 10.177 6.68895 10.3827 6.60903C10.5883 6.52913 10.794 6.48918 10.9997 6.48918C11.2053 6.48918 11.411 6.52913 11.6166 6.60903C11.8223 6.68895 12.008 6.81176 12.1737 6.97746L19.2056 14.0094C19.3877 14.1915 19.4765 14.406 19.4718 14.6528C19.4671 14.8996 19.3736 15.114 19.1915 15.2962C19.0093 15.4783 18.7925 15.5694 18.541 15.5694C18.2895 15.5694 18.0727 15.4783 17.8905 15.2962L10.9997 8.40531Z' fill='%231D1D1D'/%3E%3C/g%3E%3C/svg%3E ");
+    }
+    .header .gnb ul.depth1 > li:hover > a {
+        color: inherit;
+    }
+    .header .gnb ul.depth1 > li:hover > a > span::after {
+       display: none;
+    }
     .header .gnb ul.depth2 { /* 2차메뉴 */
-        margin-top: 7px;
-        display: none; /* 마우스 오버했을때만 나타남 */
+        margin: 0;
+        padding: 17px 0 18px 55px;
+        background-color: #ededed;
+    }
+    .header .gnb .sub_open ul.depth2 {
+        display: block;
     }
     .header .gnb ul.depth2 > li > a {
-        display: block;
-        font-size: 15px;
-        line-height: 36px;
-        color: #1d1d1d;
+        line-height: 30px;
     }
     .header .gnb ul.depth2 > li > a:hover {
         color: #009FE3;
@@ -338,14 +368,6 @@ html, body {
     text-align: center;
     position: relative; /* inner의 정렬의 기준 */
 }
-.visual .inner {
-    display: flex;
-    flex-direction: column; /* 세로배치 */
-    justify-content: center; /* 세로에서 가운데 */
-    height: 100vh; /* 브라우저 높이와 동일한 높이 */
-    min-height: 600px;
-    /* 내부에 콘텐츠가 짤리지 않을 정도의 최소 높이값을 줘야함 */
-}
 /* visual의 높이가 브라우저의 높이에 따라서 바뀜
    그래서 h2태그가 위에서 부터의 여백이 그때그때 달라짐
    --> 고정값으로 줄 수가 없음
@@ -362,14 +384,9 @@ html, body {
     margin-top: 21px;
     font-size: 20px;
 }
+.visual .swiper { height: 100vh; }
+.visual .swiper-wrapper { display: block; width: 100%; height: 100%; object-fit: contain; }
 @media screen and (max-width:640px){
-    .visual {
-       
-    }
-    .visual .inner {
-        height: 300px;
-        min-height: auto;
-    }
     .visual h2 {
         font-size: 25px;
         margin-top: 0;
@@ -377,6 +394,7 @@ html, body {
     .visual p {
         display: none; /* 숨김 */
     }
+    .visual .swiper { height: 100vh; }
 } /* media */
 
 .servirce {
@@ -1008,6 +1026,20 @@ html, body {
     margin-top: 41px;
     color: rgba(255, 255, 255, 0.8);
 }
+.footer .wrapper {
+    position: relative; /* top버튼 정렬의 기준 */
+}
+.footer .top {
+    position: absolute; /* wrapper를 기준으로 정렬 */
+    right: 0;
+    top: 161px;
+    width: 50px;
+    height: 50px;
+    background-color: #1d1d1d;
+    color: #fff;
+    text-align: center; /* 좌우에 가운데 */
+    line-height: 50px; /* 높이와 동일한 값 - 위아래 가운데 */
+}
 @media screen and (max-width:640px){
     .footer .f_top {
         display: block;
@@ -1040,5 +1072,12 @@ html, body {
     }
     .footer .f_btm .copyright {
         margin-top: 24px;
+    }
+    .footer .top {
+        top: 164px;
+        width: 50px;
+        height: 30px;
+        text-align: center; /* 좌우에 가운데 */
+        line-height: 30px; /* 높이와 동일한 값 - 위아래 가운데 */
     }
 } /* media */
