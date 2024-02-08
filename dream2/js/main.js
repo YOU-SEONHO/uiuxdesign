@@ -39,9 +39,8 @@ $(document).ready(function(){
     })
 
     $('.header .gnb').on('mouseenter focusin', function(){
-        $('.header').addClass('menu_over') // pc일때만 실행
-        if(device_status == 'pc'){
-            $('.header').addClass('menu_open')
+        if(device_status == 'pc'){ // pc일때만 실행
+            $('.header').addClass('menu_over') 
         }
     })
     $('.header').on('mouseleave', function(){
