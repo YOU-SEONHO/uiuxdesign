@@ -21,6 +21,15 @@
     font-weight:700; font-style:normal;
 }
 
+*::selection {
+    background-color: rgb(184, 215, 245);
+    color: #fff;
+}
+*::-moz-selection { /* 호환성을 위한 코드 */
+    background-color: rgb(184, 215, 245);
+    color: #fff;
+}
+
 html, body {
     font-family: 'eulyoo1945', serif; /* 서체 serif 명조 sans-serif 고딕 */
     font-size: 15px; /* 크기 */
@@ -41,6 +50,8 @@ html, body {
        짤리는 현상이 생김.  
        가로스크롤바가 생성되었을때도 홈페이지를 정상적으로 
        서비스 하기 위해서 최소 넓이를 입력 */
+    overflow: hidden;
+    /* 전체화면 밖에 나간영역 숨김 */
 }
 
 /* 640px 이하일때 스타일 - 640이하는 모바일 초과는 탭 */
@@ -59,6 +70,134 @@ html, body {
         min-width: auto; /* 홈페이지 최소 넓이 제한하지 않음 */
     }
 } /* media */
+
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100px;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: 0.5s;
+    /* header에 나중에 마우스를 올리거나 class가 추가되거나 변화가 생겨서 스타일이 변경된다면
+       그때 천천히 변경돼 */
+}
+.header .inner {
+    display: flex;
+    justify-content: space-between;
+}
+.header .logo {
+    margin-top: 30px;
+}
+.header .logo a {
+    width: 235px;
+    height: 40px;
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    background: url(../images/logo_w.svg) no-repeat center center / contain;
+}
+.header .gnb {
+    margin: 0 150px 0 0;
+}
+.header .gnb .gnb_open,
+.header .gnb .gnb_close {
+    display: none;
+}
+.header .gnb ul.depth1 {
+    display: flex;
+    text-align: center;
+}
+.header .gnb ul.depth1 > li {
+    width: 125px;
+}
+.header .gnb ul.depth1 > li > a {
+    display: block; /* width:100% */
+    line-height: 100px; /* 높이 100px에 글자는 위아래 가운데 */
+    font-size: 20px;
+    font-weight: 700;
+}
+.header .gnb ul.depth2 { /* 2차메뉴 */
+    margin-top: 23px;
+    display: none;
+}
+.header .gnb ul.depth2 > li > a {
+    display: block;
+    font-size: 15px;
+    line-height: 35px;
+}
+.header .tnb {
+    display: flex;
+}
+.header .tnb .search,
+.header .tnb .login {
+    width: 24px;
+    height: 24px;
+    margin: 38px 0 0 20px;
+    font-size: 0;
+    line-height: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 24px auto;
+}
+.header .tnb .search {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.87624 17.7525C6.39545 17.7525 4.29587 16.8933 2.57752 15.175C0.859175 13.4566 0 11.357 0 8.87624C0 6.39545 0.859175 4.29587 2.57752 2.57752C4.29587 0.859175 6.39545 0 8.87624 0C11.357 0 13.4566 0.859175 15.175 2.57752C16.8933 4.29587 17.7525 6.39545 17.7525 8.87624C17.7525 9.87767 17.5932 10.8222 17.2745 11.7098C16.9559 12.5974 16.5235 13.3826 15.9772 14.0654L23.6245 21.7127C23.8748 21.963 24 22.2817 24 22.6686C24 23.0555 23.8748 23.3741 23.6245 23.6245C23.3741 23.8748 23.0555 24 22.6686 24C22.2817 24 21.963 23.8748 21.7127 23.6245L14.0654 15.9772C13.3826 16.5235 12.5974 16.9559 11.7098 17.2745C10.8222 17.5932 9.87767 17.7525 8.87624 17.7525ZM8.87624 15.0213C10.5832 15.0213 12.0341 14.4239 13.229 13.229C14.4239 12.0341 15.0213 10.5832 15.0213 8.87624C15.0213 7.16927 14.4239 5.71835 13.229 4.52347C12.0341 3.32859 10.5832 2.73115 8.87624 2.73115C7.16927 2.73115 5.71835 3.32859 4.52347 4.52347C3.32859 5.71835 2.73115 7.16927 2.73115 8.87624C2.73115 10.5832 3.32859 12.0341 4.52347 13.229C5.71835 14.4239 7.16927 15.0213 8.87624 15.0213Z' fill='white'/%3E%3C/svg%3E ");
+}
+.header .tnb .login {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 12C10.35 12 8.9375 11.4125 7.7625 10.2375C6.5875 9.0625 6 7.65 6 6C6 4.35 6.5875 2.9375 7.7625 1.7625C8.9375 0.5875 10.35 0 12 0C13.65 0 15.0625 0.5875 16.2375 1.7625C17.4125 2.9375 18 4.35 18 6C18 7.65 17.4125 9.0625 16.2375 10.2375C15.0625 11.4125 13.65 12 12 12ZM0 21V19.8C0 18.95 0.21875 18.1688 0.65625 17.4563C1.09375 16.7438 1.675 16.2 2.4 15.825C3.95 15.05 5.525 14.4688 7.125 14.0813C8.725 13.6938 10.35 13.5 12 13.5C13.65 13.5 15.275 13.6938 16.875 14.0813C18.475 14.4688 20.05 15.05 21.6 15.825C22.325 16.2 22.9062 16.7438 23.3438 17.4563C23.7813 18.1688 24 18.95 24 19.8V21C24 21.825 23.7063 22.5312 23.1188 23.1188C22.5312 23.7063 21.825 24 21 24H3C2.175 24 1.46875 23.7063 0.88125 23.1188C0.29375 22.5312 0 21.825 0 21ZM3 21H21V19.8C21 19.525 20.9313 19.275 20.7938 19.05C20.6562 18.825 20.475 18.65 20.25 18.525C18.9 17.85 17.5375 17.3438 16.1625 17.0063C14.7875 16.6688 13.4 16.5 12 16.5C10.6 16.5 9.2125 16.6688 7.8375 17.0063C6.4625 17.3438 5.1 17.85 3.75 18.525C3.525 18.65 3.34375 18.825 3.20625 19.05C3.06875 19.275 3 19.525 3 19.8V21ZM12 9C12.825 9 13.5313 8.70625 14.1188 8.11875C14.7063 7.53125 15 6.825 15 6C15 5.175 14.7063 4.46875 14.1188 3.88125C13.5313 3.29375 12.825 3 12 3C11.175 3 10.4688 3.29375 9.88125 3.88125C9.29375 4.46875 9 5.175 9 6C9 6.825 9.29375 7.53125 9.88125 8.11875C10.4688 8.70625 11.175 9 12 9Z' fill='white'/%3E%3C/svg%3E ");
+}
+/* 브라우저가 스크롤 되었을때 디자인 변경 */
+.header.fixed {
+    background-color: #231815;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+@media screen and (max-width:640px) {
+    .header {
+        height: 50px;
+    }
+    .header .logo {
+        margin-top: 19px;
+    }
+    .header .logo a {
+        width: 89px;
+        height: 15px;
+    }
+    .header .gnb {
+        margin: 0;
+    }
+    .header .gnb .gnb_open,
+    .header .gnb .gnb_close {
+        position: absolute; /* header를 기준으로 정렬 */
+        right: 0;
+        top: 0;
+        width: 50px;
+        height: 50px;
+        font-size: 0;
+        line-height: 0;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 20px auto;
+    }
+    .header .gnb .gnb_open {
+        display: block;
+        background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.33333 15C3.09722 15 2.89931 14.9201 2.73958 14.7604C2.57986 14.6007 2.5 14.4028 2.5 14.1667C2.5 13.9306 2.57986 13.7326 2.73958 13.5729C2.89931 13.4132 3.09722 13.3333 3.33333 13.3333H16.6667C16.9028 13.3333 17.1007 13.4132 17.2604 13.5729C17.4201 13.7326 17.5 13.9306 17.5 14.1667C17.5 14.4028 17.4201 14.6007 17.2604 14.7604C17.1007 14.9201 16.9028 15 16.6667 15H3.33333ZM3.33333 10.8333C3.09722 10.8333 2.89931 10.7535 2.73958 10.5938C2.57986 10.434 2.5 10.2361 2.5 10C2.5 9.76389 2.57986 9.56597 2.73958 9.40625C2.89931 9.24653 3.09722 9.16667 3.33333 9.16667H16.6667C16.9028 9.16667 17.1007 9.24653 17.2604 9.40625C17.4201 9.56597 17.5 9.76389 17.5 10C17.5 10.2361 17.4201 10.434 17.2604 10.5938C17.1007 10.7535 16.9028 10.8333 16.6667 10.8333H3.33333ZM3.33333 6.66667C3.09722 6.66667 2.89931 6.58681 2.73958 6.42708C2.57986 6.26736 2.5 6.06944 2.5 5.83333C2.5 5.59722 2.57986 5.39931 2.73958 5.23958C2.89931 5.07986 3.09722 5 3.33333 5H16.6667C16.9028 5 17.1007 5.07986 17.2604 5.23958C17.4201 5.39931 17.5 5.59722 17.5 5.83333C17.5 6.06944 17.4201 6.26736 17.2604 6.42708C17.1007 6.58681 16.9028 6.66667 16.6667 6.66667H3.33333Z' fill='white'/%3E%3C/svg%3E ");
+    }
+    .header .gnb .gnb_close {
+        display: none;
+        background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.99967 11.1667L5.91634 15.25C5.76356 15.4028 5.56912 15.4792 5.33301 15.4792C5.0969 15.4792 4.90245 15.4028 4.74967 15.25C4.5969 15.0972 4.52051 14.9028 4.52051 14.6667C4.52051 14.4306 4.5969 14.2361 4.74967 14.0833L8.83301 10L4.74967 5.91668C4.5969 5.7639 4.52051 5.56945 4.52051 5.33334C4.52051 5.09723 4.5969 4.90279 4.74967 4.75001C4.90245 4.59723 5.0969 4.52084 5.33301 4.52084C5.56912 4.52084 5.76356 4.59723 5.91634 4.75001L9.99967 8.83334L14.083 4.75001C14.2358 4.59723 14.4302 4.52084 14.6663 4.52084C14.9025 4.52084 15.0969 4.59723 15.2497 4.75001C15.4025 4.90279 15.4788 5.09723 15.4788 5.33334C15.4788 5.56945 15.4025 5.7639 15.2497 5.91668L11.1663 10L15.2497 14.0833C15.4025 14.2361 15.4788 14.4306 15.4788 14.6667C15.4788 14.9028 15.4025 15.0972 15.2497 15.25C15.0969 15.4028 14.9025 15.4792 14.6663 15.4792C14.4302 15.4792 14.2358 15.4028 14.083 15.25L9.99967 11.1667Z' fill='white'/%3E%3C/svg%3E ");
+    }
+    .header .gnb ul.depth1 {
+        display: none;
+    }
+    .header .tnb {
+        display: none;
+    }
+} /* media */
+
 
 .visual .swiper {
     height:800px /* 팝업의 높이가 됨 */
@@ -88,54 +227,48 @@ html, body {
     right: 115px;
     background-image: url("data:image/svg+xml,%3Csvg width='116' height='32' viewBox='0 0 116 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M82 1L114.5 31H1' stroke='white' stroke-linecap='round'/%3E%3C/svg%3E");
 }
-/* 하단 아이콘으로 이미지 준 경우
-.visual .swiper .stop,
-.visual .swiper .play {
-    position: absolute; /* swiper
-    left: calc(50% + 50px);
-    bottom: 40px;
-    z-index: 10;
-    width: 20px;
-    height: 20px;
-    border: 1px solid #fff;
-    border-radius: 100%;
-    font-size: 0;
-    line-height: 0;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 14px auto;
-}
-.visual .swiper .stop {
-    background-image: none;
-}
-.visual .swiper .play {
-    display: none;
-    background-image: none;
-}
-.visual .swiper .pagination {
+.visual .visual_txt {
     position: absolute;
-    left: calc(50% - 100px);
-    bottom: 45px;
+    left: calc(50% - 640px);
+    top: 276px;
     z-index: 10;
-    width: auto;
+    width: 1280px;
+    color: #fff;
 }
-/* 일반버튼
-.visual .swiper .pagination .swiper-pagination-bullet {
-    background: transparent;
-    opacity: 1;
-    border: 1px solid #fff;
-    width: 12px;
-    height: 12px;
-    outline: 0;
+.visual .visual_txt h2 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 30px;
 }
-/* 선택버튼
-.visual .swiper .pagination .swiper-pagination-bullet.swiper-pagination {
-    backfround-color: #fff;
+.visual .visual_txt h3 {
+    font-size: 30px;
+    font-weight: 400;
 }
-*/
+.visual .visual_txt p {
+    font-size: 20px;
+    margin-bottom: 13px;
+}
+.visual .visual_txt strong {
+    font-size: 40px;
+    font-weight: 700;
+}
+@media screen and (max-width:1750px){
+    .visual .swiper .prev,
+    .visual .swiper .next {
+        top: 430px; 
+        width: 113px;
+        height: 30px;
+    }
+    .visual .swiper .prev {
+        left: 5px;
+    }
+    .visual .swiper .next {
+        right: 5px;
+    }
+}
 @media screen and (max-width:640px){
     .visual .swiper {
-        height:262px /* 팝업의 높이가 됨 */
+        height: 262px /* 팝업의 높이가 됨 */
     }
     .visual .swiper .prev,
     .visual .swiper .next {
@@ -143,7 +276,7 @@ html, body {
     }
     .visual .swiper .stop,
     .visual .swiper .play {
-        position: absolute;
+        position: absolute; /* swiper */
         left: calc(50% + 22px);
         bottom: 11px;
         z-index: 10;
@@ -158,11 +291,11 @@ html, body {
         background-size: 4px auto;
     }
     .visual .swiper .stop {
-        background-image: none;
+        background-image: url("data:image/svg+xml,%3Csvg width='4' height='4' viewBox='0 0 4 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 4V0H1.33333V4H0ZM2.66667 4V0H4V4H2.66667Z' fill='white'/%3E%3C/svg%3E%0A");
     }
     .visual .swiper .play {
         display: none;
-        background-image: none;
+        background-image: url("data:image/svg+xml,%3Csvg width='3' height='3' viewBox='0 0 4 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.721568 4.91304L3.78039 2.90217C3.9268 2.80565 4 2.67159 4 2.5C4 2.32841 3.9268 2.19435 3.78039 2.09783L0.721568 0.0869565C0.564706 -0.0202899 0.405229 -0.0283333 0.243137 0.0628261C0.0810459 0.153986 0 0.296087 0 0.48913V4.51087C0 4.70391 0.0810459 4.84601 0.243137 4.93717C0.405229 5.02833 0.564706 5.02029 0.721568 4.91304Z' fill='white'/%3E%3C/svg%3E ");
     }
     .visual .swiper .pagination {
         position: absolute;
@@ -171,6 +304,7 @@ html, body {
         z-index: 10;
         width: auto;
     }
+    /* 일반버튼 */
     .visual .swiper .pagination .swiper-pagination-bullet {
         background: transparent;
         opacity: 1;
@@ -180,7 +314,266 @@ html, body {
         height: 5.96px;
         outline: 0;
     }
-    .visual .swiper .pagination .swiper-pagination-bullet.swiper-pagination {
+    /* 선택버튼 */
+    .visual .swiper .pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
         background-color: #fff;
     }
+    .visual .visual_txt {
+        left: 20px;
+        top: 80px;
+        width: calc(100% - 40px);
+    }
+    .visual .visual_txt h2 {
+        font-size: 18px;
+        margin-bottom: 7px;
+    }
+    .visual .visual_txt h3 {
+        font-size: 15px;
+    }
+    .visual .visual_txt p {
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+    .visual .visual_txt strong {
+        font-size: 17px;
+    }
 } /* media */
+
+.book {
+    margin: 80px 0 0 0;
+}
+.book .inner {
+    position: relative;
+}
+/* 왼쪽에 tit이 작게 있고 오른쪽에 list가 콘텐츠 영역 (wtapper) 밖으로 나가야함
+   그럼 tit에 아무리 넓이를 줘도 tit의 공간이 확보가 안됨
+   flex는 무조건 공간에 구겨서라도 넣으려고 하기 때문에
+   왼쪽에 있는 요소를 float:left를 줘서 부요요소로 만듦
+   (오른쪽에 있는 list는 tit을 인식하지 못함 tit은 공간을 차지하지 않음)
+   list는 왼쪽에 tit공간 포함해서 여백을 줘야함.
+   반드시 margin으로 */
+.book .tit {
+    float: left;
+}
+.book .tit h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 7px 0;
+}
+.book .list {
+    margin-left: 327px;
+}
+.book .list ul {
+    display: flex;
+    justify-content: space-between;
+    /* list의 사이즈 콘텐츠 영역의 넓이보다 큼
+       그럼 정상적으로 나타나려면 ul에 넓이를 줘야함
+       li하나의 넓이 299px * li갯수 4   299 * 4 = 1196
+       li사이의 여백 28px * li갯수-1   28 * 3 = 84
+       합 1196 + 84 = 1280 */
+    width: 1280px;
+}
+.book .list ul li {
+    width: 299px;
+}
+.book .list ul li a {
+    display: block; /* a태그 안에 많은 태그가 존재하면 block을 주는게 좋음 */
+    /* transition: 0.5s; 이미지가 이동하는 효과 */ 
+}
+.book .list ul li a span {
+    display: block; /* width:100% */
+    height: 423px;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* 이미지가 확대 되었을때 밖으로 나가는것 막기 */
+    transition: 0.5s;
+}
+.book .list ul li a span img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+/* 이미지가 이동하는 효과 
+    .book .list ul li a:hover {
+    transform: translate(-10px, -10px);
+} */
+.book .list ul li a:hover span {
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.4);
+}
+.book .list ul li a:hover span img {
+    transform: scale3d(1.2, 1.2, 1);
+}
+.book .list ul li a h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 24px 0 10px 0;
+}
+.book .list ul li a strong {
+    display: block;
+    margin-bottom: 10px;
+    /* 한줄만 허용하는 코드 */
+    white-space: nowrap; /* 줄바꿈 금지 */
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+.book .list ul li a p {
+    /* 여러줄로 줄수를 제한하는 경우 */
+    line-height: 1.2;
+    height: 2.4em; /* 행간 * 줄수 (ex 1.2 * 2) */
+    overflow: hidden;
+}
+.book .more {
+    position: absolute; /* inner를 기준으로 */
+    left: 0;
+    top: 148px; 
+}
+.book .more a {
+    position: relative;
+    width: 152px;
+    line-height: 35px;
+    border: 1px solid #231815;
+    border-radius: 15px;
+    display: block;
+    padding-left: 22px;
+    transition: 0.5s;
+}
+.book .more a::after {
+    position: absolute;
+    color: #fff;
+    right: 22px;
+    top: 12px;
+    width: 34px;
+    height: 9px;
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg width='37' height='11' viewBox='0 0 37 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25.2643 1L35 10H1' stroke='%23231815' stroke-linecap='round'/%3E%3C/svg%3E ");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 34px auto;
+}
+.book .more a:hover {
+    border: 1px solid #231815;
+    border-radius: 15px;
+    background-color: #231815;
+    color: #fff;
+}
+.book .more a:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='37' height='11' viewBox='0 0 37 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25.2643 1L35 10H1' stroke='white' stroke-linecap='round'/%3E%3C/svg%3E ");
+    animation-name: more;
+    animation-duration:2s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear
+}
+@keyframes more {
+    0% { transform:translate(0, 0) } /* 처음위치 */
+    50% { transform:translate(-10px, 0) } /* 중간위치*/
+    100% { transform:translate(0, 0) } /* 마지막에 원위치*/
+    /* 제자리에서 도는 효과 
+    0% { transform:rotate(0, 0) } 
+    100% { transform:rotate(360deg, 0) } */
+}
+@media screen and (max-width:640px){
+    .book {
+        margin: 40px 0 0 0;
+    }
+    .book .tit {
+        float: none;
+        margin-right: 66px;
+        /* 오른쪽에 더보기가 존재할 영역을 콘텐츠가 겹치지 않게 미리 여백을 잡아줌 */
+    }
+    .book .tit h2 {
+        font-size: 20px;
+        margin: 0 0 5px 0;
+    }
+    .book .list {
+        margin-left: 0;
+        margin-top: 14px;
+        overflow-x: auto;
+    }
+    .book .list ul {
+        /* list의 사이즈 콘텐츠 영역의 넓이보다 큼
+           그럼 정상적으로 나타나려면 ul에 넓이를 줘야함
+           li하나의 넓이 162px * li갯수 4   299 * 4 = 648
+           li사이의 여백 14px * li갯수-1   14 * 3 = 42
+           합 648 + 42 = 690 */
+        width: 690px;
+    }
+    .book .list ul li {
+        width: 162px;
+    }
+    .book .list ul li a span {
+        height: 263px;
+    }
+    .book .list ul li a h3 {
+        font-size: 15px;
+        margin: 14px 0 5px 0;
+    }
+    .book .list ul li a strong {
+        margin-bottom: 5px;
+    }
+    .book .more {
+        /* pc버전에서는 left로 배치, 모바일에서는 right로 배치
+           left와 right가 동시에 선언되면 적용안됨
+           그래서 left를 auto로 해제하고 right를 줘야함 */
+        left: auto;
+        right: 0;
+        top: 54px; 
+    }
+    .book .more a {
+        width: 64px;
+        line-height: 27px; /* border때문에 2px 늘어나서 2px 뺌*/
+        border: 1px solid #231815;
+        border-radius: 15px;
+        padding-left: 0;
+        text-align: center;
+    }
+    .book .more a::after {
+        display: none;
+    }
+} /* media */
+
+.interview {
+    background-color: #f4f4f4;
+    margin-top: 80px;
+}
+.interview .tit {
+    padding-top: 80px;
+    text-align: center;
+}
+.interview .tit h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.interview .list {
+    margin-top: 40px;
+}
+.interview .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.interview .list ul li {
+    width: 408px;
+}
+.interview .list ul li:nth-child(2) {
+    margin-top: 64px;
+}
+.interview .list ul li a {
+    display: block;
+}
+.interview .list ul li a .photo {
+    border-radius: 30px 0 30px 0;
+    overflow: hidden;
+    /* 이미지를 감싸는 요소에 border-radius를 주는 경우
+       overflow:hidden;을 꼭 줘야 이미지가 짤림 */
+    font-size: 0;
+    line-height: 0;
+    box-shadow: 4px 0 4px rgba(0, 0, 0, 0.25);
+}
+/* 디자인상 두번째 li에 스타일이 다르다면
+    */
+.interview .list ul li:nth-child(2) a .photo {
+    border-radius: 0 30px 0 30px;
+}
+.interview .list ul li a .photo img {
+    filter: grayscale(100%); /* 흑백 */
+}

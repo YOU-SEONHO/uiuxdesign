@@ -6,7 +6,7 @@ $(document).ready(function(){
         //effect: "fade", /* fade 효과 */
 
         autoplay: {  /* 팝업 자동 실행 */
-            delay: 2500,
+            delay: 5000,
             disableOnInteraction: true,
         },
 
@@ -20,10 +20,46 @@ $(document).ready(function(){
 
         navigation: {  /* 이전, 다음 버튼 */
             nextEl: '.visual .next',  /* 다음 버튼의 클래스명 */
-            prevEl: '.visualprev',  
+            prevEl: '.visual .prev',  
         },
 
     });
-        swiper.autoplay.stop();  /* 일시정지 기능 */
-        swiper.autoplay.start();  /* 재생 기능 */
+
+        /* 
+        .visual .swiper .stop
+        정지버튼을 누르면 팝업 정지 - 재생버튼 보임, 정지버튼 숨김 
+        .visual .swiper .play
+        재생버튼을 누르면 팝업 재생 - 재생버튼 숨김, 정지버튼 보임 */ 
+        $('.visual .swiper .stop').on('click',function(){
+            swiper.autoplay.stop();  /* 일시정지 기능 */
+            $(".visual .swiper .play").show(); /*보이게 하기*/
+            $(".visual .swiper .stop").hide(); /*숨기기*/
+        })
+        $('.visual .swiper .play').on('click',function(){
+            swiper.autoplay.start();  /* 재생 기능 */  /* 일시정지 기능 */
+            $(".visual .swiper .play").hide();
+            $(".visual .swiper .stop").show();
+        })
+
+        /* 브라우저를 스크롤하면 header에 fixed 클래스를 추가할 예정
+           단, 스크롤이 조금이라도 내려가면 fixed를 추가하지만
+           다시 상단으로 이동하면 fixed 클래스를 삭제
+           스크롤 값을 아는게 필요 */
+        
+        let scrolling // 브라우저가 스크롤 된 값을 저장
+
+        function scroll_chk(){ // 함수의 선언
+            scrolling = $(window).scrollTop() // 브라우저가 스크롤된 값을 scrolling에 저장
+            console.log(scrolling)
+            if(scrolling > 0){ // 스크롤을 내렸을때
+                $('.header').addClass('fixed')
+            }else{ // 스크롤이 맨위에 있는 경우
+                $('.header').removeClass('fixed')
+            }
+        }
+        scroll_chk() // 함수의 실행 - 브라우저가 로딩 되었을때 단 한번 실행
+
+        $(window).scroll(function(){
+            scroll_chk() // 함수의 실행 - 스크롤 할때마다
+        })
 })
