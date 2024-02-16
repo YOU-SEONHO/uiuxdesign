@@ -113,7 +113,7 @@
                         <ul>
                             <li>
                                 <a href="#n">
-                                    <span><img src="images/book1.jpg" alt="책표지"></span>
+                                    <span><img src="images/book01.jpg" alt="책표지"></span>
                                     <h3>오디오·라이프·디자인</h3>
                                     <strong>기디언 슈워츠 ,이현준</strong>
                                     <p>편견과 한계를 극복한 오디오 혁신가를 촘촘하게 기록하고 있다.</p>
@@ -121,7 +121,7 @@
                             </li>
                             <li>
                                 <a href="#n">
-                                    <span><img src="images/book2.jpg" alt="책표지"></span>
+                                    <span><img src="images/book02.jpg" alt="책표지"></span>
                                     <h3>확장된 표현형 (출간 40주년 기념)</h3>
                                     <strong>리처드 도킨스 ,홍영남,이상임</strong>
                                     <p>명실상부한 리처드 도킨스의 대표작이자 과학자로서의 성과를 오롯이 담고 있는 걸작이다.</p>
@@ -129,7 +129,7 @@
                             </li>
                             <li>
                                 <a href="#n">
-                                    <span><img src="images/book3.jpg" alt="책표지"></span>
+                                    <span><img src="images/book03.jpg" alt="책표지"></span>
                                     <h3>고전에 기대는 시간</h3>
                                     <strong>정지우</strong>
                                     <p>고전의 의미와 우리의 삶을 잇는 정교한 접속</p>
@@ -137,7 +137,7 @@
                             </li>
                             <li>
                                 <a href="#n">
-                                    <span><img src="images/book4.jpg" alt="책표지"></span>
+                                    <span><img src="images/book04.jpg" alt="책표지"></span>
                                     <h3>이 얘기 계속해도 될까요?</h3>
                                     <strong>니시 가나코 ,전경아</strong>
                                     <p>성인은 서른 살부터라 부르짖는 소설가의 반전 가득 일상이야기이다.</p>
@@ -161,8 +161,10 @@
                     <ul>
                         <!-- 무조건 하나가 over 상태의 디자인을 유지
                              마우스를 오버하면 오버 대상 변경
-                             마우스를 아웃하면 마지막에 마우스를 올렸던 요소가 오버상태를 유지 -->
-                        <li>
+                             마우스를 아웃하면 마지막에 마우스를 올렸던 요소가 오버상태를 유지
+                             처음에는 하나의 li에 active 클래스가 들어가 있는 상태고 다른 요소에 마우스를 오버하면
+                             해당 li에만 active 클래스가 추가되는 방식 (기존 li에 acvtive 클래스는 삭제) -->
+                        <li class="active">
                             <a href="#n">
                                 <div class="photo">
                                     <img src="images/interview01.png" alt="작가 김필영 사진"></div>
@@ -199,13 +201,93 @@
                         </li>
                     </ul>
                 </div>
-                <div class="more">
+                <div class="more">    
                     <a href="#n">더보기</a>
                 </div>
             </div>
         </section>
-        <section class="news"></section>
-        <footer class="footer"></footer>
+        <section class="news">
+            <div class="wrapper">
+                <div class="inner">
+                    <div class="tit">
+                        <h2>을유의<br>소식</h2>
+                        <p>을유문화사의<br>새로운 소식을 만나보세요.</p>
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <a href="#n">
+                                    <span><img src="images/news01.png"></span>
+                                    <h3>러셀 서양철학사</h3>
+                                    <p>고대 그리스철학에서 현대 분석철학까지 서양 철학사에 뚜렷한 자취를 남긴 철학자의 주요 사상을 사회문화 및 정치적 배경과 연결하여 러셀의 관점에서 쓴 철학 고전이다.</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <span><img src="images/news02.png"></span>
+                                    <h3>낯선 것과 친숙한 것의 결합</h3>
+                                    <p>탄츠테아터는〈러프 컷Rough Cut〉(2005년 초연)으로 재차 아시아와 협력한다.</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <span><img src="images/news03.png"></span>
+                                    <h3>고통을 말하지 않는 법</h3>
+                                    <p>다양한 사회 문제와 인간 내면의 수수께끼 같은 측면을 함께 탐구하며, 그 과정을 독특한 산문으로 풀어내면서 주목받았다.</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <span><img src="images/news04.png"></span>
+                                    <h3>쇼펜하우어의 행복론과 인생론</h3>
+                                    <p>이 책은 당시 독일 교양 시민들의 폭넓은 사랑을 받으면서 이보다 앞서 30여 년 전에 출간됐던 의지와 표상으로서의 세계가 뒤늦게 재조명되기 시작했다.</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <span><img src="images/news05.png"></span>
+                                    <h3>유토피아</h3>
+                                    <p>2018년 출간한『고통을 말하지 않는 법』이 전미 비평가 협회상 비평 부문 최종 후보에 오르는 등 국제적으로 주목받았다.</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="more">
+                        <a href="#n">더보기</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="wrapper">
+                <div class="inner">
+                    <!-- 모바일의 코딩순서가 다르다면 모바일의 코딩 순서를 따름 -->
+                    <div class="footer_txt">
+                        출판은<br>
+                        이윤을 추구하는 사업보다는<br>
+                        사회에 공헌하는 <strong>문화 사업</strong>
+                    </div>
+                    <div class="footer_info">
+                        <strong>위치</strong>
+                        <span>03997 서울 마포구 서교동 469-48<br>
+                            (월드컵로16길 52-7)</span>
+                        <strong>연락처</strong>
+                        <span>전화번호: 02-733-8153<br>팩스: 02-732-9154<br>메일: eulyoo1945@eulyoo.co.kr</span>
+                        <strong>소셜네트워크</strong>
+                        <!-- 다른 홈페이지로 이동 반드시 target="_blank" 새창으로 연결
+                            target="_blank"가 포함되면 반드시 title="새창"으로
+                            새창으로 열리는 사이트임을 공지해야함 (웹접근성) -->
+                        <span><a href="http://wwww.instagram.com/eulyoo/" target="_blank" title="새창">인스타그램</a></span>
+                        <span><a href="https://www.facebook.com/eulyoo/" target="_blank" title="새창">페이스북</a></span>
+                        <span><a href="https://m.post.naver.com/my.nhn?memberNo=20168227" target="_blank" title="새창">블로그</a></span>
+                    </div>
+                    <div class="copyright">
+                        <img src="images/logo_w.svg" alt="을유문화사">
+                        <span>© 2024 EULYOO PUBLISHING CO., LTD.</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
