@@ -538,6 +538,9 @@ html, body {
     padding: 0 0 160px 0;
     position: relative;
 }
+.interview br {
+    display: none;
+}
 .interview .tit {
     padding-top: 80px;
     text-align: center;
@@ -715,6 +718,9 @@ html, body {
     .interview {
         margin-top: 40px;
         padding: 0 0 40px 0;
+    }
+    .interview br {
+        display: block;
     }
     .interview .tit {
         padding-top: 40px;
