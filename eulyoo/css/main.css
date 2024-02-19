@@ -784,7 +784,7 @@ html, body {
     .interview .more {
         left: auto;
         right: 20px;
-        top: 54px;
+        top: 95px;
     }
     .interview .more a {
         width: 64px;
@@ -810,12 +810,7 @@ html, body {
         color: #fff;
     }
     .interview .more a:hover::after {
-        background-image: url("data:image/svg+xml,%3Csvg width='37' height='11' viewBox='0 0 37 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25.2643 1L35 10H1' stroke='white' stroke-linecap='round'/%3E%3C/svg%3E ");
-        animation-name: more; 
-        animation-duration: 2s; 
-        animation-iteration-count:infinite; 
-        animation-timing-function:linear;
-    }
+        display: none;
 } /* media */
 
 .news {
@@ -1020,14 +1015,62 @@ html, body {
     display: block;
     font-weight: 700;
 }
+/* 인접선택자
+   .footer .footer_info span 다음에 오는 strong 태그
+   <div class="footer_info">
+   <strong></strong>
+   <span></span>
+   <strong></strong>   ----- span 태그 다음에 오는 strong 태그
+   <span></span> */
 .footer .footer_info span + strong {
     margin-top: 40px;
 }
 .footer .footer_info span {
     display: block;
+    margin: 10px 0 0 0 ;
+}
+.footer .footer_info span a { /* sns 여백 */
+    margin: 0 18px 0 0;
 }
 .footer .copyright {
     position: absolute;
     left: 0;
     bottom: 0;
 }
+.footer .copyright img {
+    width: 235px;
+}
+.footer .copyright span {
+    display: block;
+    margin: 13px 0 0 0;
+}
+@media screen and (max-width:640px){
+    .footer {
+        padding: 40px 0;
+    }
+    .footer .inner {
+        display: block; /* txt, info 좌우로 배치 해제 */
+    }
+    .footer .footer_txt {
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+    .footer .footer_txt strong {
+        font-size: 15px;
+    }
+    .footer .footer_info span + strong {
+        margin-top: 30px;
+    }
+    .footer .footer_info span {
+        margin: 10px 0 0 0 ;
+    }
+    .footer .copyright {
+        position: relative; /* absolute 해제 */
+        left: auto;
+        bottom: auto;
+        margin: 50px 0 0 0;
+    }
+    .footer .copyright img {
+        width: 208px;
+    }
+} /* media */
