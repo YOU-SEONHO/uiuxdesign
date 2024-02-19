@@ -811,6 +811,7 @@ html, body {
     }
     .interview .more a:hover::after {
         display: none;
+    }
 } /* media */
 
 .news {
