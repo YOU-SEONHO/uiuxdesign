@@ -344,14 +344,14 @@ html, body {
         position: absolute;
         right: 0;
         top: 0;
-        width: 50px;
+        width: 100px;
         height: 100px;
         font-size: 0;
         line-height: 0;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23.166' height='15.444' viewBox='0 0 23.166 15.444'%3E%3Cpath id='menu_FILL0_wght400_GRAD0_opsz24' d='M121.287-704.556a1.245,1.245,0,0,1-.917-.37,1.245,1.245,0,0,1-.37-.917,1.245,1.245,0,0,1,.37-.917,1.245,1.245,0,0,1,.917-.37h20.592a1.245,1.245,0,0,1,.917.37,1.245,1.245,0,0,1,.37.917,1.245,1.245,0,0,1-.37.917,1.245,1.245,0,0,1-.917.37Zm0-6.435a1.245,1.245,0,0,1-.917-.37,1.245,1.245,0,0,1-.37-.917,1.245,1.245,0,0,1,.37-.917,1.245,1.245,0,0,1,.917-.37h20.592a1.245,1.245,0,0,1,.917.37,1.245,1.245,0,0,1,.37.917,1.245,1.245,0,0,1-.37.917,1.245,1.245,0,0,1-.917.37Zm0-6.435a1.245,1.245,0,0,1-.917-.37,1.245,1.245,0,0,1-.37-.917,1.245,1.245,0,0,1,.37-.917,1.245,1.245,0,0,1,.917-.37h20.592a1.245,1.245,0,0,1,.917.37,1.245,1.245,0,0,1,.37.917,1.245,1.245,0,0,1-.37.917,1.245,1.245,0,0,1-.917.37Z' transform='translate(-120 720)' fill='%23fff'/%3E%3C/svg%3E%0A");
         background-repeat: no-repeat;
         background-position: center center;
-        background-size: 23px auto;
+        background-size: 17px auto;
     }
     .header .gnb .gnb_close {
         z-index: 111;
@@ -391,8 +391,8 @@ html, body {
         position: absolute;
         right: -20px;
         top: 7px;
-        width: 13.5px;
-        height: 7.5px;
+        width: 13px;
+        height: 7px;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.396' height='7.55' viewBox='0 0 13.396 7.55'%3E%3Cpath id='expand_more_FILL0_wght300_GRAD0_opsz24' d='M273.115-606.834a1.2,1.2,0,0,1-.422-.072,1.039,1.039,0,0,1-.371-.248l-5.635-5.635a.909.909,0,0,1-.266-.655.887.887,0,0,1,.266-.667.9.9,0,0,1,.661-.272.9.9,0,0,1,.661.272L273.115-609l5.107-5.107a.909.909,0,0,1,.655-.266.886.886,0,0,1,.667.266.9.9,0,0,1,.273.661.9.9,0,0,1-.273.661l-5.635,5.635a1.038,1.038,0,0,1-.371.248A1.2,1.2,0,0,1,273.115-606.834Z' transform='translate(-266.42 614.384)' fill='%231d1d1d'/%3E%3C/svg%3E ");
         background-repeat: no-repeat;
         background-position: center center;
@@ -421,14 +421,14 @@ html, body {
         margin: 38px 70px 0 0;
     }
     .header .tnb .search {
-        padding-left: 36px;
+        padding-left: 50px;
         margin-right: 0;
         font-size: 0;
         line-height: 0;
     }
     .header .tnb .search::before {
-        width: 21px;
-        height: 21px;
+        width: 15px;
+        height: 15px;
     }
     .header .tnb .paper {
         display: none;
@@ -465,7 +465,7 @@ html, body {
     .header .gnb .gnb_close {
         height: 50px;
     }
-    .header .gnb ul.deqth1 {
+    .header .gnb ul.depth1 {
         height: calc(100vh - 50px);
         margin: 50px 0 0 0;
     }
@@ -473,7 +473,7 @@ html, body {
         margin: 13px 40px 0 0;
     }
     .header.menu_open .tnb .paper {
-        top: 24px;
+        top: 1px;
     }
 }
 
@@ -627,8 +627,23 @@ html, body {
         font-size: 22px;
     }
 }
-
+.lost .slogan {
+    position: absolute;
+    left: 197px;
+    top: -60px;
+    z-index: 10;
+    /* mix-blend-mode: difference; 흰색에서는 검은색 */
+    animation:slogan_rotate;
+    animation-duration:10s;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+}
+@keyframes slogan_rotate {
+    0% { transform:rotate(0) }
+    100% { transform:rotate(360deg) } /* 글자가 움직여서 처음과 동일한 위치가 되는 값 (동일한 문장을 여러번 쓰기 때문에 3-4번째 문장이 다시 시작하는 위치로 하면 됨) */
+}
 .lost {
+    position: relative; /* slogan 정렬의 기준 */
     background-color: #93A266;
     color: #fff;
     padding-bottom: 60px;
@@ -768,6 +783,9 @@ html, body {
     transform: rotate(180deg);
 }
 @media screen and (max-width:1024px){
+    .lost .slogan {
+        display: none;
+    }
     .lost {
         padding-bottom: 50px;
     }
