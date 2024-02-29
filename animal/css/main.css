@@ -418,7 +418,7 @@ html, body {
         display: none;
     }
     .header .tnb {
-        margin: 38px 70px 0 0;
+        margin: 41px 50px 0 0;
     }
     .header .tnb .search {
         padding-left: 50px;
@@ -470,7 +470,7 @@ html, body {
         margin: 50px 0 0 0;
     }
     .header .tnb {
-        margin: 13px 40px 0 0;
+        margin: 16px 35px 0 0;
     }
     .header.menu_open .tnb .paper {
         top: 1px;
@@ -575,11 +575,8 @@ html, body {
     }
 }
 @media screen and (max-width:1024px){
-    .visual .visual_txt {
-        left: 20px;
-        top: 294px;
-        width: calc(100% - 40px); /* 왼쪽여백 오른쪽여백 빼고 */
-        font-size: 30px;
+    .visual .swiper {
+        height: 600px
     }
     .visual .txt01 p {
         margin: 0
@@ -787,7 +784,7 @@ html, body {
         display: none;
     }
     .lost {
-        padding-bottom: 50px;
+        padding-bottom: 30px;
     }
     .lost h2 {
         font-size: 30px;
@@ -798,7 +795,7 @@ html, body {
     }
     .lost .list > ul > li > button {
         font-size: 20px;
-        padding: 5px 21px;
+        padding: 5px 25px;
     }
     .lost .list > ul > li .detail {
         top: 54px;
@@ -822,22 +819,23 @@ html, body {
         padding: 30px 0 20px 0;
     }
     .lost .list {
-        height: 500px;
+        height: 440px;
     }
     .lost .list > ul > li > button {
         font-size: 18px;
+        padding: 5px 20px;
     }
     .lost .list > ul > li .detail {
         top: 54px;
-    }
-    .lost .list > ul > li .detail ul li a .photo {
-        height: 300px;
     }
     .lost .list > ul > li .detail ul li {
         width: calc(50% - 10px);
     }
     .lost .list > ul > li .detail ul li:nth-child(3) {
         display: none;
+    }
+    .lost .list > ul > li .detail ul li a .photo {
+        height: 250px;
     }
     .lost .list > ul > li .detail ul li a h3 {
         font-size: 15px;
@@ -847,10 +845,13 @@ html, body {
         padding: 3px 12px 2px 12px;
     }
     .lost .list > ul > li .detail .more {
-        margin-top: 20px;
+        margin-top: 30px;
+    }
+    .lost .list > ul > li .detail .more a {
+        padding: 6px 35px 6px 20px;
     }
     .lost .list > ul > li .detail .more a::after {
-        top: 12px;
+        top: 10px;
         right: 18px;
         width: 8px;
         height: 8px;
@@ -920,30 +921,28 @@ html, body {
 .msg p .msg03::before {
     background-image: url(../images/msg03.png);
 }
+.msg strong {
+    display: block;
+    margin: 15px 0 0 0;
+    text-align: center;
+}
 @media screen and (max-width:1320px){
     .msg p {
         font-size: 30px;
     }
 }
 @media screen and (max-width:1024px){
+    .msg {
+        margin: 50px 0;
+    }
     .msg p {
         font-size: 27px;
     }
 }
 @media screen and (max-width:768px){
     .msg p {
-        font-size: 22px;
-    }
-}
-@media screen and (max-width:500px){
-    .msg p {
         font-size: 20px;
     }
-}
-.msg strong {
-    display: block;
-    margin: 15px 0 0 0;
-    text-align: center;
 }
 
 .adopt {
@@ -1099,30 +1098,30 @@ html, body {
     }
     .adopt h2 {
         font-size: 30px;
-        font-weight: 700;
-        text-align: center;
         margin-bottom: 30px;
     }
-    .adopt .ctrl_btn .prev,
-    .adopt .ctrl_btn .next {
+    .adopt .ctrl_btn {
+        margin: 50px 0 0 0;
+    }
+    .adopt .ctrl_btn button.prev,
+    .adopt .ctrl_btn button.next {
         display: none;
     }
-    .adopt .ctrl_btn .stop,
-    .adopt .ctrl_btn .play {
+    .adopt .ctrl_btn button.stop,
+    .adopt .ctrl_btn button.play {
         width: 35px;
         height: 35px;
         background-size: 10px auto;
     }
     .adopt .ctrl_btn .more {
-        padding: 0 35px 0 20px;
+        padding: 0 45px 0 20px;
         /* 버튼하고 높이를 맞추기 위해서 line-height로 높이주고 좌우 여백만으로 넓이를 줌 */
         line-height: 36px;
         height: 36px;
-        border: 1px solid #fff;
-        border-radius: 30px;
-        display: inline-block;
-        position: relative;
-        margin-left: 12px;
+    }
+    .adopt .ctrl_btn .more::after {
+        top: 11px;
+        right: 18px;
     }
     .adopt .move {
         font-size: 80px;
@@ -1131,11 +1130,36 @@ html, body {
 }
 @media screen and (max-width:768px){
     .adopt {
-        padding: 60px 0 150px 0;
+        padding: 40px 0 130px 0;
+    }
+    .adopt h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .adopt .ctrl_btn {
+        margin: 30px 0 0 0;
+    }
+    .adopt .ctrl_btn button.stop,
+    .adopt .ctrl_btn button.play {
+        width: 30px;
+        height: 30px;
+        background-size: 8px auto;
+    }
+    .adopt .ctrl_btn .more {
+        padding: 0 35px 0 20px;
+        /* 버튼하고 높이를 맞추기 위해서 line-height로 높이주고 좌우 여백만으로 넓이를 줌 */
+        line-height: 30px;
+        height: 30px;
+    }
+    .adopt .ctrl_btn .more::after {
+        top: 10px;
+        right: 20px;
+        width: 8px;
+        height: 8px;
     }
     .adopt .move {
-        font-size: 50px;
-        bottom: 45px;
+        font-size: 45px;
+        bottom: 40px;
     }
 }
 
@@ -1265,7 +1289,7 @@ html, body {
 }
 @media screen and (max-width:1024px) {
     .footer {
-        padding: 35px 0;
+        padding: 50px 0;
     }
     .footer .sns {
         position: relative;
@@ -1275,12 +1299,15 @@ html, body {
     .footer .sns ul {
         justify-content: center;
     }
+    .footer .sns ul li {
+        margin-right: 4px;
+    }
     .footer .sns ul li a {
         width: 27px;
         height: 27px;
     }
     .footer .sns ul li.facebook a {
-        background-size: 8.5px auto;
+        background-size: 9px auto;
     }
     .footer .sns ul li.twitter a {
         background-size: 15px auto;
@@ -1289,10 +1316,10 @@ html, body {
         background-size: 14px auto;
     }
     .footer .sns ul li.daum a {
-        background-size: 11.5px auto;
+        background-size: 12px auto;
     }
     .footer .footer_nav {
-        margin-top: 16px;
+        margin-top: 25px;
         border-width: 1px 0 0 1px;
         border-style: solid;
         border-color: rgba(255, 255, 255, 0.5);
@@ -1321,6 +1348,9 @@ html, body {
     .footer .footer_nav ul li:last-child::after {
         display: none; /* 오른쪽 끝 중간선 삭제 */
     }
+    .footer .footer_nav ul li a {
+        display: block;
+    }
     .footer .family_site {
         position: relative;
         right: auto;
@@ -1329,9 +1359,6 @@ html, body {
     }
     .footer .family_site .site_open {
         display: block;
-    }
-    .footer .family_site .site_close {
-        display: none;
     }
     .footer .family_site .site_open,
     .footer .family_site .site_close {
