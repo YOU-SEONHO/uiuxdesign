@@ -70,8 +70,8 @@ $(document).ready(function(){
       하위메뉴를 열어줘야함 */
    $(".header .gnb ul.depth1 > li > a").on("click", function(e){
 		if(device_status == 'mobile'){
-      e.preventDefault();		/* a 태그의 href를 작동 시키지 않음 */
-      $(this).parent().toggleClass('on')
+         e.preventDefault();		/* a 태그의 href를 작동 시키지 않음 */
+         $(this).parent().toggleClass('on')
       }
 	});
 
