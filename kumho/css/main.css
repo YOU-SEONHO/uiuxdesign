@@ -320,6 +320,8 @@
    .biz .tit h2 span::after {
       width: 13px;
       height: 13px;
+      right: -7px;
+      top: -9px;
    }
    .biz .tit p {
       font-size: 20px;
@@ -369,6 +371,12 @@
 @media screen and (max-width:500px){
    .biz .tit h2 {
       font-size: 13px;
+   }
+   .biz .tit h2 span::after {
+      width: 10px;
+      height: 10px;
+      right: -6px;
+      top: -6px;
    }
    .biz .tit p {
       font-size: 15px;
@@ -530,6 +538,8 @@
    .news .tit h2 span::after {
       width: 13px;
       height: 13px;
+      right: -7px;
+      top: -9px;
    }
    .news .tit p {
       font-size: 20px;
@@ -568,6 +578,12 @@
 @media screen and (max-width:500px){
    .news .tit h2 {
       font-size: 13px;
+   }
+   .news .tit h2 span::after {
+      width: 10px;
+      height: 10px;
+      right: -6px;
+      top: -6px;
    }
    .news .tit p {
       font-size: 15px;
