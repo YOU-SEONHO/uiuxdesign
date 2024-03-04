@@ -100,6 +100,7 @@
       width: 30px;
       height: 30px;
       border-radius: 100%;
+      border-width: 1px;
    }
    .visual .btn_ctrl button.prev {
       display: none;
@@ -524,6 +525,7 @@
    }
    .news .tit h2 {
       font-size: 18px;
+      margin-bottom: 5px;
    }
    .news .tit h2 span::after {
       width: 13px;
@@ -532,6 +534,9 @@
    .news .tit p {
       font-size: 20px;
       margin: 0 0 20px 0;      
+   }
+   .news .list ul li {
+      border-width: 2px;
    }
    .news .list ul li a .date {
       font-size: 15px;
@@ -566,7 +571,16 @@
    }
    .news .tit p {
       font-size: 15px;
-      margin: 0 0 20px 0;      
+      margin: 0 0 10px 0;      
    }
-   
+   .news .more a {
+      line-height: 22px;
+      padding: 0 25px 0 10px;
+   }
+   .news .more a::after {  
+      right: 10px;
+      top: 7px;
+      width: 8px;
+      height: 8px;
+   }
 }
