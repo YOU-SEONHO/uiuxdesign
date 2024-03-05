@@ -604,16 +604,6 @@
    color: #fff;
    background: url(../images/main/service_biz.png) no-repeat center center / cover;
 }
-.service::before {
-   position: absolute;
-   left: 0;
-   top: 0;
-   width: 100%;
-   height: 100%;
-   background-color: #000;
-   opacity: 0.2;
-   content: "";
-}
 .service .tit h2 {
    display: none;
 }
@@ -632,7 +622,7 @@
 }
 .service .list ul li {
    width: calc(33.33% - 18.66px);
-   backdrop-filter: blur(7px) brightness(114%);
+   backdrop-filter: blur(40px) brightness(186%);
    transition: 0.5s;
 }
 .service .list ul li:hover {
@@ -733,7 +723,7 @@
 }
 @media screen and (max-width:500px){
    .service {
-      padding: 60px 0 70px 0;
+      padding: 60px 0 80px 0;
    }
    .service .tit p {
       font-size: 15px;    
