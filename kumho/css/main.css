@@ -491,7 +491,7 @@
 }
 
 @media screen and (max-width:1320px){
-   .news{
+   .news {
       margin: 50px 0 0 0;
    }
    .news .tit h2 {
@@ -503,9 +503,6 @@
    }
 }
 @media screen and (max-width:1024px){
-   .news{
-      margin: 50px 0 0 0;
-   }
    .news .tit h2 {
       font-size: 20px;
    }
@@ -528,7 +525,7 @@
    }
 }
 @media screen and (max-width:768px){
-   .news{
+   .news {
       margin: 30px 0 0 0;
    }
    .news .tit h2 {
@@ -598,5 +595,153 @@
       top: 7px;
       width: 8px;
       height: 8px;
+   }
+}
+
+.service {
+   margin-top: 80px;
+   padding: 140px 0 160px 0;
+   color: #fff;
+   background: url(../images/main/service_biz.png) no-repeat center center / cover;
+}
+.service::before {
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background-color: #000;
+   opacity: 0.2;
+   content: "";
+}
+.service .tit h2 {
+   display: none;
+}
+.service .tit p {
+   font-size: 30px;
+   font-weight: 400;
+   line-height: 1.2;
+}
+.service .list {
+   margin-top: 30px;
+}
+.service .list ul {
+   display: flex;
+   justify-content: space-between;
+   
+}
+.service .list ul li {
+   width: calc(33.33% - 18.66px);
+   backdrop-filter: blur(7px) brightness(114%);
+   transition: 0.5s;
+}
+.service .list ul li:hover {
+   transform: translate(-10px, -10px); /* 왼쪽상단으로 이동 */
+   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.service .list ul li a {
+   display: block;
+   height: 85px;
+   padding: 20px 20px 0 120px;
+   position: relative; /* before */
+}
+.service .list ul li a::before {
+   position: absolute;
+   left: 31px;
+   top: 12px;
+   width: 52px;
+   height: 56px;
+   content: "";
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-size: contain;
+}
+.service .list ul li.esg a::before {
+   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='49.998' height='55.501' viewBox='0 0 49.998 55.501'%3E%3Cpath id='potted_plant_FILL0_wght300_GRAD0_opsz24' d='M155.476-803.753h18.993a.94.94,0,0,0,.622-.212,1.206,1.206,0,0,0,.368-.523l3.167-12.641H151.318l3.167,12.641a1.206,1.206,0,0,0,.368.523A.939.939,0,0,0,155.476-803.753Zm0,4.412a5.183,5.183,0,0,1-3.32-1.137,5.478,5.478,0,0,1-1.917-2.952l-3.45-13.7h36.368l-3.45,13.7a5.547,5.547,0,0,1-1.917,2.938,5.143,5.143,0,0,1-3.32,1.151Zm-10.045-22.2H184.57a1,1,0,0,0,.735-.283.959.959,0,0,0,.283-.707v-5.458H144.413v5.458a.936.936,0,0,0,.3.707A1.007,1.007,0,0,0,145.431-821.541Zm19.541-17.335A14.547,14.547,0,0,1,169.16-849.3a18.636,18.636,0,0,1,10.285-5.515,1.006,1.006,0,0,1,.619.045,2.21,2.21,0,0,1,.546.339,1.109,1.109,0,0,1,.362.523,1.228,1.228,0,0,1,.023.642,17.982,17.982,0,0,1-4.743,9.276,16.324,16.324,0,0,1-9.075,4.9v6.685h20.163a2.575,2.575,0,0,1,1.9.761,2.575,2.575,0,0,1,.761,1.9v7.211a5.179,5.179,0,0,1-1.6,3.815,5.248,5.248,0,0,1-3.829,1.586H145.431a5.248,5.248,0,0,1-3.829-1.586,5.179,5.179,0,0,1-1.6-3.815v-7.211a2.575,2.575,0,0,1,.761-1.9,2.575,2.575,0,0,1,1.9-.761h20.107v-6.685a16.324,16.324,0,0,1-9.075-4.9,17.982,17.982,0,0,1-4.743-9.276,1.229,1.229,0,0,1,.023-.642,1.11,1.11,0,0,1,.362-.523,2.212,2.212,0,0,1,.546-.339,1.007,1.007,0,0,1,.619-.045,18.636,18.636,0,0,1,10.285,5.515A14.547,14.547,0,0,1,164.972-838.876Z' transform='translate(-140.001 854.843)' fill='%23fff'/%3E%3C/svg%3E%0A");
+}
+.service .list ul li.ir a::before {
+   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='51.947' height='52.705' viewBox='0 0 51.947 52.705'%3E%3Cpath id='account_balance_FILL0_wght300_GRAD0_opsz24' d='M119.158-848.483v-16.883a2.042,2.042,0,0,1,.607-1.5,2.043,2.043,0,0,1,1.5-.607,2.04,2.04,0,0,1,1.5.607,2.043,2.043,0,0,1,.606,1.5v16.883a2.041,2.041,0,0,1-.607,1.5,2.043,2.043,0,0,1-1.5.607,2.04,2.04,0,0,1-1.5-.607A2.043,2.043,0,0,1,119.158-848.483Zm15.476,0v-16.883a2.042,2.042,0,0,1,.607-1.5,2.043,2.043,0,0,1,1.5-.607,2.04,2.04,0,0,1,1.5.607,2.044,2.044,0,0,1,.606,1.5v16.883a2.041,2.041,0,0,1-.607,1.5,2.043,2.043,0,0,1-1.5.607,2.04,2.04,0,0,1-1.5-.607A2.043,2.043,0,0,1,134.634-848.483Zm-21.753,11.958a2.041,2.041,0,0,1-1.5-.607,2.043,2.043,0,0,1-.607-1.5,2.04,2.04,0,0,1,.607-1.5,2.043,2.043,0,0,1,1.5-.606h47.726a2.041,2.041,0,0,1,1.5.607,2.043,2.043,0,0,1,.607,1.5,2.04,2.04,0,0,1-.607,1.5,2.043,2.043,0,0,1-1.5.606Zm37.229-11.958v-16.883a2.042,2.042,0,0,1,.607-1.5,2.043,2.043,0,0,1,1.5-.607,2.04,2.04,0,0,1,1.5.607,2.044,2.044,0,0,1,.606,1.5v16.883a2.041,2.041,0,0,1-.607,1.5,2.043,2.043,0,0,1-1.5.607,2.04,2.04,0,0,1-1.5-.607A2.043,2.043,0,0,1,150.11-848.483ZM160.716-873.1H112.573a1.739,1.739,0,0,1-1.276-.525,1.732,1.732,0,0,1-.526-1.274V-876a1.623,1.623,0,0,1,.275-.947,2.1,2.1,0,0,1,.726-.646L134.51-888.72a5.068,5.068,0,0,1,2.231-.509,5.112,5.112,0,0,1,2.238.509L161.6-877.665a1.99,1.99,0,0,1,.822.758,2,2,0,0,1,.292,1.046v.763a1.938,1.938,0,0,1-.566,1.43A1.946,1.946,0,0,1,160.716-873.1Zm-39.967-4.221h0Zm0,0H152.74L137.123-884.9a.955.955,0,0,0-.379-.081.956.956,0,0,0-.379.081Z' transform='translate(-110.771 889.229)' fill='%23fff'/%3E%3C/svg%3E ");
+}
+.service .list ul li.webzine a::before {
+   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='42.428' height='56.003' viewBox='0 0 42.428 56.003'%3E%3Cpath id='book_5_FILL0_wght300_GRAD0_opsz24' d='M186.692-835.969a6.667,6.667,0,0,1-4.719-1.844A6,6,0,0,1,180-842.377v-38.615a6.563,6.563,0,0,1,1.58-4.333,6.953,6.953,0,0,1,4.022-2.4l20.262-4.118a4.813,4.813,0,0,1,4.245,1.009,4.861,4.861,0,0,1,1.874,3.963v32.887a5,5,0,0,1-1.15,3.247,4.894,4.894,0,0,1-2.913,1.768l-21.867,4.564a2.5,2.5,0,0,0-1.278.726,1.826,1.826,0,0,0-.533,1.3,1.937,1.937,0,0,0,.732,1.553,2.592,2.592,0,0,0,1.716.612h30.624a.847.847,0,0,0,.626-.245.847.847,0,0,0,.245-.625v-40.85a2.053,2.053,0,0,1,.609-1.512,2.053,2.053,0,0,1,1.512-.609,2.053,2.053,0,0,1,1.512.609,2.053,2.053,0,0,1,.609,1.512v40.85a4.926,4.926,0,0,1-1.5,3.615,4.926,4.926,0,0,1-3.615,1.5Zm5.167-13.919,15.2-3.139a.778.778,0,0,0,.49-.3.864.864,0,0,0,.19-.544V-886.8a.849.849,0,0,0-.326-.68.839.839,0,0,0-.734-.19l-14.823,3.03Zm-4.243.859v-34.753l-1.142.239a2.871,2.871,0,0,0-1.6.889,2.384,2.384,0,0,0-.631,1.662v32.942a7.138,7.138,0,0,1,.892-.384,7.366,7.366,0,0,1,.919-.258Zm-3.373-34.514v0Z' transform='translate(-180.001 891.972)' fill='%23fff'/%3E%3C/svg%3E ");
+}
+.service .list ul li a strong {
+   display: block;
+   font-weight: 700;
+}
+.service .list ul li a p {
+   display: block;
+}
+@media screen and (min-width:1025px){
+
+}
+@media screen and (max-width:1320px){
+   .service{ 
+      margin: 50px 0 0 0;
+   }
+   .service .tit p {
+      font-size: 25px;      
+   }
+   .service .list ul li a {
+      padding: 15px 20px 0 120px;
+   }
+   .service .list ul li a::before {
+      width: 45px;
+      height: 48px;
+   }
+}
+@media screen and (max-width:1024px){
+   .service {
+      padding: 120px 0 150px 0;
+   }
+   .service .tit p {
+      font-size: 25px;    
+   }
+   .service .list ul li {
+      border-radius: 15px;
+      width: calc(33.33% - 10.66px);
+   }
+   .service .list ul li a {
+      padding: 50px 0 10px 0;
+      text-align: center;
+      height: auto;
+   }
+   .service .list ul li a::before {
+      left: calc(50% - 20px); /* 50% - 넓이의 절반 : 가운데 정렬 */
+      width: 32px;
+      height: 34px;
+      top: 13px;
+   }
+   .service .list ul li a span {
+      display: none;
+   }
+}
+@media screen and (max-width:768px){
+   .service {
+      margin: 30px 0 0 0;
+      padding: 100px 0 120px 0;
+   }
+   .service .tit p {
+      font-size: 20px;      
+   }
+   .service .list ul li a::before {
+      left: calc(50% - 14px); /* 50% - 넓이의 절반 : 가운데 정렬 */
+      width: 28px;
+      height: 30px;
+      top: 13px;
+   }
+}
+@media screen and (max-width:500px){
+   .service {
+      padding: 60px 0 70px 0;
+   }
+   .service .tit p {
+      font-size: 15px;    
+   }
+   .service .list ul li a::before {
+      left: calc(50% - 14px); /* 50% - 넓이의 절반 : 가운데 정렬 */
+      width: 25px;
+      height: 27px;
+      top: 16px;
    }
 }

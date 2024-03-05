@@ -57,6 +57,9 @@
    line-height: 30px;
    color: #1d1d1d;
 }
+.header .gnb ul.depth2 > li > a[target="_blank"] {
+   font-weight: 700;
+}
 .header .tnb {
    display: flex;
    align-items: flex-start;
