@@ -162,3 +162,341 @@
       margin: 10px 0 0 150px;
    }
 }
+
+/* 연혁 - 회사소개 */
+.cts_history {
+   margin: 30px 0 80px 0;
+}
+/* <div class="year10 left"></div>
+   <div class="year10 right"></div>
+   이렇게 두개가 있는 경우 위 left의 하단 여백과 right의 상단 여백은 중복해서 들어가지않고
+   둘 중에 제일 큰 여백만 들어간다.
+   margin은 위아래 여백이 부딪치는 경우 둘 중에 큰값만 적용 */
+.cts_history .year10 {
+   margin: 50px 0;
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+}
+.cts_history .year10.right {
+   flex-direction: row-reverse;
+}
+.cts_history .year_tit {
+   width: 408px;
+   position: relative; /* p */
+}
+.cts_history .year_tit h2 {
+   font-size: 35px;
+   font-weight: 700;
+   color: #1d1d1d;
+   margin-bottom: 20px;
+}
+.cts_history .year_tit .photo img {
+   border-radius: 15px;
+   height: 100%;
+}
+.cts_history .year_tit p {
+   position: absolute;
+   left: 20px;
+   bottom: 20px;
+   color: #fff;
+   line-height: 1.2;
+}
+.cts_history .year_cnt {
+   width: calc(100% - 517px);
+   position: relative; /* before */
+}
+.cts_history .year_cnt::before {
+   position: absolute;
+   left: 123px;
+   top: 8px;
+   width: 1px;
+   height: calc(100% - 30px);
+   /* top으로 밀어준 만큼 빼고 선을 그리기 위해 그냥 100%만주면 top*/
+   background-color: #ED1C24;
+   content: "";
+}
+.cts_history .right .year_cnt::before {
+   left: auto;
+   right: 123px;
+}
+/* 긴 중간선의 마지막 꼬리를 흰색으로 덧칠 */
+.cts_history .year_cnt .year1_group:last-child dl dd:last-child {
+   position: relative;
+}
+/* .cts_history .year_cnt .year1_group:last-child dl dd:last-child::before {
+   position: absolute;
+   left: -72px;
+   bottom: -20px;
+   width: 1px;
+   height: 100%;
+   background-color: #fff;
+   content: "";
+} */
+/* .cts_history .right .year_cnt .year1_group:last-child dl dd:last-child::before {
+   left: auto;
+   right: -72px;
+} */
+.cts_history .year_cnt .year1_group {
+   margin-bottom: 50px;
+   display: flex;
+   justify-content: space-between;
+}
+/* <div class="year_cnt">
+       <div class="year1_group"></div>
+       <div class="year1_group"></div>   --- last-child로 선택가능 */
+.cts_history .year_cnt .year1_group:last-child {
+   margin-bottom: 0;
+}
+.cts_history .right .year_cnt .year1_group {
+   flex-direction: row-reverse; /* 콘텐츠 순서 변경 */
+}
+.cts_history .year_cnt .year1_group h3 {
+   font-size: 25px;
+   font-weight: 700;
+   line-height: 1;
+   color: #ED1C24;
+}
+.cts_history .year_cnt .year1_group dl {
+   width: calc(100% - 157px);
+}
+.cts_history .year_cnt .year1_group dl dt {
+   float: left;
+   font-size: 18px;
+   font-weight: 700;
+   color: #1d1d1d;
+   /* 뒤에 dd태그는 dt가 없는 것으로 인식 */
+   position: relative; /* before */
+}
+.cts_history .year_cnt .year1_group dl dt::before {
+   position: absolute;
+   left: -37px;
+   top: 8px;
+   width: 7px;
+   height: 7px;
+   border-radius: 100%;
+   background-color: #ED1C24;
+   content: "";
+}
+.cts_history .right .year_cnt .year1_group dl dt {
+   float: right;
+}
+.cts_history .right .year_cnt .year1_group dl dt::before {
+   left: auto;
+   right: -37px;
+}
+.cts_history .year_cnt .year1_group dl dd {
+   margin: 1px 0 15px 43px;
+   /* 왼쪽에 dt가 들어갈 자리를 반드시 margin으로 여백 */
+}
+.cts_history .right .year_cnt .year1_group dl dd {
+   margin: 1px 43px 15px 0;
+   text-align: right;
+}
+/* 만약 dd태그가 두번 역속으로 나오는 경우 두번째 dd의 경우 */
+.cts_history .year_cnt .year1_group dl dd + dd {
+   margin-top: -15px;
+}
+@media screen and (max-width:1320px) {
+   .cts_history .year_tit {
+      width: 350px;
+   }
+   .cts_history .year_tit h2 {
+      font-size: 23px;
+      margin-bottom: 0;
+   }
+   .cts_history .year_cnt {
+      width: auto;
+   }
+   .cts_history .year_cnt::before {
+      left: 96px;
+      height: calc(100% - 33px);
+   }
+   .cts_history .right .year_cnt::before {
+      left: auto;
+      right: 96px;
+   }
+   .cts_history .year_cnt .year1_group {
+      margin-bottom: 35px;
+   }
+   .cts_history .year_cnt .year1_group h3 {
+      font-size: 20px;
+   }
+   .cts_history .year_cnt .year1_group dl {
+      width: calc(100% - 130px);
+   }
+}
+@media screen and (max-width:1024px) {
+   .cts_history .year10 {
+      display: block;
+   }
+   .cts_history .year10.right {
+      flex-direction: row-reverse;
+   }
+   .cts_history .year_tit {
+      width: 408px;
+      position: relative; /* p */
+   }
+   .cts_history .year_tit h2 {
+      font-size: 30px;
+      margin: 0 0 10px 0;
+   }
+   .cts_history .year_tit .photo img {
+      width: 100%;
+      height: 100%;
+   }
+   .cts_history .year_cnt::before {
+      left: 10px;
+      top: 30px;
+      height: calc(100% - 190px);
+   }
+   .cts_history .right .year_cnt::before {
+      left: auto;
+      right: 10px;
+   }
+   .cts_history .year_cnt .year1_group {
+      margin-bottom: 30px;
+      display: block;
+   }
+   .cts_history .right .year_cnt .year1_group {
+      flex-direction: none;
+   }
+   .cts_history .year_cnt .year1_group h3 {
+      font-size: 20px;
+   }
+   .cts_history .year_cnt .year1_group dl {
+      width: 100%;
+   }
+   .cts_history .year_cnt .year1_group dl dt {
+      float: left;
+      font-size: 18px;
+      position: relative; /* before */
+      margin-left: 30px;
+   }
+   .cts_history .year_cnt .year1_group dl dt::before {
+      position: absolute;
+      left: -23px;
+      top: 8px;
+      width: 7px;
+      height: 7px;
+   }
+   .cts_history .right .year_cnt .year1_group dl dt {
+      float: right;
+   }
+   .cts_history .right .year_cnt .year1_group dl dt::before {
+      left: auto;
+      right: 0;
+   }
+   .cts_history .year_cnt .year1_group dl dd {
+      margin: 1px 0 5px 20px;
+      /* 왼쪽에 dt가 들어갈 자리를 반드시 margin으로 여백 */
+   }
+   .cts_history .right .year_cnt .year1_group dl dd {
+      margin: 1px 20px 5px 0;
+      text-align: left;
+   }
+   /* 만약 dd태그가 두번 역속으로 나오는 경우 두번째 dd의 경우 */
+   .cts_history .year_cnt .year1_group dl dd + dd {
+      margin-top: 0;
+   }
+}
+@media screen and (max-width:768px) {
+   .cts_history .year_tit .photo img {
+      width: 319px;
+      height: 150px;
+   }
+   .cts_history .year_cnt .year1_group {
+      margin-bottom: 35px;
+   }
+   .cts_history .year_cnt .year1_group h3 {
+      font-size: 20px;
+   }
+   .cts_history .year_cnt .year1_group dl {
+      width: calc(100% - 130px);
+   }
+   .cts_history .year_cnt .year1_group dl dt::before {
+      width: 5px;
+      height: 5px;
+   }
+}
+
+.cts_ir03 {
+   margin: 80px 0 100px 0;
+}
+.cts_ir03 h2 {
+   font-size: 30px;
+   font-weight: 700;
+   color: #1d1d1d;
+}
+.cts_ir03 p {
+   margin: 10px 0 30px 0;
+}
+.cts_ir03 .table_wrap {
+   overflow-y: auto;
+   /* 모바일에서 table이 다 안보일때 좌우로 스크롤 */
+}
+.cts_ir03 .table_wrap table {
+   width: 100%;
+   border-collapse: collapse;
+   /* table 에서만 적용됨
+      각 th, td 칸에 boder가 들어가 있는데 중복되서 선이 이중으로 보이는걸 병합해줌 */
+   border-top: 3px solid #ED1C24;
+}
+.cts_ir03 .table_wrap table caption {
+   display: none;
+}
+.cts_ir03 .table_wrap table th,
+.cts_ir03 .table_wrap table td {
+   border: 1px solid #ccc;
+}
+.cts_ir03 .table_wrap table th:first-child,
+.cts_ir03 .table_wrap table td:first-child {
+   border-left: 0;
+}
+.cts_ir03 .table_wrap table th:last-child,
+.cts_ir03 .table_wrap table td:last-child {
+   border-right: 0;
+}
+.cts_ir03 .table_wrap table tbody th,
+.cts_ir03 .table_wrap table tbody td {
+   padding: 10px 40px;
+}
+.cts_ir03 .table_wrap table thead th,
+.cts_ir03 .table_wrap table thead td {
+   background-color: #f4f4f4;
+   font-size: 20px;
+   font-weight: 700;
+   padding: 20px 40px;
+}
+.cts_ir03 .table_wrap table td {
+   text-align: right;
+}
+.cts_ir03 .table_wrap table th {
+   text-align: right;
+}
+.cts_ir03 .table_wrap table th:first-child {
+   text-align: left;
+}
+@media screen and (max-width:768px) {
+   .cts_ir03 {
+      margin: 30px 0 50px 0;
+   }
+   .cts_ir03 h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #1d1d1d;
+   }
+   .cts_ir03 p {
+      margin: 0 0 15px 0;
+   }
+   .cts_ir03 .table_wrap table tbody th,
+   .cts_ir03 .table_wrap table tbody td {
+      padding: 7px 20px;
+}
+   .cts_ir03 .table_wrap table thead th,
+   .cts_ir03 .table_wrap table thead td {
+      font-size: 15px;
+      font-weight: 700;
+      padding: 10px 20px;
+}
+}
