@@ -602,7 +602,6 @@
       height: 70px;
       padding: 22px 0;
       top: 380px;
-      overflow-x: auto;
    }
 }
 @media screen and (max-width:1024px) {
@@ -623,6 +622,7 @@
       padding: 19px 0;
       top: 340px;
       overflow-x: auto;
+      overflow-y: hidden;
    }
    .lnb ul {
       justify-content: flex-start;
