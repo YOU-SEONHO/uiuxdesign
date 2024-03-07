@@ -788,6 +788,7 @@
 .cts_biz05 .join_group .info .info_box {
     border: 1px solid #ccc;
     border-radius: 20px;
+    margin-bottom: 50px;
 }
 .cts_biz05 .join_group .info .info_box > div {
     height: 90px;
@@ -823,4 +824,60 @@
 .cts_biz05 .join_group .info .info_box .user_id input,
 .cts_biz05 .join_group .info .info_box .user_pw input {
     width: calc(100% - 150px);
+}
+.cts_biz05 .join_group .info .info_box input[type="text"],
+.cts_biz05 .join_group .info .info_box input[type="password"] {
+    font-size: 25px;
+    font-weight: 700;
+    color: #1d1d1d;
+    border: 0;
+    outline: 0;
+}
+.cts_biz05 .join_group .info .info_box input[type="text"]::placeholder,
+.cts_biz05 .join_group .info .info_box input[type="password"]::placeholder {
+    font-weight: 400;
+    color: #aaa;
+}
+.cts_biz05 .join_group .info .info_box .user_mail input {
+    width: calc(100% - 292px);
+}
+.cts_biz05 .join_group .info .info_box .user_mail select {
+    font-size: 25px;
+    width: 150px;
+    border: 0;
+    outline: 0;
+}
+.cts_biz05 .join_group .info .info_box .user_gender {
+    justify-content: center;/* 좌우에 가운데 */
+}
+.cts_biz05 .join_group .info .info_box .user_gender input {
+    display: none; /* 숨김 */
+}
+.cts_biz05 .join_group .info .info_box .user_gender label {
+    width: calc(50% - 38px);
+    margin: 0 5px;
+    line-height: 48px;
+    border: 1px solid #ccc;
+    border-radius: 14px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #666;
+    text-align: center;
+    cursor: pointer;
+}
+.cts_biz05 .join_group .info .info_box .user_gender input:checked + label {
+    border: 2px solid #F51919;
+    color: #F51919;
+}
+.cts_biz05 .join_group .info input[type="submit"] {
+    width: calc(100% - 80px);
+    margin: 0 40px;
+    line-height: 80px;
+    background-color: #F51919;
+    border-radius: 15px;
+    border: 0;
+    font-size: 25px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;/* 오버시 마우스 포인터 손가락 */
 }
