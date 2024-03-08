@@ -27,6 +27,7 @@ body {
     display: flex;
     justify-content: space-between;
     z-index: 100;
+    position: relative;
 }
 .header .gnb .depth1 {
     display: flex;
@@ -35,13 +36,17 @@ body {
     width: 150px;
     text-align: center;
 }
-.header .gnb .depth1 > li a {
+.header .gnb .depth1 > li > a {
     line-height: 100px;
     display: block;
     font-size: 20px;
     font-weight: 700;
 }
-.header .gnb .depth1 > li a:hover {
+.header .gnb .depth1 > li.on > a {
+    background-color: #0066ad;
+    color: #fff;
+}
+.header .gnb .depth1 > li > a:hover {
     background-color: #0066ad;
     color: #fff;
 }
