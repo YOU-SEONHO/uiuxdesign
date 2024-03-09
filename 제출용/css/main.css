@@ -1,3 +1,4 @@
+@charset "utf-8";
 * {
     margin: 0;
     padding: 0;
@@ -21,7 +22,7 @@ body {
 .wrapper {
     width: 1200px;
     margin: 0 auto;
-}
+} 
 .header {
     height: 100px;
     display: flex;
@@ -90,28 +91,21 @@ body {
     z-index: 2;
     opacity: 1;
 }
-.containner {
+.container {
     margin-top: 30px;
     display: flex;
     height: 200px;
     overflow: hidden;
 }
-.containner .board {
+.container .board {
     width: 400px;
     height: 170px;
-}
-.containner .banner {
-    margin: 0 30px;
-}
-.containner .board {
-    width: 400px;
-    height: 270px;
     position: relative;
 }
-.containner .board .list {
+.container .board .list {
     display: flex;
 }
-.containner .board .list > li button {
+.container .board .list > li button {
     border: 0;
     background-color: #ededed;
     font-size: 20px;
@@ -119,36 +113,36 @@ body {
     padding: 10px 20px;
     cursor: pointer;
 }
-.containner .board .list > li.on button {
+.container .board .list > li.on button {
     background-color: #0066ad;
     color: #fff;
 }
-.containner .board .list > li .detail {
+.container .board .list > li .detail {
     display: none;
 }
-.containner .board .list > li.on .detail {
+.container .board .list > li.on .detail {
     display: block;
     position: absolute;
     left: 0;
     top: 50px;
     width: 100%;
 }
-.containner .board .notice ul li a {
+.container .board .notice ul li a {
     display: flex;
     justify-content: space-between;
     line-height: 28px;
 }
-.containner .board .notice ul li a span {
+.container .board .notice ul li a span {
     color: #666666;
 }
-.containner .board .gellery ul {
+.container .board .gallery ul {
     display: flex;
     justify-content: space-around;
 }
-.containner .board .gellery ul li a:hover img {
+.container .board .gallery ul li a:hover img {
     opacity: 0.5;
 }
-.containner .banner {
+.container .banner {
     margin: 0 30px;
 }
 .footer {
@@ -171,13 +165,13 @@ body {
 .layer_popup {
     position: absolute;
     left: 100px;
-    top: 100px;
+    top: 200px;
     width: 500px;
     background-color: #0066ad;
     color: #fff;
-    transform: translate(-50%, -50%);
     padding: 40px;
     display: none;
+    z-index: 3;
 }
 .layer_popup h2 {
     font-size: 25px;
