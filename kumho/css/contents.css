@@ -1564,3 +1564,89 @@
       height: 15px;
    }
 }
+
+.container .inner {
+   display: flex;
+   justify-content: space-between;
+   margin: 80px 0 50px 0;
+}
+.container .map_info h2 {
+   font-size: 30px;
+   font-weight: 700;
+   margin-bottom: 85px;
+}
+.container .map_info .info_01 h3 {
+   font-size: 23px;
+   font-weight: 700;
+   margin-bottom: 20px;
+}
+.container .map_info .info_01 p {
+   margin: 0 0 10px 48px;
+}
+.container .map_info .info_01 .adress span {
+   margin-left: 40px;
+}
+.container .map_info .info_01 strong {
+   font-size: 20px;
+   font-weight: 700;
+   margin-right: 40px;
+}
+.container .map_info .info_01 span {
+   margin-left: 120px;
+}
+.container .map {
+   margin-top: 85px;
+}
+
+.container .map_info .info_02 h3 {
+   font-size: 23px;
+   font-weight: 700;
+   margin: 30px 0 20px 0;
+}
+.container .map_info .info_02 p {
+   margin: 0 0 23px 48px;
+}
+.container .map_info .info_02 strong {
+   font-size: 20px;
+   font-weight: 700;
+   margin-right: 40px;
+}
+.container .map_info .info_02 span {
+   border: 1px solid #0055FF;
+   background-color: #0055FF;
+   border-radius: 5px;
+   color: #fff;
+   margin-right: 20px;
+   padding: 5px 20px;
+}
+.container .map_info .info_02 em {
+   margin-left: 200px;
+}
+.container .map_info .info_02 .bus span {
+   border: 1px solid #3B9500;
+   background-color: #3B9500;
+   color: #fff;
+   margin-left: 80px;
+}
+
+.container .link {
+   margin: 50px 100px;
+   border: 1px solid #f4f4f4;
+   background-color: #f4f4f4;
+   padding: 30px 0 30px 25px;
+}
+.container .link h2 {
+   font-size: 20px;
+   font-weight: 700;
+   margin-bottom: 10px
+}
+.container .link a {
+   display: block;
+   border: 1px solid #ED1C24;
+   border-radius: 15px;
+   width: 230px;
+   line-height: 33px;
+   padding: 5px 27px;
+   margin-top: 30px;
+   color: #ED1C24;
+}
