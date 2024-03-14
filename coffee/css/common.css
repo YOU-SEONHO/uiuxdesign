@@ -75,12 +75,6 @@ html, body {
            디바이스의 넓이에 맞춰서 꽊차게 나와야 하기 때문에
            그 안쪽으로 좌우 여백이 20px씩 들어가게 함 */
         margin: 0 20px;  /* 가운데 정렬 */
-        font-size: 20px;
-    }
-}
-@media screen and (max-width:1320px){
-    html, body {
-        font-size: 18px; /* 크기 */ 
     }
 } /* media */
 @media screen and (max-width:1024px){

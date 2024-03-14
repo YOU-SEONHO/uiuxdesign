@@ -57,6 +57,7 @@ header .tnb1 ul li,
 header .tnb2 ul li {
    margin-right: 38px;
    position: relative; /* after */
+   font-size: 1.2rem;
 }
 header .tnb1 ul li:last-child,
 header .tnb2 ul li:last-child {
@@ -84,26 +85,25 @@ header .gnb_close {
 header .gnb .depth1 {
    display: flex;
    text-align: center;
-   margin-left: 400px;
 }
 header .gnb .depth1 > li {
-   width: 14.7%;
+   width: 16.6%;
 }
 header .gnb .depth1 > li a {
    display: block;
    line-height: 70px;
-   font-size: 1.25rem;
+   font-size: 1.333rem;
    font-weight: 700;
    white-space: nowrap; /* 무조건 한줄 */
 }
 header .gnb .depth2 {
-   padding: 15px;
-   /* 오버해서 나타나는 여백은 padding으로 줘야 아웃되지 않음 */
+   padding: 15px 0 0 0;
+   /* 오버해서 나타나는 메뉴는 padding으로 줘야 out되지 않음 */
    display: none;
 }
 header .gnb .depth2 > li a {
    display: block;
-   font-size: 1.125rem;
+   font-size: 1rem;
    font-weight: 300;
    line-height: 35px;
    white-space: nowrap; /* 무조건 한줄 */
@@ -116,10 +116,7 @@ header .gnb .depth2 > li a {
       margin-right: 0;
    }
 }
-@media screen and (max-width:1320px){
-
-}
-@media screen and (min-width:1025px){ /* 1025 이상 */
+@media screen and (min-width:1025px){ /* 1025px 이상 */
    /* 메뉴 오버 */
    header.menu_over::before {
       position: absolute; /* header (fixed) */
@@ -219,6 +216,17 @@ header .gnb .depth2 > li a {
    header .tnb2 {
       display: none;
    }
+   header .tnb2 {
+      position: absolute;
+      left: 20px;
+      top: 55%;
+      z-index: 10;
+      transform: translate(0, -45%);
+      margin: 0;
+   }
+   header .tnb2 ul li::after {
+      display: none;
+  }
    header .logo {
       left: 20px;
       top: 15px;
@@ -239,20 +247,19 @@ header .gnb .depth2 > li a {
       background-color: #ea983c;
    }
    header .gnb .depth1 {
-      margin-top: 100px;
+      margin-top: 110px;
       height: calc(100% - 100px);
       overflow-x: hidden; /* 좌우는 스크롤 금지 */
       overflow-y: auto; /* 위아래는 스크롤 */
       flex-direction: column;
       /* display:flex를 유지하면서 아래로 정렬되도록 */
-      margin-left: 0;
    }
    header .gnb .depth1 > li {
       width: auto;
    }
    header .gnb .depth1 > li > a {
-      font-size: 18px;
-      line-height: 34px;
+      font-size: 1.2rem;
+      line-height: 2.28rem;
    }
    header .gnb .depth1 > li > a::after {
       position: absolute;
@@ -272,11 +279,11 @@ header .gnb .depth2 > li a {
       border-radius: 0 100px 100px 0;
       background-color: #92573a;
       margin-right: 50px;
-      padding-left: 63px;
+      padding: 10px 0 10px 63px;
    }
    header .gnb .depth2 > li > a {
-      font-size: 13px;
-      line-height: 25px;
+      font-size: 1rem;
+      line-height: 1.8rem;
       color: #fff;
    }
    header .gnb .depth2 > li.on > a {
@@ -290,7 +297,7 @@ header .gnb .depth2 > li a {
       position: absolute;
       right: 0;
       top: 0;
-      width: 50px;
+      width: 100px;
       height: 100px;
       font-size: 0;
       line-height: 0;
@@ -303,6 +310,7 @@ header .gnb .depth2 > li a {
    }
    header .gnb .gnb_close {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='21px' height='22px'%3E%3Cpath fill-rule='evenodd' fill='rgb(146, 87, 58)' d='M20.565,19.870 L19.151,21.284 L10.312,12.445 L1.475,21.286 L0.061,19.872 L8.898,11.031 L0.059,2.192 L1.473,0.778 L10.312,9.617 L19.149,0.776 L20.563,2.190 L11.726,11.031 L20.565,19.870 Z'/%3E%3C/svg%3E");
+      background-size: 22px auto;
    }
    /* 메뉴가 열렸을때 */
    header.menu_open .gnb .gnb_wrap {
@@ -313,20 +321,9 @@ header .gnb .depth2 > li a {
    }
    header.menu_open .gnb_close {
       display: block;
-      background-size: 28px auto;
    }
    header.menu_open .tnb2 {
       display: block;
-   }
-   header.menu_open .tnb2 {
-      position: absolute;
-      left: 20px;
-      top: 50%;
-      z-index: 10;
-      transform: translate(0, -50%);
-   }
-   header.menu_open .tnb2 ul li {
-      margin: 0 15px 16px 0;
    }
 }
 @media screen and (max-width:768px) {
@@ -342,18 +339,16 @@ header .gnb .depth2 > li a {
    }
    header .gnb .gnb_open,
    header .gnb .gnb_close {
-       width: 60px;
+       width: 50px;
        height: 50px;
-       background-size: 25px;
+       background-size: 18px;
    }
    header .gnb .depth1 {
-      margin-top: 50px;
+      margin-top: 55px;
       height: calc(100% - 50px);
    }
-   header .tnb2 {
-      font-size: 13px;
-   }
    header .tnb2 ul li {
-      padding: 5px 10;
+   margin-right: 15px;
+   font-size: 1rem;
    }
 }
