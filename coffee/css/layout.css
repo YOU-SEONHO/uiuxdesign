@@ -1,0 +1,359 @@
+/***********************************************************
+   파일명 : layout.css
+   작성자 : 유선호
+   작성일 : 2024.02.28
+   속  성 : 모든 페이지의 레이아웃 요소 (header/footer/서브레이아웃)
+            메뉴명, sub_visual 이미지스타일, 탭메뉴
+************************************************************/
+
+header {
+   position: fixed; /* 상단에 고정 */
+   left: 0;
+   top: 0;
+   z-index: 100;
+   width: 100%;
+   background-color: #f1f1de;
+   border-bottom: 1px solid rgba(146, 87, 58, 0.3);
+   transition: transform 0.5s; /* transform 0.5s 해당속성만 애니메이션 */
+}
+header .head_top {
+   height: 80px;
+}
+header .head_sub {
+   height: 70px;
+}
+header .logo {
+   position: absolute; /* header */
+   left: 50%;
+   top: 23px;
+   transform: translate(-50%, 0);
+   /* 가운데 정렬을 absolute로 해야하고 넓이가 변경될 수도 있음
+      left: calc(50% - 넓이반) 으로 가운데정렬을 하면 넓이가 변경되면 계속 값을 변경해야함 
+      넓이가 변경되더라도 계속 가운데
+      left: 50% - 나의 정렬의 기준에서 가운데
+      transform: translate(-50%, 0) - 나 자신 사이즈의 절반을 왼쪽으로 이동 */
+}
+header .logo a {
+   display: block;
+   width: 80px;
+   height: 56px;
+   background: url(../images/common/logo.png) no-repeat center center / contain;
+   font-size: 0;
+   line-height: 0;
+}
+header .tnb1 {
+   float: left;
+   margin: 19px 0 0 237px;
+}
+header .tnb2 {
+   float: right;
+   margin: 19px 237px 0 0;
+}
+header .tnb1 ul,
+header .tnb2 ul {
+   display: flex;
+}
+header .tnb1 ul li,
+header .tnb2 ul li {
+   margin-right: 38px;
+   position: relative; /* after */
+}
+header .tnb1 ul li:last-child,
+header .tnb2 ul li:last-child {
+   margin-right: 0;
+}
+header .tnb1 ul li::after,
+header .tnb2 ul li::after {
+   position: absolute; /* li */
+   right: -20px;
+   top: 7px;
+   width: 3px;
+   height: 3px;
+   border-radius: 100%;
+   background-color: #92573a;
+   content: "";
+}
+header .tnb1 ul li:last-child:after,
+header .tnb2 ul li:last-child:after {
+   display: none;
+}
+header .gnb_open,
+header .gnb_close {
+   display: none;
+}
+header .gnb .depth1 {
+   display: flex;
+   text-align: center;
+   margin-left: 400px;
+}
+header .gnb .depth1 > li {
+   width: 14.7%;
+}
+header .gnb .depth1 > li a {
+   display: block;
+   line-height: 70px;
+   font-size: 1.25rem;
+   font-weight: 700;
+   white-space: nowrap; /* 무조건 한줄 */
+}
+header .gnb .depth2 {
+   padding: 15px;
+   /* 오버해서 나타나는 여백은 padding으로 줘야 아웃되지 않음 */
+   display: none;
+}
+header .gnb .depth2 > li a {
+   display: block;
+   font-size: 1.125rem;
+   font-weight: 300;
+   line-height: 35px;
+   white-space: nowrap; /* 무조건 한줄 */
+}
+@media screen and (max-width:1640px){
+   header .tnb1 {
+      margin-left: 0;
+   }
+   header .tnb2 {
+      margin-right: 0;
+   }
+}
+@media screen and (max-width:1320px){
+
+}
+@media screen and (min-width:1025px){ /* 1025 이상 */
+   /* 메뉴 오버 */
+   header.menu_over::before {
+      position: absolute; /* header (fixed) */
+      left: 0;
+      top: 0;
+      z-index: -1;
+      width: 100%;
+      height: 404px;
+      background-color: #f1f1de;
+      content: ""; /* before, after한테 줌 */
+   }
+   header.menu_over::after {
+      position: absolute;
+      left: 0;
+      top: 150px;
+      width: 100%;
+      height: 1px;
+      background-color: rgba(146, 87, 58, 0.3);
+      content: "";
+   }
+   header.menu_over .gnb .depth2 {
+      display: block;
+   }
+   header .gnb .depth1 > li.on > a {
+      color: #e80a4d;
+   }
+   header .gnb .depth1 > li.on > a span {
+      position: relative;
+   }
+   header .gnb .depth1 > li.on > a span::after {
+      position: absolute;
+      left: -5px;
+      bottom: -26px;
+      z-index: 1;
+      width: calc(100% + 10px);
+      height: 3px;
+      background-color: #e80a4d;
+      content: "";
+   }
+   header .gnb .depth2 > li > a:hover {
+      color: #e80a4d;
+      font-weight: 700;
+   }
+   /* 메뉴 고정 */
+   header.fixed {
+      height: 100px;
+   }
+   header.fixed .head_top {
+      height: auto;
+   }
+   header.fixed .head_sub {
+      height: auto;
+   }
+   header.fixed .tnb1,
+   header.fixed .tnb2 {
+      display: none;
+   }
+   header.fixed .wrapper {
+      display: flex;
+      justify-content: space-between;
+      width: auto;
+   }
+   header.fixed .logo {
+      left: 20px;
+      top: 20px;
+      transform: translate(0, 0);
+   }
+   header.fixed .gnb .depth1 {
+      justify-content: flex-end;
+      margin-left: 100px; /* 왼쪽에 로고가 들어갈 만큼 여백 */
+   }
+   header.fixed .gnb .depth1 > li {
+      width: 225px;
+   }
+   header.fixed .gnb .depth1 > li > a {
+      line-height: 100px;
+      font-size: 1.1rem;
+   }
+   header.fixed .gnb .depth2 > li > a {
+      font-size: 1rem;
+   }
+   header.fixed.menu_over::after {
+      top: 100px;
+   }
+}
+@media screen and (max-width:1024px){
+   header {
+      height: 100px;
+   }
+   header .head_top {
+      height: auto;
+   }
+   header .head_sub {
+      height: auto;
+   }
+   header .tnb1,
+   header .tnb2 {
+      display: none;
+   }
+   header .logo {
+      left: 20px;
+      top: 15px;
+      transform: translate(0, 0);
+      /* 가운데 정렬을 absolute로 해야하고 넓이가 변경될 수도 있음
+         left: calc(50% - 넓이반) 으로 가운데정렬을 하면 넓이가 변경되면 계속 값을 변경해야함 
+         넓이가 변경되더라도 계속 가운데
+         left: 50% - 나의 정렬의 기준에서 가운데
+         transform: translate(-50%, 0) - 나 자신 사이즈의 절반을 왼쪽으로 이동 */
+   }
+   header .gnb .gnb_wrap {
+      display: none;
+      position: absolute; /* header */
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: #ea983c;
+   }
+   header .gnb .depth1 {
+      margin-top: 100px;
+      height: calc(100% - 100px);
+      overflow-x: hidden; /* 좌우는 스크롤 금지 */
+      overflow-y: auto; /* 위아래는 스크롤 */
+      flex-direction: column;
+      /* display:flex를 유지하면서 아래로 정렬되도록 */
+      margin-left: 0;
+   }
+   header .gnb .depth1 > li {
+      width: auto;
+   }
+   header .gnb .depth1 > li > a {
+      font-size: 18px;
+      line-height: 34px;
+   }
+   header .gnb .depth1 > li > a::after {
+      position: absolute;
+      left: 0;
+      right: 0;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      content: "";
+   }
+   header .gnb .depth1 > li.on > a {
+      color: #e80a4d;
+   }
+   header .gnb .on .depth2 {
+      display: block;
+      border: 1px solid #92573a;
+      border-radius: 0 100px 100px 0;
+      background-color: #92573a;
+      margin-right: 50px;
+      padding-left: 63px;
+   }
+   header .gnb .depth2 > li > a {
+      font-size: 13px;
+      line-height: 25px;
+      color: #fff;
+   }
+   header .gnb .depth2 > li.on > a {
+      font-weight: 700;
+   }
+   header .gnb .gnb_open {
+      display: block;
+   }
+   header .gnb .gnb_open,
+   header .gnb .gnb_close {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 50px;
+      height: 100px;
+      font-size: 0;
+      line-height: 0;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+   }
+   header .gnb .gnb_open {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='27px' height='10px'%3E%3Cpath fill-rule='evenodd' fill='rgb(146, 87, 58)' d='M3.1000,9.1000 L3.1000,7.1000 L26.1000,7.1000 L26.1000,9.1000 L3.1000,9.1000 ZM-0.000,-0.000 L26.1000,-0.000 L26.1000,1.1000 L-0.000,1.1000 L-0.000,-0.000 Z'/%3E%3C/svg%3E");
+   }
+   header .gnb .gnb_close {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='21px' height='22px'%3E%3Cpath fill-rule='evenodd' fill='rgb(146, 87, 58)' d='M20.565,19.870 L19.151,21.284 L10.312,12.445 L1.475,21.286 L0.061,19.872 L8.898,11.031 L0.059,2.192 L1.473,0.778 L10.312,9.617 L19.149,0.776 L20.563,2.190 L11.726,11.031 L20.565,19.870 Z'/%3E%3C/svg%3E");
+   }
+   /* 메뉴가 열렸을때 */
+   header.menu_open .gnb .gnb_wrap {
+      display: block;
+   }
+   header.menu_open .gnb_open {
+      display: none;
+   }
+   header.menu_open .gnb_close {
+      display: block;
+      background-size: 28px auto;
+   }
+   header.menu_open .tnb2 {
+      display: block;
+   }
+   header.menu_open .tnb2 {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      z-index: 10;
+      transform: translate(0, -50%);
+   }
+   header.menu_open .tnb2 ul li {
+      margin: 0 15px 16px 0;
+   }
+}
+@media screen and (max-width:768px) {
+   header {
+      height: 50px;
+   }
+   header .logo {
+      top: 12px;
+   }
+   header .logo a {
+      width: 42px;
+      height: 29px;
+   }
+   header .gnb .gnb_open,
+   header .gnb .gnb_close {
+       width: 60px;
+       height: 50px;
+       background-size: 25px;
+   }
+   header .gnb .depth1 {
+      margin-top: 50px;
+      height: calc(100% - 50px);
+   }
+   header .tnb2 {
+      font-size: 13px;
+   }
+   header .tnb2 ul li {
+      padding: 5px 10;
+   }
+}
