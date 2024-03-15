@@ -19,7 +19,7 @@
              스크롤을 내린 상태에서 보일때 : fixed 클래스 추가
              pc버전 메뉴를 오버했을때 : menu_over
              모바일에서 메뉴를 클릭했을때 : menu_open -->
-        <header class="menu_open">
+        <header>
             <div class="wrapper">
                 <div class="head_top">
                     <h1 class="logo"><a href="index.html">폴바셋</a></h1>
@@ -50,9 +50,9 @@
                                         <li><a href="#n">CSR</a></li>
                                     </ul>
                                 </li>
-                                <li class="on"><a href="#n"><span>MENU</span></a>
+                                <li><a href="#n"><span>MENU</span></a>
                                     <ul class="depth2">
-                                        <li class="on"><a href="#n">NEW</a></li>
+                                        <li><a href="#n">NEW</a></li>
                                         <li><a href="#n">COFFEE</a></li>
                                         <li><a href="#n">BEVERAGE</a></li>
                                         <li><a href="#n">ICE-CREAM</a></li>
@@ -111,8 +111,125 @@
                     </ul>
                 </div>
             </section>
-            <section class="product"></section>
-            <section class="brend"></section>
+            <section class="product">
+                <div class="wrapper">
+                    <h2>MD's PICK</h2>
+                    <div class="list">
+                        <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                            <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <span class="photo"><img src="images/main/product01.png" alt="음료 사진"></span>
+                                        <strong class="tit">아이스 카페 오트</strong>
+                                        <span class="name">Iced Cafe Oat</span>
+                                        <span class="info">
+                                            <span><em>제공량(ml)</em>  360</span>
+                                            <span><em>열량(kcal)</em>  145</span>
+                                        </span>
+                                    </a>
+                                </li> <!-- 팝업 요소들 (div로 해도 상관없음) -->
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <span class="photo"><img src="images/main/product02.png" alt="음료 사진"></span>
+                                        <strong class="tit">제주말차 한라봉 스무디</strong>
+                                        <span class="name">Jeju Malcha Hallabong Smoothie</span>
+                                        <span class="info">
+                                            <span><em>제공량(ml)</em>  360</span>
+                                            <span><em>열량(kcal)</em>  270</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <span class="photo"><img src="images/main/product03.png" alt="음료 사진"></span>
+                                        <strong class="tit">제주말차 콜드브루 크림 라떼</strong>
+                                        <span class="name">Jeju Malcha Cold Brew Cream Latte</span>
+                                        <span class="info">
+                                            <span><em>제공량(ml)</em>  360</span>
+                                            <span><em>열량(kcal)</em>  230</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <span class="photo"><img src="images/main/product04.png" alt="음료 사진"></span>
+                                        <strong class="tit">벌집꿀 아이스크림(컵)</strong>
+                                        <span class="name">Honeycomb Ice Cream</span>
+                                        <span class="info">
+                                            <span><em>제공량(ml)</em>  150</span>
+                                            <span><em>열량(kcal)</em>  315</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <span class="photo"><img src="images/main/product05.png" alt="음료 사진"></span>
+                                        <strong class="tit">아이스 라벤더 카페 브레베</strong>
+                                        <span class="name">Iced Lavender Cafe Breve</span>
+                                        <span class="info">
+                                            <span><em>제공량(ml)</em>  355</span>
+                                            <span><em>열량(kcal)</em>  335</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <span class="photo"><img src="images/main/product06.png" alt="음료 사진"></span>
+                                        <strong class="tit">콜드 브루 플로트</strong>
+                                        <span class="name">Cold Brew Float</span>
+                                        <span class="info">
+                                            <span><em>제공량(ml)</em>  355</span>
+                                            <span><em>열량(kcal)</em>  225</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <span class="photo"><img src="images/main/product07.png" alt="음료 사진"></span>
+                                        <strong class="tit">제주 쑥떡 크림 프라푸치노</strong>
+                                        <span class="name">Jeju Mugwort Cream Frappuccino</span>
+                                        <span class="info">
+                                            <span><em>제공량(ml)</em>  473</span>
+                                            <span><em>열량(kcal)</em>  460</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <span class="photo"><img src="images/main/product08.png" alt="음료 사진"></span>
+                                        <strong class="tit">딸기 콜드폼 초콜릿</strong>
+                                        <span class="name">Strawberry Cold Foam Chocolate</span>
+                                        <span class="info">
+                                            <span><em>제공량(ml)</em>  355</span>
+                                            <span><em>열량(kcal)</em>  255</span>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="brand">
+                <div class="wrapper">
+                    <div class="photo"><img src="images/main/brand_bg.png" alt="커피사진"></div>
+                    <div class="inner">
+                        <h2>SIGNATURE<br>BLEND</h2>
+                        <p>Paul Bassett 국내 로스팅 팩토리에서 로스팅한 시그니처 블렌드와 다양한 산지의
+                        싱글 오리진 스페셜티 커피빈들은 엄격한 품질 관리를 위해 철저히 로스팅 일자를
+                        관리하며, 2주일 단위의 교체 주기에 따라 신선한 원두를 지속적으로 판매할 수 있도록
+                        합니다.</p>
+                        <div class="list">
+                            <ul>
+                                <li><img src="images/main/brand_ico01.png" alt="커피이미지"></li>
+                                <li><img src="images/main/brand_ico02.png" alt="커피이미지"></li>
+                                <li><img src="images/main/brand_ico03.png" alt="커피이미지"></li>
+                                <li><img src="images/main/brand_ico04.png" alt="커피이미지"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>   
             <section class="social"></section>
         </div>
         <footer></footer>
