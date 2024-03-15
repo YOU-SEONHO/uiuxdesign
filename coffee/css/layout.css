@@ -265,7 +265,7 @@ header .gnb .depth2 > li a {
    header .gnb .depth1 >li > a::after {
       position: absolute;
       top: 2px;
-      right: 195px;
+      right: 291px;
       width: 20px;
       height: 20px;
       background-repeat: no-repeat;
@@ -360,6 +360,9 @@ header .gnb .depth2 > li a {
    header .gnb .depth1 {
       margin-top: 55px;
       height: calc(100% - 50px);
+   }
+   header .gnb .depth1 >li > a::after {
+      right: 62px;
    }
    header .tnb2 ul li {
    margin-right: 15px;
