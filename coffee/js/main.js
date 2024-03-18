@@ -37,7 +37,7 @@ $(document).ready(function(){
             spaceBetween: 17,
          },
          1280: {    /* 1280px 이상일때 적용 */
-            slidesPerView: 4,
+            slidesPerView: 5,
             spaceBetween: 17,
          },
       },

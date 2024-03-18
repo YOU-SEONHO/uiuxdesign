@@ -3,30 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="images/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!-- swiper 라이브러리 -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
-    <!-- aos룰 작동시키기 위한 css와 js -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- aos룰 작동시키기 위한 css와 js -->
+    <link rel="stylesheet" href="css/main.css">
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/common.js"></script>
-    <title>폴바셋</title>
+    <title>Paul Bassett</title>
 </head>
 <body>
-    <div id="wrap" class="main">
-        <!-- 스크롤을 아래로 내리면 숨겨짐, 스크롤을 위로 올리면 보임
-             스크롤을 아래로 내렸을때 header의 높이가 변함
-             스크롤을 내린 상태에서 보일때 : fixed 클래스 추가
-             pc버전 메뉴를 오버했을때 : menu_over
-             모바일에서 메뉴를 클릭했을때 : menu_open -->
+    <div id="wrap">
+        <!-- 스크롤을 아래로 내리면 숨겨짐, 스크롤을 위로 올리면 보임 
+            스크롤을 아래로 내렸을때 header의 높이가 변함. 
+            스크롤을 내린 상태에서 보일 때 : fixed 클래스 추가 
+            PC버전 메뉴를 오버했을때 : menu_over
+            모바일에서 메뉴를 클릭했을때 : menu_open
+        -->
         <header>
             <div class="wrapper">
                 <div class="head_top">
-                    <h1 class="logo"><a href="index.html">폴바셋</a></h1>
+                    <h1 class="logo"><a href="index.html">풀바셋</a></h1>
                     <div class="tnb1">
                         <ul>
                             <li><a href="#n">신규입점제의</a></li>
@@ -47,14 +45,16 @@
                         <div class="gnb_wrap">
                             <ul class="depth1">
                                 <!-- 메뉴에 마우스 오버 -->
-                                <li><a href="#n"><span>ABOUT US</span></a>
+                                <li>
+                                    <a href="#n"><span>ABOUT US</span></a>
                                     <ul class="depth2">
                                         <li><a href="#n">Brand</a></li>
                                         <li><a href="#n">회사소개</a></li>
                                         <li><a href="#n">CSR</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#n"><span>MENU</span></a>
+                                <li>
+                                    <a href="#n"><span>MENU</span></a>
                                     <ul class="depth2">
                                         <li><a href="#n">NEW</a></li>
                                         <li><a href="#n">COFFEE</a></li>
@@ -64,12 +64,14 @@
                                         <li><a href="#n">PRODUCT</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#n"><span>STORE</span></a>
+                                <li>
+                                    <a href="#n"><span>STORE</span></a>
                                     <ul class="depth2">
                                         <li><a href="#n">매장찾기</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#n"><span>SOCIETY</span></a>
+                                <li>
+                                    <a href="#n"><span>SOCIETY</span></a>
                                     <ul class="depth2">
                                         <li><a href="#n">Paul Bassett Society</a></li>
                                         <li><a href="#n">회원 등급 혜택</a></li>
@@ -78,13 +80,15 @@
                                         <li><a href="#n">제휴혜택 안내</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#n"><span>WHAT'S NEW</span></a>
+                                <li>
+                                    <a href="#n"><span>WHAT'S NEW</span></a>
                                     <ul class="depth2">
                                         <li><a href="#n">Event / News</a></li>
                                         <li><a href="#n">Notice</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#n"><span>E-SHOP</span></a>
+                                <li>
+                                    <a href="#n"><span>E-SHOP</span></a>
                                     <ul class="depth2">
                                         <li><a href="#n">E-SHOP 소개</a></li>
                                     </ul>
@@ -98,18 +102,24 @@
         </header>
         <div class="container">
             <section class="visual">
-                <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
-                    <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소-->
+                <div class="swiper"> 
+                    <ul class="swiper-wrapper"> 
                         <li class="swiper-slide">
                             <a href="#n">
-                                <img src="images/main/visual01_pc.png" alt="QUALITY NEVER COMPROMISED" class="popup_pc">
-                                <img src="images/main/visual01_m.png" alt="QUALITY NEVER COMPROMISED" class="popup_m">
+                                <img src="images/main/visual01_pc.png" alt="Quality Naver Compromised" class="popup_pc">
+                                <img src="images/main/visual01_m.png" alt="Quality Naver Compromised" class="popup_m">
                             </a>
-                        </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
+                        </li>
                         <li class="swiper-slide">
                             <a href="#n">
-                                <img src="images/main/visual02_pc.png" alt="SPRING FLAVORS" class="popup_pc">
-                                <img src="images/main/visual02_m.png" alt="SPRING FLAVORS" class="popup_m">
+                                <img src="images/main/visual02_pc.png" alt="Paul Basett Strawberries" class="popup_pc">
+                                <img src="images/main/visual02_m.png" alt="Paul Basett Strawberries" class="popup_m">
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="#n">
+                                <img src="images/main/visual03_pc.png" alt="Iced Shine Darjeeling" class="popup_pc">
+                                <img src="images/main/visual03_m.png" alt="Iced Shine Darjeeling" class="popup_m">
                             </a>
                         </li>
                     </ul>
@@ -117,35 +127,24 @@
             </section>
             <section class="product">
                 <div class="wrapper">
-                    <h2 data-aos="fade-up">MD's PICK</h2>
-                    <div class="list" date-aos="fade-up">
-                        <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
-                            <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
+                    <h2>MD’S PICK</h2>
+                    <div class="list">
+                        <div class="swiper">
+                            <ul class="swiper-wrapper">
                                 <li class="swiper-slide">
                                     <a href="#n">
-                                        <span class="photo"><img src="images/main/product01.png" alt="음료 사진"></span>
-                                        <strong class="tit">아이스 카페 오트</strong>
-                                        <span class="name">Iced Cafe Oat</span>
+                                        <span class="photo"><img src="images/main/product01.png" alt="음료사진"></span>
+                                        <strong class="tit">아이스 룽고</strong>
+                                        <span class="name">Iced Lungo</span>
                                         <span class="info">
                                             <span><em>제공량(ml)</em>  360</span>
-                                            <span><em>열량(kcal)</em>  145</span>
-                                        </span>
-                                    </a>
-                                </li> <!-- 팝업 요소들 (div로 해도 상관없음) -->
-                                <li class="swiper-slide">
-                                    <a href="#n">
-                                        <span class="photo"><img src="images/main/product02.png" alt="음료 사진"></span>
-                                        <strong class="tit">제주말차 한라봉 스무디</strong>
-                                        <span class="name">Jeju Malcha Hallabong Smoothie</span>
-                                        <span class="info">
-                                            <span><em>제공량(ml)</em>  360</span>
-                                            <span><em>열량(kcal)</em>  270</span>
+                                            <span><em>열량(kcal)</em>  15</span>
                                         </span>
                                     </a>
                                 </li>
                                 <li class="swiper-slide">
                                     <a href="#n">
-                                        <span class="photo"><img src="images/main/product03.png" alt="음료 사진"></span>
+                                        <span class="photo"><img src="images/main/product02.png" alt="음료사진"></span>
                                         <strong class="tit">제주말차 콜드브루 크림 라떼</strong>
                                         <span class="name">Jeju Malcha Cold Brew Cream Latte</span>
                                         <span class="info">
@@ -156,7 +155,18 @@
                                 </li>
                                 <li class="swiper-slide">
                                     <a href="#n">
-                                        <span class="photo"><img src="images/main/product04.png" alt="음료 사진"></span>
+                                        <span class="photo"><img src="images/main/product03.png" alt="음료사진"></span>
+                                        <strong class="tit">시나몬 에스프레소 콘 파나</strong>
+                                        <span class="name">Cinnamon Espresso Con Panna</span>
+                                        <span class="info">
+                                            <span><em>제공량(ml)</em>  70</span>
+                                            <span><em>열량(kcal)</em>  100</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <span class="photo"><img src="images/main/product04.png" alt="음료사진"></span>
                                         <strong class="tit">벌집꿀 아이스크림(컵)</strong>
                                         <span class="name">Honeycomb Ice Cream</span>
                                         <span class="info">
@@ -167,45 +177,45 @@
                                 </li>
                                 <li class="swiper-slide">
                                     <a href="#n">
-                                        <span class="photo"><img src="images/main/product05.png" alt="음료 사진"></span>
-                                        <strong class="tit">아이스 라벤더 카페 브레베</strong>
-                                        <span class="name">Iced Lavender Cafe Breve</span>
+                                        <span class="photo"><img src="images/main/product05.png" alt="음료사진"></span>
+                                        <strong class="tit">아이스 카페라떼</strong>
+                                        <span class="name">Iced Cafe Latte</span>
                                         <span class="info">
-                                            <span><em>제공량(ml)</em>  355</span>
-                                            <span><em>열량(kcal)</em>  335</span>
+                                            <span><em>제공량(ml)</em>  360</span>
+                                            <span><em>열량(kcal)</em>  135</span>
                                         </span>
                                     </a>
                                 </li>
                                 <li class="swiper-slide">
                                     <a href="#n">
-                                        <span class="photo"><img src="images/main/product06.png" alt="음료 사진"></span>
-                                        <strong class="tit">콜드 브루 플로트</strong>
-                                        <span class="name">Cold Brew Float</span>
+                                        <span class="photo"><img src="images/main/product06.png" alt="음료사진"></span>
+                                        <strong class="tit">아이스 멜로우 우바 홍차</strong>
+                                        <span class="name">Iced Mellow Uva</span>
                                         <span class="info">
-                                            <span><em>제공량(ml)</em>  355</span>
-                                            <span><em>열량(kcal)</em>  225</span>
+                                            <span><em>제공량(ml)</em>  360</span>
+                                            <span><em>열량(kcal)</em>  10</span>
                                         </span>
                                     </a>
                                 </li>
                                 <li class="swiper-slide">
                                     <a href="#n">
-                                        <span class="photo"><img src="images/main/product07.png" alt="음료 사진"></span>
-                                        <strong class="tit">제주 쑥떡 크림 프라푸치노</strong>
-                                        <span class="name">Jeju Mugwort Cream Frappuccino</span>
+                                        <span class="photo"><img src="images/main/product07.png" alt="음료사진"></span>
+                                        <strong class="tit">딸기 바나나 요거트</strong>
+                                        <span class="name">Strawberry Banana Yogurt</span>
                                         <span class="info">
-                                            <span><em>제공량(ml)</em>  473</span>
+                                            <span><em>제공량(ml)</em>  360</span>
+                                            <span><em>열량(kcal)</em>  275</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <span class="photo"><img src="images/main/product08.png" alt="음료사진"></span>
+                                        <strong class="tit">콜드브루 모카 프라페</strong>
+                                        <span class="name">Cold Brew Mocha Frappe</span>
+                                        <span class="info">
+                                            <span><em>제공량(ml)</em>  360</span>
                                             <span><em>열량(kcal)</em>  460</span>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="swiper-slide">
-                                    <a href="#n">
-                                        <span class="photo"><img src="images/main/product08.png" alt="음료 사진"></span>
-                                        <strong class="tit">딸기 콜드폼 초콜릿</strong>
-                                        <span class="name">Strawberry Cold Foam Chocolate</span>
-                                        <span class="info">
-                                            <span><em>제공량(ml)</em>  355</span>
-                                            <span><em>열량(kcal)</em>  255</span>
                                         </span>
                                     </a>
                                 </li>
@@ -218,100 +228,115 @@
                 <div class="wrapper">
                     <div class="photo"><img src="images/main/brand_bg.png" alt="커피사진"></div>
                     <div class="inner">
-                        <h2 data-aos="fade-up">SIGNATURE<br>BLEND</h2>
-                        <p data-aos="fade-up">Paul Bassett 국내 로스팅 팩토리에서 로스팅한 시그니처 블렌드와 다양한 산지의
-                        싱글 오리진 스페셜티 커피빈들은 엄격한 품질 관리를 위해 철저히 로스팅 일자를
-                        관리하며, 2주일 단위의 교체 주기에 따라 신선한 원두를 지속적으로 판매할 수 있도록
-                        합니다.</p>
+                        <h2>SIGNATURE <br>BLEND</h2>
+                        <p>엄선된 원두로 직접 로스팅한 후, 폴바셋만의 비법으로 블렌딩하여 탄생한 Paul Bassett의 대표원두인 “시그니처 블랜드(Signature Blend)”와 폴 바셋에게 사사받은 오랜 경력의 전문 바리스타 출신 “Coffee Ambassador”의 관리 서비스 프로그램을 제안합니다</p>
                         <div class="list">
                             <ul>
-                                <li data-aos="fade-up"><img src="images/main/brand_ico01.png" alt="커피이미지"></li>
-                                <li data-aos="fade-up" data-aos-delay="300"><img src="images/main/brand_ico02.png" alt="커피이미지"></li>
-                                <li data-aos="fade-up" data-aos-delay="600"><img src="images/main/brand_ico03.png" alt="커피이미지"></li>
-                                <li data-aos="fade-up" data-aos-delay="900"><img src="images/main/brand_ico04.png" alt="커피이미지"></li>
+                                <li>
+                                    <img src="images/main/brand_ico01.png" alt="">
+                                    <strong>스페셜티 <br>생두 셀렉션</strong>
+                                </li>
+                                <li>
+                                    <img src="images/main/brand_ico02.png" alt="">
+                                    <strong>국내 로스팅 및 <br>철저한 생산관리 시스템</strong>
+                                </li>
+                                <li>
+                                    <img src="images/main/brand_ico03.png" alt="">
+                                    <strong>생두의 철저한 <br>항온 항습 관리</strong>
+                                </li>
+                                <li>
+                                    <img src="images/main/brand_ico04.png" alt="">
+                                    <strong>시그니처 블렌드의 <br>다양한 맛과 향</strong>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
-            </section>   
+            </section>
             <section class="social">
                 <div class="wrapper">
-                    <h2 data-aos="fade-up">취향을 담는 시간<span class="m_skip">,<br> 폴 바셋</span></h2>
+                    <h2>취향을 담는 시간<span class="m_skip">, 폴 바셋</span></h2>
                     <div class="sns">
                         <ul>
-                            <li data-aos="fade-up"><a href="#n">#<span>폴바셋 </span>페이스북</a></li>
-                            <li data-aos="fade-up"><a href="#n">#<span>폴바셋 </span>인스타그램</a></li>
-                            <li data-aos="fade-up"><a href="#n">#<span>폴바셋 </span>유튜브</a></li>
+                            <li><a href="#n">#<span class="m_skip">폴바셋 </span>페이스북</a></li>
+                            <li><a href="#n">#<span class="m_skip">폴바셋 </span>인스타그램</a></li>
+                            <li><a href="#n">#<span class="m_skip">폴바셋 </span>유튜브</a></li>
                         </ul>
                     </div>
-                </div>    
+                </div>
                 <div class="list">
                     <div class="swiper">
                         <ul class="swiper-wrapper">
                             <li class="swiper-slide">
                                 <a href="#n">
-                                    <sapn class="photo">
+                                    <span class="photo">
                                         <img src="images/main/social01.png" alt="">
                                         <span class="cate"><img src="images/main/social_facebook.png" alt="페이스북"></span>
-                                    </sapn>
-                                    <strong>Paul Bassett SPRING FLACORS</strong>
-                                    <em>봄의 따스함이 서서히 느껴지는 겨울의 끝자락
-                                        폴 바셋에도 향긋한 봄 내음을 가득 담은 설레는 말차
-                                        시즌이 찾아옵니다.</em>
+                                    </span>
+                                    <strong>#Paul Bassett SPRING FLAVORS</strong>
                                 </a>
                             </li>
                             <li class="swiper-slide">
                                 <a href="#n">
-                                    <sapn class="photo">
+                                    <span class="photo">
                                         <img src="images/main/social02.png" alt="">
                                         <span class="cate"><img src="images/main/social_youtube.png" alt="유튜브"></span>
-                                    </sapn>
-                                    <strong>아이스크림 디저트, 이렇게 쉬운거였어?</strong>
-                                    <em>폴 바셋 디저트의 끝판왕
-                                        달콤하고 부드러운 아이스크림과 함께 나만의 디저트를
-                                        완성해보세요!</em>
+                                    </span>
+                                    <strong>#폴 바셋의 첫 번째 커피 이야기</strong>
                                 </a>
                             </li>
                             <li class="swiper-slide">
                                 <a href="#n">
-                                    <sapn class="photo">
+                                    <span class="photo">
                                         <img src="images/main/social03.png" alt="">
                                         <span class="cate"><img src="images/main/social_insta.png" alt="인스타그램"></span>
-                                    </sapn>
-                                    <strong>[이벤트] #어메이징오트 프로모션</strong>
-                                    <em>폴 바셋에서 어메이징 오트 커피&초콜릿을 만나보세요!</em>
+                                    </span>
+                                    <strong>#어메이징오트커피<br>#어메이징오트초콜릿 </strong>
                                 </a>
                             </li>
                             <li class="swiper-slide">
                                 <a href="#n">
-                                    <sapn class="photo">
+                                    <span class="photo">
                                         <img src="images/main/social04.png" alt="">
-                                        <span class="cate"><img src="images/main/social_facebook.png" alt="페이스북"></span>
-                                    </sapn>
-                                    <strong>[신제품] #피스타치오 3종</strong>
-                                    <em>폴 바셋의 가을은 피스타치오와 함께 시작합니다.</em>
+                                        <span class="cate"><img src="images/main/social_insta.png" alt="인스타그램"></span>
+                                    </span>
+                                    <strong>#폴 바셋 홀리데이 케이크</strong>
                                 </a>
                             </li>
                             <li class="swiper-slide">
                                 <a href="#n">
-                                    <sapn class="photo">
+                                    <span class="photo">
                                         <img src="images/main/social05.png" alt="">
                                         <span class="cate"><img src="images/main/social_facebook.png" alt="페이스북"></span>
-                                    </sapn>
-                                    <strong>[신메뉴] 딸기 시즌 🍓</strong>
-                                    <em>11월 30일 기다리고 기다리던 폴 바셋 딸기가 
-                                        돌아옵니다!</em>
+                                    </span>
+                                    <strong> #수능응원 이벤트!</strong>
                                 </a>
                             </li>
                             <li class="swiper-slide">
                                 <a href="#n">
-                                    <sapn class="photo">
+                                    <span class="photo">
                                         <img src="images/main/social06.png" alt="">
                                         <span class="cate"><img src="images/main/social_youtube.png" alt="유튜브"></span>
-                                    </sapn>
-                                    <strong>덕후들도 인정하는 음료 TOP3</strong>
-                                    <em>폴 바셋 바리스타들이 뽑은 폴 바셋 덕후픽
-                                        음료 3대장~!</em>
+                                    </span>
+                                    <strong>#폴 바셋에 찾아온 봄</strong>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <span class="photo">
+                                        <img src="images/main/social07.png" alt="">
+                                        <span class="cate"><img src="images/main/social_insta.png" alt="인스타그램"></span>
+                                    </span>
+                                    <strong>#11월 30일 폴 바셋 딸기</strong>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <span class="photo">
+                                        <img src="images/main/social08.png" alt="">
+                                        <span class="cate"><img src="images/main/social_insta.png" alt="인스타그램"></span>
+                                    </span>
+                                    <strong>#드라이스브루</strong>
                                 </a>
                             </li>
                         </ul>
@@ -322,20 +347,18 @@
         <aside><button>TOP</button></aside>
         <footer>
             <div class="wrapper">
-                <div class="f_top">
-                    <div class="f_logo"><img src="images/common/logo.png" alt="폴바셋"></div>
-                    <div class="f_link">
-                        <ul>
-                            <li class="link01"><a href="#n"><span>Mobile App</span></a></li>
-                            <li class="link02"><a href="#n"><span>Benefit</span></a></li>
-                            <li class="link03"><a href="#n"><span>e-shop</span></a></li>
-                        </ul>
-                    </div>
+                <div class="f_logo"><img src="images/common/logo.svg" alt="풀바셋"></div>
+                <div class="f_link">
+                    <ul>
+                        <li class="link01"><a href="#n"><span>Mobile App</span></a></li>
+                        <li class="link02"><a href="#n"><span>Special Benefit</span></a></li>
+                        <li class="link03"><a href="#n"><span>e-shop</span></a></li>
+                    </ul>
                 </div>
                 <div class="f_nav">
                     <button class="f_nav_open" title="열기">개인정보처리방침</button>
                     <ul>
-                        <li><a href="#n"><strong>개인정보처리방침</strong></a></li>
+                        <li><a href="#n">개인정보처리방침</a></li>
                         <li><a href="#n">신규입점안내</a></li>
                         <li><a href="#n">이용약관</a></li>
                         <li><a href="#n">위치정보 서비스 이용약관</a></li>
@@ -351,19 +374,12 @@
                     <span>엠즈씨드(주)</span>
                     <span>대표이사 : 권태훈</span>
                     <span>주소 : 서울특별시 강남구 도산대로 75길 22 (청담동)</span><br>
-                    <span>사업자등록번호 211-88-95935</span>
-                    <span>대표번호 1899-8829</span>
+                    <span>사업자등록번호 : 211-88-95935</span>
+                    <span>대표번호 : 1899-8829</span>
                     <span>개인정보관리책임자 : 정보문</span>
                 </div>
-                <div class="f_sns">
-                    <ul>
-                        <li><a href="#n"><img src="images/main/f_facebook.png" alt="페이스북"></a></li>
-                        <li><a href="#n"><img src="images/main/f_insta.png" alt="인스타"></a></li>
-                        <li><a href="#n"><img src="images/main/f_youtube.png" alt="유트브"></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">© 2019 m’s seed Co., Ltd. All rights reserved.</div>
+            </div><!--//wrapper-->
+            <div class="copyright">© m’s seed Co., Ltd. All rights reserved.</div>
         </footer>
     </div>
 </body>

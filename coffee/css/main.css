@@ -185,7 +185,7 @@
 }
 @media screen and (max-width:768px) {
    .product {
-      margin: 40px 0 100px 0;
+      margin: 40px 0 60px 0;
    }
    .product h2 {
       margin: 0 0 50px 0;
@@ -337,7 +337,7 @@
 }
 
 .social {
-   margin: 140px 0 118px 0;
+   margin: 140px 0 20px 0;
    background-color: #e9b881;
 }
 .social h2 {
@@ -371,7 +371,7 @@
 .social .list li a .cate {
    position: absolute;
    width: 40px;
-   right: 9px;
+   right: 10px;
    top: 9px;
 }
 .social .list li a strong {
@@ -381,16 +381,334 @@
    margin: 5px 0 5px 0;
    text-align: left;
 }
+.social .list li a em {
+   margin-bottom: 75px;
+   display: block;
+}
+@media screen and (max-width:1024px) {
+   .social {
+      margin: 110px 0 20px 0;
+      background-color: #f1f1de;
+   }
+   .social h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      padding-top: 50px;
+   }
+   .social .list {
+      margin: 30px 0 0 0;
+   }
+   .social .list li a .photo img {
+      width: 90%;
+      border-radius: 40px;
+   }
+   .social .list li a .cate {
+      right: 40px;
+   }
+   .social .list li a strong {
+      font-size: 1rem;
+      text-align: center;
+   }
+   .social .list li a em {
+      font-size: 0;
+      font-weight: 0;
+      margin-bottom: 20px;
+   }
+}
 @media screen and (max-width:768px) {
    .m_skip {
       display: none;
    }
+   .social {
+      margin: 50px 0 20px 0;
+   }
+   .social h2 {
+      font-size: 1.538rem;
+      padding-top: 50px;
+   }
+   .social .list {
+      margin: 20px 0 0 0;
+   }
+   .social .list li a .photo img {
+      border-radius: 30px;
+   }
+   .social .list li a strong {
+      margin-top: 10px;
+   }
+   .social .list li a em {
+      margin-bottom: 40px;
+   }
 }
 
-
-
-
-
 footer {
-   height: 1000px;
+   /* text-align: center; */
+}
+footer .f_top {
+   display: flex;
+   justify-content: space-between;
+}
+footer .f_logo img {
+   width: 80px;
+}
+footer .f_link ul {
+   display: flex;
+   justify-content: right;
+}
+footer .f_link ul li {
+   width: 104px;
+   margin: 0 10px;
+}
+footer .f_link ul li a {
+   display: block;
+   line-height: 50px;
+   border-radius: 20px;
+   background-color: #ea983c;
+   color: #fff;
+   text-align: center;
+}
+footer .f_link ul li a span {
+   position: relative;
+   display: inline-block;
+   padding-top: 25px;
+}
+footer .f_link ul li a span::before {
+   position: absolute;
+   left: 14px;
+   top: 5px;
+   width: 30px;
+   height: 40px;
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-size: contain;
+   content: "";
+}
+footer .f_link ul li.link01 a span::before {
+   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 -960 960 960' width='24'%3E%3Cpath d='M292.309-60.002q-30.308 0-51.308-21-21-20.999-21-51.307v-695.382q0-30.308 21-51.308t51.308-21h375.382q30.308 0 51.308 21t21 51.308v695.382q0 30.308-21 51.308t-51.308 21H292.309ZM280-249.23v116.922q0 4.616 3.846 8.463 3.847 3.846 8.463 3.846h375.382q4.616 0 8.463-3.846 3.846-3.847 3.846-8.463v-116.922H280Zm200 100q14.692 0 25.038-10.347 10.346-10.346 10.346-25.038t-10.346-25.038Q494.692-220 480-220t-25.038 10.346q-10.346 10.346-10.346 25.038t10.346 25.038q10.346 10.347 25.038 10.347ZM280-309.23h400v-420.771H280v420.771Zm0-480.769h400v-37.692q0-4.616-3.846-8.463-3.847-3.846-8.463-3.846H292.309q-4.616 0-8.463 3.846-3.846 3.847-3.846 8.463v37.692Zm0 540.768V-120v-129.231Zm0-540.768V-840v50.001Z' fill='%23fff'/%3E%3C/svg%3E");
+   background-size: 30px auto;
+   left: 29px;
+}
+footer .f_link ul li.link02 a span::before {
+   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 -960 960 960' width='24'%3E%3Cpath d='M210.001-140.001q-12.75 0-21.375-8.629t-8.625-21.384q0-12.756 8.625-21.371Q197.251-200 210.001-200h539.998q12.75 0 21.375 8.629 8.625 8.628 8.625 21.384 0 12.755-8.625 21.37-8.625 8.616-21.375 8.616H210.001Zm112.692-155.385q-59.077 0-100.884-41.23-41.808-41.23-41.808-99.538v-323.077q0-25.307 17.731-43.037 17.73-17.731 43.037-17.731h545.384q30.461 0 52.153 21.193 21.693 21.192 21.693 51.499v104.614q0 30.308-21.693 51.5-21.692 21.192-52.153 21.192h-80v133.847q0 58.308-41.807 99.538-41.808 41.23-100.884 41.23H322.693Zm0-59.998h240.769q34.11 0 58.401-23.771 24.291-23.772 24.291-57.152V-760H240v323.836q0 33.395 24.291 57.087 24.291 23.693 58.402 23.693Zm383.46-274.615h80q5.769 0 9.808-3.654t4.039-9.04v-104.614q0-5.385-4.039-9.039T786.153-760h-80v130.001Zm-383.46 274.615H240h406.154-323.461Z' fill='%23fff'/%3E%3C/svg%3E");
+   background-size: 30px auto;
+} 
+footer .f_link ul li.link03 a span::before {
+   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 -960 960 960' width='24'%3E%3Cpath d='M212.309-100.001q-29.923 0-51.115-21.193-21.193-21.192-21.193-51.115v-455.382q0-29.923 21.193-51.115 21.192-21.193 51.115-21.193h87.692q0-74.922 52.538-127.46Q405.078-879.997 480-879.997t127.461 52.538q52.538 52.538 52.538 127.46h87.692q29.923 0 51.115 21.193 21.193 21.192 21.193 51.115v455.382q0 29.923-21.193 51.115-21.192 21.193-51.115 21.193H212.309Zm0-59.999h535.382q4.616 0 8.463-3.846 3.846-3.847 3.846-8.463v-455.382q0-4.616-3.846-8.463-3.847-3.846-8.463-3.846H212.309q-4.616 0-8.463 3.846-3.846 3.847-3.846 8.463v455.382q0 4.616 3.846 8.463 3.847 3.846 8.463 3.846ZM360-699.999h240q0-50-35-85t-85-35q-50 0-85 35t-35 85ZM200-160V-640-160Zm279.385-260.001q67.845 0 121.883-45.923t53.423-104.231q0-12.384-8.307-21.114Q638.076-600 625.307-600q-10.538 0-18.846 7.269-8.307 7.269-11.768 20.269-8.693 40.692-41.462 66.577Q520.462-480 479.385-480q-41.078 0-74.154-25.885-33.077-25.885-41.154-66.577-3.462-13.615-11.154-20.577-7.692-6.961-18.23-6.961-12.769 0-21.384 8.731-8.615 8.73-8.615 21.114 0 58.308 53.422 104.231 53.423 45.923 121.269 45.923Z' fill='%23fff'/%3E%3C/svg%3E");
+   background-size: 30px auto;
+}  
+footer .f_nav {
+   margin-top: 37px;
+}
+footer .f_nav button {
+   display: none;
+}
+footer .f_nav ul {
+   display: flex;
+   position: flex;
+   justify-content: left;
+   flex-wrap: wrap; /* 줄바꿈 허용 */
+   margin-bottom: 10px;
+}
+footer .f_nav ul li {
+   margin: 0 40px 0 0 ;
+   position: relative;
+}
+footer .f_nav ul li::after {
+   position: absolute;
+   right: 0;
+   top:0;
+   width: 1px;
+   height: 10px;
+   background-color: #ccc;
+   content: "";
+}
+footer .f_nav ul li:last-child {
+   margin-right: 0;
+}
+footer .f_nav ul li:last-child::after {
+   display: none;
+}
+footer .f_nav ul li a strong {
+   font-weight: 700;
+}
+footer .f_nav.open ul {
+   display: block;
+}
+footer .f_nav.open button.f_nav_open {
+   display: none;
+}
+footer .f_nav.open button.f_nav_close {
+   display: block;
+}
+footer .f_info span {
+   display: inline-block;
+   margin: 0 20px 10px 0;
+   line-height: 0;
+   text-align: left;
+}
+footer .f_sns ul {
+   display: flex;
+   justify-content: center;
+}
+footer .f_sns ul li {
+   margin: 40px 20px 0 0;
+}
+footer .copyright {
+   margin: 40px 0 0 0;
+   padding: 20px 0;
+   background-color: #92573a;
+   color: #fff;
+}
+aside {
+   position: relative;
+}
+aside button {
+   position: absolute;
+   right: 20px;
+   top: -73px;
+   width: 100px;
+   height: 100px;
+   border: 1px solid #e80a4d;
+   border-radius: 100%;
+   background-color: #e80a4d;
+   color: #fff;
+   font-size: 29px;
+}
+@media screen and (max-width:1024px) {
+   footer {
+      border-top: 1px solid rgba(204, 204, 204, 0.5);
+   }
+   footer .f_top {
+      display: block;
+   }
+   footer .f_logo img {
+      margin-top: 20px;
+      width: 80px;
+   }
+   footer .f_link ul {
+      justify-content: center;
+   }
+   footer .f_link ul li {
+      width: 104px;
+      margin: 5px 10px;
+   }
+   footer .f_link ul li a {
+      line-height: 40px;
+      border-radius: 20px;
+   }
+   footer .f_link ul li a span::before {
+      top: 3px;
+   }
+   footer .f_link ul li.link01 a span::before {
+      background-size: 26px auto;
+      left: 20px;
+   }
+   footer .f_link ul li.link02 a span::before {
+      background-size: 26px auto;
+   } 
+   footer .f_link ul li.link03 a span::before {
+      background-size: 26px auto;
+   }
+   footer .f_nav {
+      position: relative;
+      margin: 27px 0 20px 0;
+   }
+   footer .f_nav ul {
+      display: none;
+      position: absolute;
+      left: 0;
+      bottom: 38px;
+      width: 100%;
+      background-color: #876f53;
+      color: #fff;
+      border-radius: 10px;
+      padding: 10px 20px;
+  }
+  footer .f_nav ul li {
+   margin: 10px 0;
+   }
+   footer .f_nav ul li:after {
+      display: none;
+   }
+   footer .f_nav button {
+      width: 100%;
+      height: 38px;
+      position: relative;
+      border: 1px solid #92573a;
+      padding: 10px 20px;
+   }
+   footer .f_nav button::after {
+      position: absolute;
+      right: 20px;
+      top: 11px;
+      width: 15px;
+      height: 10px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 -960 960 960' width='24' fill='%23876f53'%3E%3Cpath d='M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z'/%3E%3C/svg%3E");
+      content: "";
+   }
+   footer .f_nav button.f_nav_open::after {
+      transform: rotate(180deg);
+   }
+   footer .f_nav button.f_nav_open {
+      display: block;
+   }
+   footer .f_sns ul li {
+      margin: 30px 20px 0 0;
+   }
+   footer .copyright {
+      margin: 30px 0 0 0;
+      padding: 20px 0;
+   }
+   aside button {
+      top: -33px;
+      width: 70px;
+      height: 70px;
+      font-size: 20px;
+   }
+}
+@media screen and (max-width:768px) {
+   footer .f_logo img {
+      margin-top: 20px;
+      width: 50px;
+   }
+   footer .f_link ul li {
+      width: 104px;
+      margin: 5px 10px;
+   }
+   footer .f_link ul li a {
+      line-height: 40px;
+      border-radius: 10px;
+   }
+   footer .f_link ul li a span::before {
+      top: 3px;
+   }
+   footer .f_link ul li.link01 a span::before {
+      background-size: 20px auto;
+   }
+   footer .f_link ul li.link02 a span::before {
+      background-size: 20px auto;
+   } 
+   footer .f_link ul li.link03 a span::before {
+      background-size: 20px auto;
+   }
+   footer .f_nav {
+      margin: 27px 0 20px 0;
+   }
+   footer .f_info span {
+      flex-wrap: wrap;
+   }
+   footer .f_sns ul li {
+      margin: 30px 20px 0 0;
+   }
+   footer .copyright {
+      margin: 30px 0 0 0;
+      padding: 20px 0;
+   }
+   aside button {
+      top: -25px;
+      width: 50px;
+      height: 50px;
+      font-size: 15px;
+   }
 }
