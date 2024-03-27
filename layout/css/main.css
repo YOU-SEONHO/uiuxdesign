@@ -38,7 +38,7 @@ body {
 
 .top {
     width: 100%;
-    height: calc(100% - 120px);
+    height: calc(100vh - 120px); /* 높이 pc단위 없음 vh */
     clear: both;
 }
 .top .header {
