@@ -137,14 +137,14 @@
    .header .gnb ul.depth1 > li[date-menu="on"] > a {
       color: #1d1d1d;
    }
-   .header .gnb ul.depth1 > li.on a > span,
+   .header .gnb ul.depth1 > li.on > a > span,
    .header .gnb ul.depth1 > li[date-menu="on"] > span {
       position: relative; /* after */
    }
-   .header .gnb ul.depth1 > li.on a > span::after,
+   .header .gnb ul.depth1 > li.on > a > span::after,
    .header .gnb ul.depth1 > li[date-menu="on"] > span::after {
       position: absolute;
-      right: -4x;
+      right: -4px;
       top: -4px;
       width: 4px;
       height: 4px;
