@@ -622,9 +622,9 @@ aside button {
       color: #fff;
       border-radius: 10px;
       padding: 10px 20px;
-  }
-  footer .f_nav ul li {
-   margin: 10px 0;
+   }
+   footer .f_nav ul li {
+      margin: 10px 0;
    }
    footer .f_nav ul li:after {
       display: none;
