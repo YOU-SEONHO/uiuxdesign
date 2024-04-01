@@ -731,7 +731,7 @@
       display: block;
    }
    .service .service_txt strong.align {
-      left: calc(100% - 100px);
+      left: calc(100% - 92px);
       text-align: center;
    }
    .service .service_txt span {
