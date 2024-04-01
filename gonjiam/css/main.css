@@ -722,11 +722,11 @@
    }
    .service .service_txt strong {
       font-size: 15px;
-      left: calc(100% - 75px);
+      left: calc(100% - 83px);
       top: 135px;
    }
    .service .service_txt strong.align {
-      left: calc(100% - 107px);
+      left: calc(100% - 116px);
       text-align: center;
    }
    .service .service_txt span {
