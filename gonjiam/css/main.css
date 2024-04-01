@@ -655,9 +655,6 @@
    top: 400px;
    color: rgba(255, 255, 255, 0.8);
 }
-.service .service_txt br {
-   display: none;
-}
 .service .service_txt span {
    position: absolute;
    left: calc(100% - 126px);
@@ -727,11 +724,9 @@
       font-size: 15px;
       left: calc(100% - 83px);
       top: 135px;
-   }.service .service_txt br {
-      display: block;
    }
    .service .service_txt strong.align {
-      left: calc(100% - 92px);
+      left: calc(100% - 115px);
       text-align: center;
    }
    .service .service_txt span {
