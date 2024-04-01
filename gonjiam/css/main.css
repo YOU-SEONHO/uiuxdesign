@@ -651,7 +651,7 @@
 }
 .service .service_list ul li {
    position: relative;
-   width: 640px;
+   width: 33.33%;
 }
 .service .service_list ul li a {
    display: block;
