@@ -68,7 +68,7 @@ $(document).ready(function(){
 	   },
    });
 
-   $(document).load(function(){
+   $(window).load(function(){
       room_swiper.slideReset()
    })
 
