@@ -720,6 +720,12 @@
    .service .service_list ul li a img {
       height: 300px;
    }
+   .service .service_tit {
+      margin-bottom: 20px;
+   }
+   .service .service_tit h2 {
+      font-size: 20px;
+   }
    .service .service_tit p {
       padding: 0 20px;
    }
