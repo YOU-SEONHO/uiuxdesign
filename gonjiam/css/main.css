@@ -665,11 +665,15 @@
 .service .service_list ul li a:hover img {
    opacity: 0.8;
 }
+.service .service_txt {
+   text-align: center;
+}
 .service .service_txt strong {
    position: absolute;
    font-size: 40px;
    font-weight: 700;
-   left: calc(100% - 456px);
+   left: 50%;
+   transform: translate(-50%, 0);
    top: 400px;
    color: rgba(255, 255, 255, 0.8);
 }
@@ -700,11 +704,7 @@
    }
    .service .service_txt strong {
       font-size: 30px;
-      left: calc(100% - 266px);
       top: 350px;
-   }
-   .service .service_txt strong.align {
-      left: calc(100% - 290px);
    }
    .service .service_txt span {
       left: calc(100% - 114px);
@@ -717,11 +717,7 @@
    }
    .service .service_txt strong {
       font-size: 25px;
-      left: calc(100% - 202px);
       top: 300px;
-   }
-   .service .service_txt strong.align {
-      left: calc(100% - 223px);
    }
    .service .service_txt span {
       font-size: 0;
@@ -749,19 +745,10 @@
    }
    .service .service_txt strong {
       font-size: 15px;
-      left: calc(100% - 83px);
       top: 135px;
    }
    .service .service_txt br {
       display: block;
-   }
-   .service .service_txt strong.align {
-      left: calc(100% - 94px);
-      text-align: center;
-   }
-   .service .service_txt span {
-      font-size: 0;
-      line-height: 0;
    }
    .service .service_txt span::after {
       right: -106px;
