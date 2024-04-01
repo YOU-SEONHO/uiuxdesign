@@ -364,6 +364,12 @@ header.fixed.menu_over .tnb .lang::after {
       width: 89px;
       height: 45px;
    }
+   header .gnb .gnb_bg {
+      right: 4px;
+      top: -6px;
+      width: 55px;
+      height: 55px;
+   }
    header .gnb .gnb_open,
    header .gnb .gnb_close {
       width: 50px;
