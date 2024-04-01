@@ -42,6 +42,7 @@ $(document).ready(function(){
       },
    });
 
+   
    const room_swiper = new Swiper('.room .swiper', { /* 팝업을 감싼는 요소의 class명 */
       centeredSlides: true,
       slidesPerView: 'auto',
@@ -62,9 +63,13 @@ $(document).ready(function(){
       },
       loop: true,  
       autoplay: {
-		delay: 3000,
-		disableOnInteraction: true,
+         delay: 3000,
+         disableOnInteraction: true,
 	   },
    });
+
+   $(document).load(function(){
+      room_swiper.slideReset()
+   })
 
 })
