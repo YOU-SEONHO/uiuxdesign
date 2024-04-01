@@ -204,6 +204,14 @@
    background-image: url("data:image/svg+xml,%3Csvg width='26' height='45' viewBox='0 0 26 45' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.33235 44.3819L0 41.1196L19.3353 22.1909L0 3.26227L3.33235 0L26 22.1909L3.33235 44.3819Z' fill='%234D4D4D'/%3E%3C/svg%3E ");
    margin-right: 200px;
 }
+@media screen and (max-width:1815px) {
+   .biz .ctrl_btn .prev {
+      margin-left: 50px;
+   }
+   .biz .ctrl_btn .next {
+      margin-right: 50px;
+   }
+}
 @media screen and (max-width:1320px) {
    .biz {
       margin: 110px 0;
