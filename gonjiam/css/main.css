@@ -60,7 +60,6 @@
       height:600px;
    }
    .visual .visual_txt {
-      left: calc(100% - 750px);
       top: 280px;
    }
    .visual .visual_txt strong {
@@ -75,7 +74,6 @@
       height:450px;
    }
    .visual .visual_txt {
-      left: calc(100% - 630px);
       top: 200px;
    }
    .visual .visual_txt strong {   
@@ -94,7 +92,6 @@
       height: 6px;
    }
    .visual .visual_txt {
-      left: 50%;
       top: 130px;
    }
    .visual .visual_txt strong {
