@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/main.js"></script>
     <title>곤지암 리조트</title>
@@ -88,8 +90,8 @@
         <div class="biz">
             <div class="wrapper">
                 <div class="biz_tit">
-                    <h2>PACKAGE & PROMOTION</h2>
-                    <p>곤지암리조트에서 제공하는 다양한 이벤트를 만나보세요.</p>
+                    <h2 data-aos="fade-up">PACKAGE & PROMOTION</h2>
+                    <p data-aos="fade-up" data-aos-delay="300">곤지암리조트에서 제공하는 다양한 이벤트를 만나보세요.</p>
                 </div>
                 <div class="biz_list">
                     <div class="swiper">
@@ -114,8 +116,8 @@
         </div>
         <div class="room">
             <div class="room_tit">
-                <h2>GONJIAM ROOMS</h2>
-                <p>최고의 편안함과 품격있는 휴가를 위한 선택</p>
+                <h2 data-aos="fade-up">GONJIAM ROOMS</h2>
+                <p data-aos="fade-up" data-aos-delay="300">최고의 편안함과 품격있는 휴가를 위한 선택</p>
             </div>
             <div class="room_list">
                 <div class="swiper">
@@ -132,8 +134,8 @@
         <div class="notice">
             <div class="wrapper">
                 <div class="notice_tit">    
-                    <h2>NOTICE</h2>
-                    <P>곤지암리조트의 새로운 소식을 만나보세요.</P>
+                    <h2 data-aos="fade-up">NOTICE</h2>
+                    <P data-aos="fade-up" data-aos-delay="300">곤지암리조트의 새로운 소식을 만나보세요.</P>
                 </div>
                 <div class="notice_list">
                     <ul>
@@ -147,8 +149,8 @@
         </div>
         <div class="service">
             <div class="service_tit">    
-                <h2>GONJIAM WELLESS</h2>
-                <P>'곤지암 웰니스'는 지친 일상 속 리프레쉬를 체험할 수 있는<br>웰니스 전용 공간으로, 자연속 지도트에서 가족, 친구, 연인과 함께 할 수 있는 특별한 추억과 시간을 선물합니다.</P>
+                <h2 data-aos="fade-up">GONJIAM WELLESS</h2>
+                <P data-aos="fade-up" data-aos-delay="300">'곤지암 웰니스'는 지친 일상 속 리프레쉬를 체험할 수 있는<br>웰니스 전용 공간으로, 자연속 지도트에서 가족, 친구, 연인과 함께 할 수 있는 특별한 추억과 시간을 선물합니다.</P>
             </div>
             <div class="service_list">
                 <ul>
@@ -194,6 +196,13 @@
                 </div>
             </div>
         </footer>
-    </div>  
+    </div>
+    <script>
+        AOS.init({
+            offset: 150, // 해당 콘텐츠가 하단에서 몇 px 위로 올라와에 나타나는 효과가 나타날지 셋팅하는 값
+            duration: 500, // 애니메이션 효과가 작동되는 시간
+            easing: 'ease', // 가속도
+        });
+    </script>
 </body>
 </html>
