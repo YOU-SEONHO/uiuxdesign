@@ -48,6 +48,9 @@
    font-weight: 700;
    line-height: 1.4;
 }
+.visual .visual_txt span {
+   display: none;
+}
 @media screen and (max-width:1320px) {
    .visual .swiper {
       height:600px
@@ -89,9 +92,18 @@
       width: 6px;
       height: 6px;
    }
+   .visual .visual_txt {
+      left: 10%;
+      top: 130px;
+   }
    .visual .visual_txt strong {
       font-size: 0;
       line-height: 0;
+   }
+   .visual .visual_txt span {
+      display: block;
+      font-size: 25px;
+      font-weight: 700;
    }
 }
 
@@ -282,7 +294,7 @@
    }
    .biz .biz_list ul li a strong {
       font-size: 15px;
-      white-space: wrap;
+      white-space: nowrap;
    }
    .biz .biz_list ul li a p {
       display: none;
