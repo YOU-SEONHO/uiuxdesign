@@ -31,13 +31,11 @@ header .gnb .depth1 {
    display: flex;
    text-align: center;
 }
-header .gnb .depth1 > li {
-   width: 130px;
-}
 header .gnb .depth1 > li > a {
    display: block;
    font-size: 18px;
    line-height: 100px;
+   width: 130px;
 }
 header .gnb .depth2 {
    display: none;
@@ -45,9 +43,10 @@ header .gnb .depth2 {
 }
 header .gnb .depth2 li a {
    display: block;
+   width: 130px;
    font-size: 15px;
    color: #3d3d3d;
-   line-height: 25px;
+   line-height: 30px;
 }
 header .gnb .on .depth2 {
    display: block;
@@ -85,7 +84,7 @@ header .tnb ul li.search a {
       top: 0;
       z-index: -1;
       width: 100%;
-      height: 404px;
+      height: 400px;
       background-color: #FAFAFA;
       content: ""; /* before, after한테 줌 */
    }
@@ -120,11 +119,9 @@ header .tnb ul li.search a {
    header .logo a img {
       width: 190px;
    }
-   header .gnb .depth1 > li {
-      width: 110px;
-   }
    header .gnb .depth1 > li > a {
       font-size: 18px;
+      width: 100px;
    }
    header .tnb ul li {
       margin-left: 10px;
@@ -158,6 +155,33 @@ header .tnb ul li.search a {
    header.menu_open {
       border-bottom: 1px solid rgba(0, 0, 0, 0.2);
    }
+   header .gnb .depth1 {
+      text-align: left;
+      margin-top: 110px;
+      height: calc(100% - 100px);
+      overflow-x: hidden; /* 좌우는 스크롤 금지 */
+      overflow-y: auto; /* 위아래는 스크롤 */
+      flex-direction: column;
+      /* display:flex를 유지하면서 아래로 정렬되도록 */
+   }
+   header .gnb .depth1 > li > a {
+      width: 100%;
+      font-size: 18px;
+      margin-left: 40px;
+      line-height: 50px;
+   }
+   header .gnb .depth1 > li.on > a {
+      font-weight: 700;
+   }
+   header .gnb .on .depth2 {
+      padding: 10px 50px;
+   }
+   header .gnb .depth2 li a {
+      line-height: 30px;
+   }
+   header .gnb .depth2 li a:hover {
+      font-weight: 700;
+   }
    header .gnb .gnb_wrap {
       display: none; /* 메뉴 숨김 */
       position: absolute; /* header */
@@ -173,29 +197,78 @@ header .tnb ul li.search a {
    }
    header .gnb .gnb_open {
       display: block;
-      background-image: url("data:image/svg+xml,%3Csvg width='17' height='12' viewBox='0 0 17 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 11.2692V9.76922H17V11.2692H0ZM0 6.38457V4.88462H17V6.38457H0ZM0 1.49997V0H17V1.49997H0Z' fill='black'/%3E%3C/svg%3E ");
    }
    header .gnb .gnb_open,
    header .gnb .gnb_close {
       position: absolute; /* header */
       right: 0px;
       top: 0px;
+      z-index: 102;
       width: 100px;
       height: 100%; /* header 높이만큼 */
       font-size: 0;
       line-height: 0;
+   }
+   header .gnb .gnb_open::before,
+   header .gnb .gnb_close::before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
       background-repeat: no-repeat;
       background-position: center center;
-      background-size: 20px auto;
       content: "";
    }
-   header .gnb .depth1 > li {
-      width: 100px;
+   header .gnb .gnb_open::before {
+      background-image: url("data:image/svg+xml,%3Csvg width='17' height='12' viewBox='0 0 17 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 11.2692V9.76922H17V11.2692H0ZM0 6.38457V4.88462H17V6.38457H0ZM0 1.49997V0H17V1.49997H0Z' fill='black'/%3E%3C/svg%3E ");
+      background-size: 25px auto;
    }
-   header .gnb .depth1 > li > a {
-      font-size: 18px;
+   header .gnb .gnb_close::before {
+      background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.09773 13.8621L0 12.7644L5.83333 6.93107L0 1.09773L1.09773 0L6.93107 5.83333L12.7644 0L13.8621 1.09773L8.0288 6.93107L13.8621 12.7644L12.7644 13.8621L6.93107 8.0288L1.09773 13.8621Z' fill='black'/%3E%3C/svg%3E ");
+      background-size: 21px auto;
+   }
+   header.menu_open .gnb .gnb_open {
+      display: none;
+   }
+   header.menu_open .gnb .gnb_close {
+      display: block;
    }
    header .tnb {
       display: none;
+   }
+}
+@media screen and (max-width:768px){
+   header {
+      height: 50px;
+   }
+   header .logo {
+      margin-top: 15px;
+   }
+   header .logo a img {
+      width: 84px;
+   }
+   header .gnb .depth1 {
+      margin-top: 60px;
+      height: calc(100% - 60px);
+   }
+   header .gnb .depth1 > li > a {
+      font-size: 16px;
+      margin-left: 20px;
+      line-height: 40px;
+   }
+   header .gnb .on .depth2 {
+      padding: 5px 30px;
+   }
+   header .gnb .gnb_open,
+   header .gnb .gnb_close {
+      width: 50px;
+   }
+   header .gnb .gnb_open::before {
+      background-size: 17px auto;
+   }
+   header .gnb .gnb_close::before {
+      background-size: 14px auto;
    }
 }
