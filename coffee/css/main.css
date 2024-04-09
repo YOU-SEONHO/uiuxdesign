@@ -233,6 +233,7 @@
    width: 100%;
    height: 100%;
    object-fit: cover;
+   transform: scale3d(1.2, 1.2, 1)
 }
 .brand .inner {
    width: 700px;
