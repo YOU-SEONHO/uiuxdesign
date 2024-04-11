@@ -518,7 +518,7 @@ footer .f_info .Privacy span {
       margin: 0 10px;
    }
    footer .f_news {
-      height: 400px;
+      height: 440px;
    }
    footer .f_news .f_logo {
       padding: 10px 0 0 10px;
@@ -529,7 +529,6 @@ footer .f_info .Privacy span {
    footer .f_news .inner .news {
       margin-top: 10px;
       padding: 10px 0 0 10px;
-      line-height: 20px;
    }
    footer .f_news .inner .qna {
       padding: 0 0 0 10px;
@@ -537,7 +536,7 @@ footer .f_info .Privacy span {
       border-top: 1px solid rgba(0, 0, 0, 0.8);
    }
    footer .f_info {
-      margin-top: -15px;
+      margin-top: -10px;
       height: 500px;
    }
    footer .f_info .sns {
@@ -560,5 +559,10 @@ footer .f_info .Privacy span {
    }
    footer .f_info .Privacy span {
       font-size: 15px;
+   }
+}
+@media screen and (max-width:276px) {
+   footer .f_news {
+      height: 470px;
    }
 }
