@@ -135,7 +135,7 @@
       font-size: 65px;
    }
    .visual .visual_text {
-      padding-top: 33px;
+      padding-top: 22px;
    }
    .visual .visual_text ul li::after {
       position: absolute;
@@ -455,7 +455,7 @@
 .board {
    position: relative;
    width: 100%;
-   height: 100%;
+   height: 623px;
 }
 .board .photo {
    display: flex;
@@ -579,6 +579,9 @@
    background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.6216 8.2187H0V6.78125H11.6216L6.16283 1.32242L7.18748 0.3125L14.375 7.49998L7.18748 14.6875L6.16283 13.6775L11.6216 8.2187Z' fill='%231F1F1F'/%3E%3C/svg%3E ");
 }
 @media screen and (max-width:1320px) {
+   .board {
+      height: 343px;
+   }
    .board .notice::after {
       top: -27px;
       height: 115%;
@@ -636,14 +639,17 @@
    }
 }
 @media screen and (max-width:1024px) {
+   .board {
+      height: 251px;
+   }
    .board .notice::after {
-      top: -27px;
-      height: 100%;
+      top: -31px;
+      height: 120%;
       border-right: 5px solid #fafafa;
    }
    .board .event::after {
-      top: calc(100% - 61%);
-      left: calc(100% - 43.5%);
+      top: calc(100% - 50%);
+      left: calc(100% - 44%);
       border-bottom: 5px solid #fafafa;
    }
    .board .notice .board_text {
@@ -681,7 +687,7 @@
       padding-left: 15px;
    }
    .board .biz .board_text span {
-      width: 100px;
+      width: 120px;
       line-height:25px;
    }
    .board .board_text span::after {
@@ -696,6 +702,9 @@
    }
 }
 @media screen and (max-width:768px) {
+   .board {
+      height: 183px;
+   }
    .board img {
       height: 180px;
    }
@@ -737,14 +746,14 @@
    }
    .board .biz .board_text span {
       border: 0;
-      background-color: none;
+      background-color: transparent;
       width: 80px;
       line-height: 0;
       padding-left: 0;
    }
    .board .biz .board_text span:hover {
       border: 0;
-      background-color: none;
+      background-color: transparent;
       color: #fafafa;
    }
    .board .event .board_text span {
@@ -787,51 +796,16 @@
 }
 .container .branch {
    position: relative;
-}
-.container .branch .list > li .detail {
-   display: none;
-}
-.container .branch .list > li.on .detail {
-   display: flex;
-   position: absolute;
-   left: 298px;
-   top: 0;
-   width: 527px;
-   height: 410px;
-   border: 1px solid #ccc;
-   background-color: #fafafa;
-   padding: 50px 0 0 40px;
-}
-.container .branch .list > li .detail ul li {
-   margin-bottom: 30px;
-}
-.container .branch .list > li .detail ul li span {
-   margin: 0 0 10px 20px;
-   display: block;
-   font-size: 22px;
-   font-weight: 700;
-}
-.container .branch .list > li .detail ul li strong {
-   font-size: 20px;
-   font-weight: 700;
-}
-.container .branch .detail .photo {
-   position: absolute;
-   top: -1px;
-   right: -454px;
-   width: 454px;
-}
-.container .branch .detail .photo img {
-   border: 1px solid #ccc;
    width: 100%;
+   height: 408px;
 }
 .container .branch .list > li button {
    border: 1px solid #ccc;
    border-bottom: 0;
    background-color: #f4f4f4;
    font-size: 22px;
-   width: 299px;
-   line-height: 135.5px;
+   width: 23.35%;
+   line-height: 136px;
    color: #1d1d1d;
 }
 .container .branch .list > li:last-child button {
@@ -840,6 +814,70 @@
 .container .branch .list > li.on button {
    background-color: rgba(0, 0, 0, 0.8);
    color: #FAFAFA;
+}
+.container .branch .list > li .detail {
+   display: none;
+   justify-content: space-between;
+   position: absolute;
+   left: 23.35%;;
+   top: 0;
+   width: 76.65%;
+   height: 412px;
+   border-width: 1px 1px 1px 0;
+   border-style: solid;
+   border-color: #ccc;
+   background-color: #fafafa;
+   
+}
+.container .branch .list > li.on .detail {
+   display: flex;
+}
+.container .branch .list > li .detail ul {
+   padding: 50px 0 0 40px;
+   width : 57.72%;
+}
+.container .branch .list > li .detail ul li {
+   margin-bottom: 30px;
+}
+.container .branch .list > li .detail ul li span {
+   position: relative;
+   margin: 0 0 10px 30px;
+   display: block;
+   font-size: 22px;
+   font-weight: 700;
+}
+.container .branch .list > li .detail ul li span::before {
+   position: absolute;
+   top: 5px;
+   left: -30px;
+   width: 20px;
+   height: 20px;
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-size: contain;
+   content: "";
+}
+.container .branch .list > li .detail ul li span.map::before {
+   background-image: url("data:image/svg+xml,%3Csvg width='14' height='20' viewBox='0 0 14 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 14.475C8.65 13.1417 9.89583 11.8583 10.7375 10.625C11.5792 9.39167 12 8.23333 12 7.15C12 6.21667 11.8292 5.42083 11.4875 4.7625C11.1458 4.10417 10.725 3.57083 10.225 3.1625C9.725 2.75417 9.18333 2.45833 8.6 2.275C8.01667 2.09167 7.48333 2 7 2C6.51667 2 5.98333 2.09167 5.4 2.275C4.81667 2.45833 4.275 2.75417 3.775 3.1625C3.275 3.57083 2.85417 4.10417 2.5125 4.7625C2.17083 5.42083 2 6.21667 2 7.15C2 8.23333 2.42083 9.39167 3.2625 10.625C4.10417 11.8583 5.35 13.1417 7 14.475ZM7 17C4.65 15.2667 2.89583 13.5833 1.7375 11.95C0.579167 10.3167 0 8.71667 0 7.15C0 5.96667 0.2125 4.92917 0.6375 4.0375C1.0625 3.14583 1.60833 2.4 2.275 1.8C2.94167 1.2 3.69167 0.75 4.525 0.45C5.35833 0.15 6.18333 0 7 0C7.81667 0 8.64167 0.15 9.475 0.45C10.3083 0.75 11.0583 1.2 11.725 1.8C12.3917 2.4 12.9375 3.14583 13.3625 4.0375C13.7875 4.92917 14 5.96667 14 7.15C14 8.71667 13.4208 10.3167 12.2625 11.95C11.1042 13.5833 9.35 15.2667 7 17ZM7 9C7.55 9 8.02083 8.80417 8.4125 8.4125C8.80417 8.02083 9 7.55 9 7C9 6.45 8.80417 5.97917 8.4125 5.5875C8.02083 5.19583 7.55 5 7 5C6.45 5 5.97917 5.19583 5.5875 5.5875C5.19583 5.97917 5 6.45 5 7C5 7.55 5.19583 8.02083 5.5875 8.4125C5.97917 8.80417 6.45 9 7 9ZM0 20V18H14V20H0Z' fill='black' fill-opacity='0.8'/%3E%3C/svg%3E%0A");
+}
+.container .branch .list > li .detail ul li span.call::before {
+   background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.5375 16.5C13.6278 16.5 11.741 16.0837 9.87708 15.251C8.01319 14.4184 6.31736 13.2382 4.78958 11.7104C3.26181 10.1826 2.0816 8.48681 1.24896 6.62292C0.416319 4.75903 0 2.87222 0 0.9625C0 0.6875 0.0916667 0.458333 0.275 0.275C0.458333 0.0916667 0.6875 0 0.9625 0H4.675C4.88889 0 5.07986 0.0725694 5.24792 0.217708C5.41597 0.362847 5.51528 0.534722 5.54583 0.733333L6.14167 3.94167C6.17222 4.18611 6.16458 4.39236 6.11875 4.56042C6.07292 4.72847 5.98889 4.87361 5.86667 4.99583L3.64375 7.24167C3.94931 7.80694 4.31215 8.35313 4.73229 8.88021C5.15243 9.40729 5.61458 9.91528 6.11875 10.4042C6.59236 10.8778 7.08889 11.317 7.60833 11.7219C8.12778 12.1267 8.67778 12.4972 9.25833 12.8333L11.4125 10.6792C11.55 10.5417 11.7295 10.4385 11.951 10.3698C12.1726 10.301 12.3903 10.2819 12.6042 10.3125L15.7667 10.9542C15.9806 11.0153 16.1562 11.126 16.2938 11.2865C16.4312 11.4469 16.5 11.6264 16.5 11.825V15.5375C16.5 15.8125 16.4083 16.0417 16.225 16.225C16.0417 16.4083 15.8125 16.5 15.5375 16.5ZM2.77292 5.5L4.28542 3.9875L3.89583 1.83333H1.85625C1.93264 2.45972 2.03958 3.07847 2.17708 3.68958C2.31458 4.30069 2.51319 4.90417 2.77292 5.5ZM10.9771 13.7042C11.5729 13.9639 12.1802 14.1701 12.799 14.3229C13.4177 14.4757 14.0403 14.575 14.6667 14.6208V12.6042L12.5125 12.1687L10.9771 13.7042Z' fill='black' fill-opacity='0.8'/%3E%3C/svg%3E ");
+}
+.container .branch .list > li .detail ul li span.time::before {
+   background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.3 14.7L14.7 13.3L11 9.6V5H9V10.4L13.3 14.7ZM10 20C8.61667 20 7.31667 19.7375 6.1 19.2125C4.88333 18.6875 3.825 17.975 2.925 17.075C2.025 16.175 1.3125 15.1167 0.7875 13.9C0.2625 12.6833 0 11.3833 0 10C0 8.61667 0.2625 7.31667 0.7875 6.1C1.3125 4.88333 2.025 3.825 2.925 2.925C3.825 2.025 4.88333 1.3125 6.1 0.7875C7.31667 0.2625 8.61667 0 10 0C11.3833 0 12.6833 0.2625 13.9 0.7875C15.1167 1.3125 16.175 2.025 17.075 2.925C17.975 3.825 18.6875 4.88333 19.2125 6.1C19.7375 7.31667 20 8.61667 20 10C20 11.3833 19.7375 12.6833 19.2125 13.9C18.6875 15.1167 17.975 16.175 17.075 17.075C16.175 17.975 15.1167 18.6875 13.9 19.2125C12.6833 19.7375 11.3833 20 10 20ZM10 18C12.2167 18 14.1042 17.2208 15.6625 15.6625C17.2208 14.1042 18 12.2167 18 10C18 7.78333 17.2208 5.89583 15.6625 4.3375C14.1042 2.77917 12.2167 2 10 2C7.78333 2 5.89583 2.77917 4.3375 4.3375C2.77917 5.89583 2 7.78333 2 10C2 12.2167 2.77917 14.1042 4.3375 15.6625C5.89583 17.2208 7.78333 18 10 18Z' fill='black' fill-opacity='0.8'/%3E%3C/svg%3E ");
+}
+.container .branch .list > li .detail ul li strong {
+   font-size: 20px;
+   font-weight: 700;
+}
+.container .branch .detail .photo {
+   width: 42.28%;
+}
+.container .branch .detail .photo img {
+   border: 1px solid #ccc;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
 }
 .container .lo {
    position: absolute;
@@ -860,41 +898,11 @@
 }
 @media screen and (max-width:1320px) {
    .container {
-      margin: 100px 0 130px 0;
+      margin: 100px 0 100px 0;
    }
    .container h2 {
       font-size: 45px;
       margin-bottom: 60px;
-   }
-   .container .branch .list > li.on .detail {
-      left: 209px;
-      width: 427px;
-      height: 303px;
-      padding: 30px 0 0 40px;
-   }
-   .container .branch .list > li .detail ul li {
-      margin-bottom: 25px;
-   }
-   .container .branch .list > li .detail ul li span {
-      margin: 0 0 10px 20px;
-      font-size: 18px;
-   }
-   .container .branch .list > li .detail ul li strong {
-      font-size: 17px;
-   }
-   .container .branch .detail .photo {
-      top: -1px;
-      right: -337px;
-      width: 337px;
-   }
-   .container .branch .list > li button {
-      font-size: 18px;
-      width: 210px;
-      line-height: 100px;
-   }
-   .container .lo {
-      width: 80px;
-      line-height: 30px;
    }
 }
 @media screen and (max-width:1024px) {
@@ -909,17 +917,28 @@
    .container .branch .list {
       display: flex;
    }
-   .container .branch .list > li.on .detail {
+   .container .branch .list > li .detail {
       top: 45px;
       left: 0;
-      width: 53%;
+      width: 100%;
       height: 303px;
    }
+   .container .branch .list > li .detail ul {
+      width: 60%;
+      padding: 20px 0 0 40px;
+      border-left: 1px solid #ccc;
+   }
+   .container .branch .list > li .detail ul li span {
+      font-size: 17px;
+   }
+   .container .branch .list > li .detail ul li span::before {
+      top: 3px;
+      left: -30px;
+      width: 18px;
+      height: 18px;
+   }
    .container .branch .detail .photo {
-      top: -1px;
-      right: -337px;
-      width: 337px;
-      height: 100%;
+      width: 40%;
    }
    .container .branch .list > li button {
       font-size: 15px;
@@ -934,22 +953,22 @@
       width: 80px;
       line-height: 30px;
       right: 10px;
-      bottom: -294px;
+      bottom: 5px;
    }
 }
 @media screen and (max-width:768px) {
    .container {
-      margin: 40px 0 60px 0;
+      margin: 40px 0 40px 0;
       height: 418px;
    }
    .container h2 {
       margin-bottom: 20px;
    }
-   .container .branch .list > li.on .detail {
-      top: 45px;
-      left: 0;
-      width: 53%;
-      height: 303px;
+   .container .branch .list > li .detail {
+      top: 26px;
+      height: 275px;
+   }
+   .container .branch .list > li .detail ul {
       padding: 10px 0 0 10px;
    }
    .container .branch .list > li .detail ul li {
@@ -959,14 +978,14 @@
       margin: 0 0 10px 20px;
       font-size: 13px;
    }
+   .container .branch .list > li .detail ul li span::before {
+      top: 2px;
+      left: -18px;
+      width: 12px;
+      height: 12px;
+   }
    .container .branch .list > li .detail ul li strong {
       font-size: 13px;
-   }
-   .container .branch .detail .photo {
-      top: -1px;
-      right: -148px;
-      width: 148px;
-      height: 100%;
    }
    .container .branch .list > li button {
       font-size: 15px;
@@ -976,23 +995,9 @@
    .container .branch .list > li button span {
       display: none;
    }
-
    .container .lo {
-      width: 80px;
-      line-height: 30px;
-      right: 10px;
-      bottom: -294px;
+      width: 70px;
+      line-height: 25px;
+      right: 7px;
    }
 }
-
-
-
-
-
-
-.footer {
-   margin-top: 10000000px;
-}
-
-
-
