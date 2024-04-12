@@ -282,29 +282,25 @@ footer .f_news {
    border-bottom: 1px solid rgba(0, 0, 0, 0.8);
    display: flex;
    justify-content: space-between;
-   height: 260px;
+   padding: 30px 35px 30px 35px;
 }
 footer .f_news .f_logo {
-   padding: 30px 0 0 35px;
+   width: 50%;
 }
-footer .f_news .inner {
-   display: flex;
-   padding: 0 35px;
-}
-footer .f_news .inner .news {
-   margin-top: 25px;
+footer .f_news .news {
    line-height: 30px;
    font-size: 20px;
    font-weight: 700;
+   width: 25%;
 }
-footer .f_news .inner .qna {
-   margin: 15px 0 0 227px;
+footer .f_news .qna {
    line-height: 25px;
+   width: 25%;
 }
-footer .f_news .inner .qna li {
+footer .f_news .qna li {
    position: relative;
 }
-footer .f_news .inner .qna li::before {
+footer .f_news .qna li::before {
    position: absolute;
    top: 12px;
    left: 0;
@@ -314,23 +310,21 @@ footer .f_news .inner .qna li::before {
    background-color: rgba(0, 0, 0, 0.8);
    content: "";
 }
-footer .f_news .inner .qna li:first-child:before {
-   display: none;
-}
-footer .f_news .inner .qna li a {
+footer .f_news .qna li a {
    padding-left: 10px;
+   display: block;
 }
-footer .f_news .inner .qna strong {
+footer .f_news .qna h2 {
    font-size: 20px;
    font-weight: 700;
-   margin: -14px 0 10px 0;
+   margin: 0 0 10px 0;
    display: block;
 }
 footer .f_nav {
    display: flex;
    height: 350px;
    border-bottom: 1px solid rgba(0, 0, 0, 0.8);
-   padding: 30px 0 0 35px;   
+   padding: 30px 0 0 0;
 }
 footer .f_nav span {
    font-size: 20px;
@@ -342,28 +336,29 @@ footer .f_nav .menu01 {
    font-size: 20px;
    font-weight: 700;
    line-height: 30px;
-   margin-right: 180px;
+   width: 25%;
+   padding-left: 35px;
 }
 footer .f_nav .menu02 {
    line-height: 25px;
-   margin-right: 250px;
+   width: 25%;
 }
 footer .f_nav .menu03 {
    line-height: 25px;
-   margin-right: 300px;
+   width: 25%;
 }
 footer .f_nav .menu04 {
    line-height: 25px;
+   width: 25%;
 }
 footer .f_info {
-   height: 400px;
    position: relative;
    display: flex;
-   margin-top: 30px;
+   margin: 30px 0 100px 0;
 }
 footer .f_info .sns {
-   padding: 0 0 0 35px;
-   margin-right: 150px;
+   padding-left: 35px;
+   width: 25%;
 }
 footer .f_info .sns ul {
    display: flex;
@@ -373,10 +368,11 @@ footer .f_info .sns ul li {
 }
 footer .f_info .name {
    line-height: 25px;
-   margin-right: 130px;
+   width: 25%;
 }
 footer .f_info .Privacy {
    line-height: 25px;
+   width: 25%;
 }
 footer .f_info .Privacy span {
    font-size: 20px;
@@ -388,59 +384,34 @@ footer .f_info .Privacy span {
    footer {
       margin: 0 30px;
    }
-   footer .f_news {
-      height: 280px;
-   }
    footer .f_news .f_logo {
       padding: 25px 0 0 30px;
    }
    footer .f_news .f_logo a img {
       width: 190px;
    }
-   footer .f_news .inner .news {
+   footer .f_news  .news {
       font-size: 17px;
    }
-   footer .f_news .inner .qna {
-      margin: 15px 0 0 227px;
+   footer .f_news  .qna {
       line-height: 25px;
    }
-   footer .f_news .inner .qna strong {
+   footer .f_news  .qna h2 {
       font-size: 17px;
-      margin: -14px 0 5px 0;
-   }
-   footer .f_nav {
-      height: 330px;
    }
    footer .f_nav span {
       font-size: 18px;
       margin-bottom: 5px;
    }
    footer .f_nav .menu01 {
-      margin-right: 100px;
       font-size: 17px;
    }
-   footer .f_nav .menu02 {
-      margin-right: 150px;
-   }
-   footer .f_nav .menu03 {
-      margin-right: 90px;
-   }
-   footer .f_info {
-      height: 300px;
-   }
    footer .f_info .sns {
-      padding: 0 0 0 30px;
-      margin-right: 95px;
-   }
-   footer .f_info .sns ul li {
-      margin-right: 5px;
+      padding-left: 0;
    }
    footer .f_info .sns ul li a {
       width: 30px;
       height: 31px;
-   }
-   footer .f_info .name {
-      margin-right: 30px;
    }
    footer .f_info .Privacy span {
       font-size: 17px;
@@ -449,65 +420,64 @@ footer .f_info .Privacy span {
 }
 @media screen and (max-width:1024px) {
    footer {
-      margin: 0 30px;
+      margin: 70px 30px;
    }
    footer .f_news {
-      height: 245px;
       display: block;
    }
    footer .f_news .f_logo {
       padding: 20px 0 0 20px;
+      width: auto;
    }
    footer .f_news .f_logo img {
       width: 160px;
    }
-   footer .f_news .inner {
+   footer .f_news  {
       display: block;
       padding: 0;
    }
-   footer .f_news .inner .news {
+   footer .f_news .news {
       margin-top: 15px;
       padding: 10px 0 0 20px;
       font-size: 15px;
       border-top: 1px solid rgba(0, 0, 0, 0.8);
+      width: auto;
    }
-   footer .f_news .inner .qna {
-      padding: 0 0 0 20px;
-      margin: 20px 0 20px 0;
+   footer .f_news .qna {
+      padding: 10px 0 0 20px;
+      margin: 10px 0 20px 0;
+      width: auto;
+      border-top: 1px solid rgba(0, 0, 0, 0.8);
    }
    footer .f_nav {
       display: none;
    }
    footer .f_info {
-      margin-top: 190px;
-      height: 500px;
       display: block;
+      margin: 0;
    }
    footer .f_info .sns {
       padding: 0 0 10px 0;
-      width: 100%;
+      width: auto;
       border-bottom: 1px solid rgba(0, 0, 0, 0.8);
       margin-right: 0;
+      padding: 15px 0;
    }
    footer .f_info .sns ul {
-      position: absolute;
-      top: 25px;
-      left: 50%;
-      transform: translate(-50%, 0);
+      justify-content: center;
    }
    footer .f_info .sns ul li a {
       width: 25px;
       height: 26px;
    }
    footer .f_info .name {
-      border-top: 1px solid rgba(0, 0, 0, 0.8);
-      width: 100%;
+      width: auto;
       padding: 20px 0 20px 20px;
       border-bottom: 1px solid rgba(0, 0, 0, 0.8);
-      margin-top: 60px;
    }
    footer .f_info .Privacy {
       padding: 20px 0 0 20px;
+      width: auto;
    }
    footer .f_info .Privacy span {
       font-size: 15px;
@@ -517,21 +487,18 @@ footer .f_info .Privacy span {
    footer {
       margin: 0 10px;
    }
-   footer .f_news {
-      height: 440px;
-   }
    footer .f_news .f_logo {
       padding: 10px 0 0 10px;
    }
    footer .f_news .f_logo img {
       width: 84px;
    }
-   footer .f_news .inner .news {
+   footer .f_news .news {
       margin-top: 10px;
       padding: 10px 0 0 10px;
    }
-   footer .f_news .inner .qna {
-      padding: 0 0 0 10px;
+   footer .f_news .qna {
+      padding: 10px 0 0 10px;
       margin: 10px 0 10px 0;
       border-top: 1px solid rgba(0, 0, 0, 0.8);
    }
@@ -540,7 +507,7 @@ footer .f_info .Privacy span {
       height: 500px;
    }
    footer .f_info .sns {
-      padding: 0 0 10px 0;
+      padding: 20px 0 10px 0;
       border-bottom: 0;
    }
    footer .f_info .sns ul li a {
@@ -552,17 +519,11 @@ footer .f_info .Privacy span {
       width: 100%;
       padding: 10px 0 10px 10px;
       border-bottom: 1px solid rgba(0, 0, 0, 0.8);
-      margin-top: 60px;
    }
    footer .f_info .Privacy {
       padding: 10px 0 0 10px;
    }
    footer .f_info .Privacy span {
       font-size: 15px;
-   }
-}
-@media screen and (max-width:276px) {
-   footer .f_news {
-      height: 470px;
    }
 }
