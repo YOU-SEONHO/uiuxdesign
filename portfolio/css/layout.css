@@ -17,24 +17,21 @@ header {
    display: flex;
    justify-content: space-between;
    color: #fff;
-   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
 }
 header .logo {
-   margin-top: 45px;
+   margin-top: 41px;
 }
 header .logo a {
    display: block;
-   font-size: 0;
-   line-height: 0;
-   width: 184px;
-   height: 51px;
-   background: url(../images/common/logo_w.svg) no-repeat center center / contain;
+   width: 147px;
+   height: 24px;
 }
-header .gnb ul{
+header .gnb ul {
    display: flex;
-   line-height: 100px;
 }
-
-.home {
-   margin-top: 100px;
+header .gnb ul li {
+   margin-left: 50px;
+}
+header .gnb ul li a {
+   line-height: 100px;
 }

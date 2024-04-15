@@ -7,43 +7,28 @@
    작성일 : 2024.04.15
    설  명 : 메인페이지에만 들어가는 스타일을 저장 (header와 footer 빼고 전부 다) */
 
-
-@media screen and (max-width:1600px) {
-   section .wrapper {
-      width: auto;
-      margin: 0 150px;
-   }
-}
-@media screen and (max-width:1024px) {
-   section .wrapper {
-      margin: 0 20px;
-   }
-}
-header {
-   display: flex;
-   justify-content: space-between;
-}
-
-
-
 .home {
    position: relative;
 }
 .home .tit {
    position: absolute;
-   left: 50%;  
-   top: 50%;
-   transform: translate(-50%, -50%);
-   width: 1280px;
+   left: 330px;  
+   top: 325px;
    z-index: 10;
    color: #fff;
-   font-size: 20px;
-   text-align: center;
+   font-size: 50px;
+   text-align: left;
 }
 .home .tit h2 {
-   font-size: 45px;
+   font-size: 30px;
+   margin-bottom: 40px;
+}
+.home .tit span {
    font-weight: 700;
-   margin-bottom: 10px;
+}
+.home,
+.home .photo {
+   height: 100vh; /* 팝업의 높이제어 */
 }
 .home .photo img {
    display: block;
@@ -51,6 +36,55 @@ header {
    height: 100%;
    object-fit: cover;
 }
+
+.about {
+   height: 1000px;
+   background-color: #DFD7CF;
+}
+.about .wrapper {
+   display: flex;
+}
+.about .left {
+   display: block;
+   width: 460px;
+   height: auto;
+   margin: 40px 0 0 90px;
+}
+.about .text {
+   position: relative;
+}
+.about .text h2 {
+   position: absolute;
+   top: -60px;
+   left: -90px;
+   font-size: 100px;
+   font-weight: 700;
+   color: #ededed;
+}
+.about .text strong {
+   font-size: 50px;
+   position: relative;
+   z-index: 10;
+}
+.about .text p {
+   margin-bottom: 5px;
+}
+.about .text p.pick {
+   margin: 50px 0 30px 0;
+}
+.about .text span {
+   font-size: 25px;
+   margin: 20px 0 10px 0;
+   display: inline-block;
+}
+.about .right {
+   margin: 150px 0 0 321px;
+   width: 315px;
+   height: 405px;
+   background: url(../images/main/photo.png) no-repeat center center / cover;
+}
+
+
 
 
 body #fp-nav.fp-right {
@@ -62,6 +96,7 @@ body #fp-nav ul li .fp-tooltip {
    font-family: inherit; /* 상속 */
    opacity: 1;
    width: auto;
+   top: 3px;
 }
 body #fp-nav ul li a span, .fp-slidesNav ul li a span {
    height: 15px;
@@ -75,9 +110,10 @@ body .fp-slidesNav ul li:hover a.active span {
    height: 15px;
    width: 15px;
    background-color: #fff;
+   margin: -2px 0 0 -2px;
 }
 body #fp-nav ul li, body .fp-slidesNav ul li {
-   margin: 20px 10px;
+   margin: 20px 0;
 }
 body #fp-nav ul li:hover .fp-tooltip, body #fp-nav.fp-show-active a.active + .fp-tooltip {
    font-weight: 700;
