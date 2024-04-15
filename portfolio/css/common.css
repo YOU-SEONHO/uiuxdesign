@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+*::selection {
+    background-color: #1d1d1d;
+    color: #fff;
+}
+*::-moz-selection {
+    background-color: #1d1d1d;
+    color: #fff;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face { font-family:'Montserrat';
+    src:url('../fonts/Montserrat-Regular.ttf') format('woff');
+    font-weight:400; font-style:normal;
+}
+@font-face { font-family:'Montserrat';
+    src:url('../fonts/Montserrat-Regular.ttf') format('woff2');
+    font-weight:400; font-style:normal;
+}
+@font-face { font-family:'Montserrat';
+    src:url('../fontS/Montserrat-Bold.ttf') format('woff'); 
+    font-weight:700; font-style:normal;
+}@font-face { font-family:'Montserrat';
+    src:url('../fonts/Montserrat-Bold.ttf') format('woff2'); 
+    font-weight:700; font-style:normal;
+}
+html, body {
+    /* 만약에 내가 정의한 웹폰트가 적용안되면, 맑은고딕(window용) 또는 애플고딕(맥용) 사용 */
+    font-family: 'Montserrat', 'Noto Sans KR', 'Malgun Gothic', '맑은 고딕', 'Dotum', '돋움', 'Helvetica', 'Apple SD Gothic Neo', '애플 SD 산돌고딕 Neo', sans-serif; /* 서체 serif 명조 sans-serif 고딕 */
+    font-size: 15px; /* 크기 */
+    background-color: #fff;
+    color: #1d1d1d; /* 글자색상 */
+    font-weight: 400; /* 글자의 두께 */
+    line-height: 1.2; /* auto */
+    /* word-break: keep-all; */
+    word-wrap: break-word; /* 만약 단어가 엄청 길면 줄바꿈 */
+}
+.wrapper { /* 홈페이지의 넓이를 제한하고 가운데 정렬 */
+    width: 1280px; /* 홈페이지 넓이 */
+    margin: 0 auto;  /* 가운데 정렬 */
+}
+#wrap { /* id="wrap"에 적용되는 스타일 */
+    width: 100%;
+    /* PC형에서 wrapper사이즈보다 브라우저 넓이가 작을때
+       가로스크롤바가 생성되는데 오른쪽에 background가 
+       짤리는 현상이 생김.  
+       가로스크롤바가 생성되었을때도 홈페이지를 정상적으로 
+       서비스 하기 위해서 최소 넓이를 입력 */
+    overflow: hidden;
+    /* 전체화면 밖에 나간영역 숨김 */
+}
+
+/* wrapper의 사이즈 1280 + 40px(좌여여백) = 1320 */
+@media screen and (max-width:1320px){
+    .wrapper { /* 홈페이지의 넓이를 제한하고 가운데 정렬 */
+        width: auto; 
+        /* 홈페이지 넓이를 제한하면 안됨
+           디바이스의 넓이에 맞춰서 꽊차게 나와야 하기 때문에
+           그 안쪽으로 좌우 여백이 20px씩 들어가게 함 */
+        margin: 0 20px;  /* 가운데 정렬 */
+    }
+} /* media */
+@media screen and (max-width:1024px){
+    html, body {
+        font-size: 15px; /* 크기 */ 
+    }
+}
+@media screen and (max-width:768px){
+    html, body {
+        font-size: 13px; /* 크기 */ 
+    }
+}
+
+.skipnav {
+    position: absolute;
+    left: 0;
+    top: -100px;
+    z-index: 1000000000000;
+    width: 100%;
+}
+.skipnav a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    line-height: 50px;
+    text-align: center;
+    background-color: #FE6D46;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+}
+/* 속성선택자
+ a태그중에서 href="#gnb"인  a 태그의 스타일 */
+.skipnav a[href="#gnb"] {
+    background-color: #FFAF37;
+}
+.skipnav a:focus {
+    top: 100px;
+}
+
+/* 파일명 : common.css
+   작성자 : 유선호
+   작성일 : 2024.03.20
+   속  성 : 홈페이지 전체에 공통으로 적용되는 스타일을 저장
+            문자스타일 등의 기본스타일만 저장 */

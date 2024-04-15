@@ -1,0 +1,40 @@
+/***********************************************************
+   파일명 : layout.css
+   작성자 : 유선호
+   작성일 : 2024.04.15
+   속  성 : 모든 페이지의 레이아웃 요소 (header/footer/서브레이아웃)
+            메뉴명, sub_visual 이미지스타일, 탭메뉴
+************************************************************/
+
+header {
+   position: fixed;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100px;
+   z-index: 100;
+   padding: 0 100px;
+   display: flex;
+   justify-content: space-between;
+   color: #fff;
+   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
+}
+header .logo {
+   margin-top: 45px;
+}
+header .logo a {
+   display: block;
+   font-size: 0;
+   line-height: 0;
+   width: 184px;
+   height: 51px;
+   background: url(../images/common/logo_w.svg) no-repeat center center / contain;
+}
+header .gnb ul{
+   display: flex;
+   line-height: 100px;
+}
+
+.home {
+   margin-top: 100px;
+}
