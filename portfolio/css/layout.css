@@ -29,12 +29,21 @@ header .logo a {
 }
 header .gnb ul {
    display: flex;
+   text-align: center;
 }
 header .gnb ul li {
    margin-left: 50px;
+   width: 120px;
 }
 header .gnb ul li a {
+   display: block;
    line-height: 100px;
+}
+header .gnb ul li a:hover {
+   color: #1d1d1d;
+}
+header.black .gnb ul li a:hover {
+   color: #fff;
 }
 header.black {
    color: #1d1d1d;

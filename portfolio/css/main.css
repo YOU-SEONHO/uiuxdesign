@@ -18,7 +18,7 @@
 .swiper-slide-active .home h2 {
    animation-name: right_ani;
    animation-duration: 0.5s;
-   animation-iteration-count: 1;
+   animation-iteration-count: 1; 
    animation-fill-mode: forwards;
 }
 .swiper-slide-active .home p {
@@ -27,21 +27,37 @@
    animation-iteration-count: 1;
    animation-fill-mode: forwards;
 }
-.swiper-slide-active .portfolio1 strong {
+.swiper-slide-active .swiper-slide-active .portfolio1 strong {
    animation-name: left_ani;
-   animation-duration: 0.5s;
+   animation-duration: 2s;
    animation-iteration-count: 1;
    animation-fill-mode: forwards;
 }
-.swiper-slide-active .portfolio2 strong {
-   animation-name: right_ani;
-   animation-duration: 0.5s;
+.swiper-slide-active .swiper-slide-active .portfolio1 span,
+.swiper-slide-active .swiper-slide-active .portfolio1 p,
+.swiper-slide-active .swiper-slide-active .portfolio1 a {
+   animation-name: left_ani;
+   animation-duration: 1s;
+   animation-iteration-count: 1;
+   animation-fill-mode: forwards;
+}
+.swiper-slide-active .swiper-slide-active .portfolio2 strong {
+   animation-name: left_ani;
+   animation-duration: 2s;
+   animation-iteration-count: 1;
+   animation-fill-mode: forwards;
+}
+.swiper-slide-active .swiper-slide-active .portfolio2 span,
+.swiper-slide-active .swiper-slide-active .portfolio2 p,
+.swiper-slide-active .swiper-slide-active .portfolio2 a {
+   animation-name: left_ani;
+   animation-duration: 1s;
    animation-iteration-count: 1;
    animation-fill-mode: forwards;
 }
 .swiper-slide-active .contact span {
    animation-name: in_ani;
-   animation-duration: 0.5s;
+   animation-duration: 3s;
    animation-iteration-count: 1;
    animation-fill-mode: forwards;
 }
