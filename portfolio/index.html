@@ -4,12 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.11/fullpage.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.11/fullpage.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/main.js"></script>
@@ -18,7 +14,7 @@
 <body>
     <div id="wrap">
         <header>
-            <h1 class="logo"><a href="index.html"><img src="images/common/YOU_SEONHO.svg" alt="YOU_SEONHO"></a></h1>
+            <h1 class="logo"><a href="index.html"></a></h1>
             <nav class="gnb">
                 <ul>
                     <li><a href="index.html">HOME</a></li>
@@ -29,52 +25,167 @@
                 </ul>
             </nav>
         </header>
-        <div id="fullpage">
-            <section class="section home">
-                <div class="wrapper">
-                    <div class="tit">
-                        <h2>PORTFOLIO</h2>
-                        <p>안녕하세요<br>
-                        <span>신입디자이너 유선호</span> 입니다.</p>
+        <div class="swiper swiperV">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <section class="section home">
+                        <div class="wrapper">
+                            <div class="tit">
+                                <h2>PORTFOLIO</h2>
+                                <p>안녕하세요<br>
+                                <span>신입디자이너 유선호</span> 입니다.</p>
+                            </div>
+                        </div>
+                        <div class="photo"><img src="images/main/home_bg.png" alt="home_bg">
+                    </section>
+                </div>
+                <div class="swiper-slide">
+                    <section class="section about">
+                        <div class="wrapper">
+                            <div class="left">
+                                <div class="tit">
+                                    <h2>02</h2>
+                                    <strong>ABOUT ME</strong>
+                                    <p class="pick">안녕하세요. 신입디자이너 유선호입니다.<br>
+                                    사용자에게 최고의 경험을 제공하는 디자이너가 되겠습니다.<br></p>
+                                </div>
+                                <div class="text">
+                                    <span>Certificate</span><br>
+                                    <p>2024. 03. 웹디자인기능사<br></p>
+                                    <p>2024. 03. 컴퓨터그래픽스운용기능사<br></p>
+                                </div>
+                                <div class="text">
+                                    <span>Education</span><br>
+                                    <p>2023. 12. 18 ~ 2024. 04. 25<br></p>
+                                    <p>이지디자인컴퓨터학원 웹디자인&웹퍼블리싱 UI/UX 콘텐츠개발 과정 수료<br></p>
+                                </div>
+                                <div class="text">
+                                <span>Skills</span><br>
+                                <ul class="progress">
+                                    <li class="draw_circle" data-name="Ps" data-percent="80">
+                                        <span class="graph"><strong>80%</strong></span>
+                                        <span class="name">Ps</span>
+                                    </li>
+                                    <li class="draw_circle" data-name="Ai" data-percent="70"><span></span></li>
+                                    <li class="draw_circle" data-name="Figma" data-percent="90"><span></span></li>
+                                    <li class="draw_circle" data-name="Xd" data-percent="80"><span></span></li>
+                                    <li class="draw_circle" data-name="HTML&CSS&JS" data-percent="80"><span></span></li>
+                                </ul>
+                                </div>
+                            </div>
+                            <div class="right"></div>
+                        </div>
+                    </section>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper swiperH">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <section class="section portfolio1">
+                                    <div class="wrapper">
+                                        <div class="inner">
+                                            <div class="left">
+                                                <p>우측 슬라이드로 페이지이동없이도<br>
+                                                    정보를 손쉽게 파악할 수 있습니다.</p>
+                                            </div>
+                                            <div class="right">
+                                                <div class="tit">
+                                                    <h2>03</h2>
+                                                    <strong>GONJIAM RESORT</strong>
+                                                </div>
+                                                <div class="text">
+                                                    <span class="Overview">Overview</span>
+                                                    <p>사용자의 이용패턴을 고려해<br>
+                                                        화면을 구성하고, 노후화된 사<br>
+                                                        용성 및 보완성을 개선하여 사<br>
+                                                        용자가 쉽고 빠르게 접근할 수 <br>
+                                                        있도록 UI/UX를 구성했습니다.</p>
+                                                </div>
+                                                <div class="text">
+                                                    <span class="Participation">Participation</span>
+                                                    <p>100% 개인작업_2024</p>
+                                                </div>
+                                                <div class="text">
+                                                    <span class="Font">Font</span>
+                                                    <p>Noto Sans KR</p>
+                                                </div>
+                                                <div class="text">
+                                                    <span class="Color">Main Color</span>
+                                                    <div class="list">
+                                                        <p class="Color1">7C6C5D</p>
+                                                        <p class="Color2">1D1D1D</p>
+                                                        <p class="Color3">FFFFFF</p>
+                                                    </div>
+                                                </div>
+                                                <div class="web"><a href="https://you-seonho.github.io/uiuxdesign/gonjiam">web</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div> 
+                            <div class="swiper-slide">
+                                <section class="section portfolio2">
+                                    <div class="wrapper">
+                                        <div class="inner">
+                                            <div class="left">
+                                                <div class="tit">
+                                                    <h2>04</h2>
+                                                    <strong>ART GALLERY</strong>
+                                                </div>
+                                                <div class="text">
+                                                    <span class="Overview">Overview</span>
+                                                    <p>분산된 정보를 리뉴얼한 웹사이트로 과도한 정보노출대신 심플한 디자인과 UI로<br>
+                                                        콘텐츠를 강조하여 쉽게 사용할수있도록 디자인했습니다.</p>
+                                                </div>
+                                                <div class="text">
+                                                    <span class="Participation">Participation</span>
+                                                    <p>100% 개인작업_2024</p>
+                                                </div>
+                                                <div class="text">
+                                                    <span class="Font">Font</span>
+                                                    <p>Noto Sans KR</p>
+                                                </div>
+                                                <div class="text">
+                                                    <span class="Color">Main Color</span>
+                                                    <div class="list">
+                                                        <p class="Color1">313131</p>
+                                                        <p class="Color2">FAFAFA</p>
+                                                    </div>
+                                                </div>
+                                                <div class="web"><a href="https://you-seonho.github.io/uiuxdesign/museum">web</a></div>
+                                            </div>
+                                            <div class="right">
+                                                <p class="info">이용하는 미술관, 가까운 미술관정보를 이용자가<br>
+                                                    쉽게 확인 또는 문의 가능하도록 디자인했습니다.</p>
+                                                <p class="news">미술관의 주요 소식, 행사는 눈에띄는<br>
+                                                    레이아웃을 사용하여 방문자의 주목을<br>
+                                                    끌 수있도록 구성하였습니다.</p>
+                                                <p class="nav">원하는 정보를 신속하고 직관적으로<br>
+                                                    찾을수 있도록 구축하였습니다.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div> 
+                        </div>
                     </div>
                 </div>
-                <div class="photo"><img src="images/main/home_bg.png" alt="home_bg"><div class="home_"></div>
-            </section>
-            <section class="section about">
-                <div class="wrapper">
-                    <div class="left">
-                        <div class="text">
-                            <h2>02</h2>
-                            <strong>ABOUT ME</strong>
-                            <p class="pick">안녕하세요. 신입디자이너 유선호입니다.<br>
-                            사용자에게 최고의 경험을 제공하는 디자이너가 되겠습니다.<br></p>
+                <div class="swiper-slide">
+                    <section class="section contact">
+                        <div class="wrapper">
+                            <div class="tit">
+                                <h2>05</h2>
+                                <strong>CONTACT</strong>
+                            </div>
+                            <div class="text">
+                                <span><strong>THANK</strong> YOU</span>
+                                <p>010 6606 0814</p>
+                                <p>seonho0814@naver.com</p>
+                            </div>
                         </div>
-                        <div class="text">
-                            <span>Certificate</span><br>
-                            <p>2024. 03. 웹디자인기능사<br></p>
-                            <p>2024. 03. 컴퓨터그래픽스운용기능사<br></p>
-                        </div>
-                        <div class="text">
-                            <span>Education</span><br>
-                            <p>2023. 12. 18 ~ 2024. 04. 25<br></p>
-                            <p>이지디자인컴퓨터학원 웹디자인&웹퍼블리싱 UI/UX 콘텐츠개발 과정 수료<br></p>
-                        </div>
-                        <div class="text">
-                        <span>Skills</span><br>
-                        <ul class="progress">
-                            <li data-name="Ps" data-percent="80%"></li>
-                            <li data-name="Ai" data-percent="70%"></li>
-                            <li data-name="Figma" data-percent="90%"></li>
-                            <li data-name="Xd" data-percent="80%"></li>
-                            <li data-name="HTML&CSS&JS" data-percent="80%"></li>
-                        </ul>
-                        </div>
-                    </div>
-                    <div class="right"></div>
+                    </section>
                 </div>
-            </section>
-            <section class="PORTFOLIO1">
-            </section>
+            </div>
         </div>
     </div>
 </body>

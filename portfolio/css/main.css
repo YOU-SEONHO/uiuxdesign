@@ -7,6 +7,58 @@
    작성일 : 2024.04.15
    설  명 : 메인페이지에만 들어가는 스타일을 저장 (header와 footer 빼고 전부 다) */
 
+.swiperV {
+   height: 100vh;
+}
+.swiper-slide {
+   height: 100vh;
+   overflow: hidden;
+}
+
+.swiper-slide-active .home h2 {
+   animation-name: right_ani;
+   animation-duration: 0.5s;
+   animation-iteration-count: 1;
+   animation-fill-mode: forwards;
+}
+.swiper-slide-active .home p {
+   animation-name: right_ani;
+   animation-duration: 1s;
+   animation-iteration-count: 1;
+   animation-fill-mode: forwards;
+}
+.swiper-slide-active .portfolio1 strong {
+   animation-name: left_ani;
+   animation-duration: 0.5s;
+   animation-iteration-count: 1;
+   animation-fill-mode: forwards;
+}
+.swiper-slide-active .portfolio2 strong {
+   animation-name: right_ani;
+   animation-duration: 0.5s;
+   animation-iteration-count: 1;
+   animation-fill-mode: forwards;
+}
+.swiper-slide-active .contact span {
+   animation-name: in_ani;
+   animation-duration: 0.5s;
+   animation-iteration-count: 1;
+   animation-fill-mode: forwards;
+}
+
+@keyframes right_ani {
+   0% { transform: translate(-50px, 0); opacity: 0; }
+   100% { transform: translate(0, 0); opacity: 1; }
+}
+@keyframes left_ani {
+   0% { transform: translate(50px, 0); opacity: 0; }
+   100% { transform: translate(0, 0); opacity: 1; }
+}
+@keyframes in_ani {
+   0% { transform: translate(0, 0); opacity: 0; }
+   100% { transform: translate(0, 0); opacity: 1; }
+}
+
 .home {
    position: relative;
 }
@@ -43,17 +95,18 @@
 }
 .about .wrapper {
    display: flex;
+   height: 900px;
 }
 .about .left {
    display: block;
    width: 460px;
    height: auto;
-   margin: 40px 0 0 90px;
+   margin: 160px 0 0 250px;
 }
-.about .text {
+.about .tit {
    position: relative;
 }
-.about .text h2 {
+.about .tit h2 {
    position: absolute;
    top: -60px;
    left: -90px;
@@ -61,16 +114,17 @@
    font-weight: 700;
    color: #ededed;
 }
-.about .text strong {
+.about .tit strong {
    font-size: 50px;
    position: relative;
    z-index: 10;
 }
+.about .tit p.pick {
+   margin: 50px 0 30px 0;
+}
 .about .text p {
    margin-bottom: 5px;
-}
-.about .text p.pick {
-   margin: 50px 0 30px 0;
+   color: #3d3d3d;
 }
 .about .text span {
    font-size: 25px;
@@ -78,11 +132,303 @@
    display: inline-block;
 }
 .about .right {
-   margin: 150px 0 0 321px;
+   margin: 270px 0 0 321px;
    width: 315px;
    height: 405px;
    background: url(../images/main/photo.png) no-repeat center center / cover;
 }
+.about .progress {
+   display: flex;
+}
+.about .progress li {
+   position: relative;
+}
+.about .progress li .graph {
+   position: relative;
+   display: block;
+   width: 70px;
+   height: 70px;
+   transition: 10s;
+   border-radius: 50%;
+}
+.about .progress li .graph strong {
+   background: #fff;
+   display : block;
+   position: absolute;
+   top:50%; 
+   left:50%;
+   width:50px;
+   height:50px;
+   border-radius: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.portfolio1 {
+   height: 1000px;
+   background: url(../images/main/portfolio1.png) no-repeat center center / cover;
+}
+.portfolio1 .wrapper {
+   height: 900px;
+}
+.portfolio1 .inner {
+   display: flex;
+   justify-content: space-between;
+   height: auto;
+}
+.portfolio1 .left {
+   margin: 338px 0 0 100px;
+   color: #3d3d3d;
+}
+.portfolio1 .right {
+   margin: 260px 0 0 0;
+}
+.portfolio1 .tit {
+   font-size: 50px;
+   position: relative;
+   margin-bottom: 40px;
+}
+.portfolio1 .tit h2 {
+   position: absolute;
+   top: -60px;
+   left: -90px;
+   font-size: 100px;
+   font-weight: 700;
+   color: #ededed;
+}
+.portfolio1 .tit strong {
+   position: relative;
+   z-index: 10;
+}
+.portfolio1 .right .text {
+   padding-left: 109px;
+}
+.portfolio1 .right .text span {
+   font-size: 25px;
+   padding: 12px;
+   position: relative;
+   display: block;
+}
+.portfolio1 .right .text span::before {
+   position: absolute;
+   bottom: 12px;
+   left: 0;
+   border: 1px solid rgba(57, 77, 117, 0);
+   background-color: rgba(57, 77, 117, 0.2);
+   content: "";
+}
+.portfolio1 .right .text span.Overview::before {
+   width: 142px;
+   height: 12px;
+}
+.portfolio1 .right .text span.Participation::before {
+   width: 185px;
+   height: 12px;
+}
+.portfolio1 .right .text span.Font::before {
+   width: 85px;
+   height: 12px;
+}
+.portfolio1 .right .text span.Color::before {
+   width: 157px;
+   height: 12px;
+}
+.portfolio1 .right .text p {
+   color: #3d3d3d;
+}
+.portfolio1 .right .text .list {
+   display: flex;
+}
+.portfolio1 .right .text .list p {
+   border-width: 1px;
+   border-style: solid;
+   border-radius: 100%;
+   width: 37px;
+   height: 37px;
+   font-size: 0;
+   line-height: 0;
+   margin-right: 20px;
+}
+.portfolio1 .right .text .list p.Color1 {
+   border-color: #7C6C5D;
+   background-color: #7C6C5D;
+}
+.portfolio1 .right .text .list p.Color2 {
+   border-color: #1D1D1D;
+   background-color: #1D1D1D;
+}
+.portfolio1 .right .text .list p.Color3 {
+   border-color: #fff;
+   background-color: #fff;
+}
+.portfolio1 .web a {
+   border: 1px solid #3d3d3d;
+   border-radius: 20px;
+   width: 185px;
+   line-height: 30px;
+   margin: 30px 0 0 110px;
+   display: block;
+   text-align: center;
+}
+.portfolio1 .web a:hover {
+   background-color: #3d3d3d;
+   color: #fff;
+}
+
+.portfolio2 {
+   height: 1000px;
+   background: url(../images/main/portfolio2.png) no-repeat center center / cover;
+}
+.portfolio2 .inner {
+   display: flex;
+   height: 900px;
+}
+.portfolio2 .left {
+   margin: 160px 0 0 0;
+}
+.portfolio2 .tit {
+   font-size: 50px;
+   position: relative;
+   margin-bottom: 5px;
+}
+.portfolio2 .tit h2 {
+   position: absolute;
+   top: -60px;
+   left: 0px;
+   font-size: 100px;
+   font-weight: 700;
+   color: #ededed;
+}
+.portfolio2 .tit strong {
+   position: relative;
+   z-index: 10;
+   padding-left: 90px;
+}
+.portfolio2 .left .text span {
+   font-size: 25px;
+   padding: 12px;
+   position: relative;
+   display: block;
+}
+.portfolio2 .left .text span::before {
+   position: absolute;
+   bottom: 12px;
+   left: 0;
+   border: 1px solid rgba(45, 70, 43, 0);
+   background-color: rgba(45, 70, 43, 0.2);
+   content: "";
+}
+.portfolio2 .left .text span.Overview::before {
+   width: 142px;
+   height: 12px;
+}
+.portfolio2 .left .text span.Participation::before {
+   width: 185px;
+   height: 12px;
+}
+.portfolio2 .left .text span.Font::before {
+   width: 85px;
+   height: 12px;
+}
+.portfolio2 .left .text span.Color::before {
+   width: 157px;
+   height: 12px;
+}
+.portfolio2 .left .text p {
+   color: #3d3d3d;
+}
+.portfolio2 .left .text .list {
+   display: flex;
+}
+.portfolio2 .left .text .list p {
+   border-width: 1px;
+   border-style: solid;
+   border-radius: 100%;
+   width: 37px;
+   height: 37px;
+   font-size: 0;
+   line-height: 0;
+   margin-right: 20px;
+}
+.portfolio2 .left .text .list p.Color1 {
+   border-color: #313131;
+   background-color: #313131;
+}
+.portfolio2 .left .text .list p.Color2 {
+   border-color: #FAFAFA;
+   background-color: #FAFAFA;
+}
+.portfolio2 .web a {
+   border: 1px solid #3d3d3d;
+   border-radius: 20px;
+   width: 185px;
+   line-height: 30px;
+   margin-top: 30px;
+   display: block;
+   text-align: center;
+}
+.portfolio2 .web a:hover {
+   background-color: #3d3d3d;
+   color: #fff;
+}
+.portfolio2 .right {
+   color: #3d3d3d;
+}
+.portfolio2 .right p.info {
+   margin: 195px 0 0 725px;
+}
+.portfolio2 .right p.news {
+   margin: 455px 0 0 340px;
+}
+.portfolio2 .right p.nav {
+   margin: -30px 0 0 880px;
+}
+
+.contact {
+   height: 1000px;
+   background: url(../images/common/contact.png) no-repeat center center / cover;
+}
+.contact .wrapper {
+   height: 900px;
+}
+.contact .tit {
+   font-size: 50px;
+   position: relative;
+   padding: 320px 0 48px 0;
+   color: #fff;
+   font-weight: 700;
+}
+.contact .tit h2 {
+   position: absolute;
+   top: 260px;
+   left: 0px;
+   font-size: 100px;
+   font-weight: 700;
+   color: rgba(237, 237, 237, 0.8);
+}
+.contact .tit strong {
+   position: relative;
+   z-index: 10;
+   padding-left: 90px;
+}
+.contact .text {
+   text-align: center;
+   color: #fff;
+}
+.contact .text span {
+   font-size: 50px;
+   margin-bottom: 68px;
+   display: block;
+}
+.contact .text span strong {
+   font-weight: 700;
+}
+.contact .text p {
+   font-size: 35px;
+   margin-bottom: 5px;
+}
+
+
+
 
 
 

@@ -41,12 +41,15 @@ html, body {
     word-wrap: break-word;
 }
 .wrapper {
-    width: 1280px;
+    width: 1620px;
     margin: 0 auto;
 }
 #wrap {
-    width: 100%;
+    width: 100vw;
+    min-width: 1620px;
+    height: 100vh;
     overflow: hidden;
+    position: relative;
 }
 
 .skipnav {

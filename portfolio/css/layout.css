@@ -19,12 +19,13 @@ header {
    color: #fff;
 }
 header .logo {
-   margin-top: 41px;
+   margin-top: 35px;
 }
 header .logo a {
    display: block;
    width: 147px;
    height: 24px;
+   background: url(../images/common/YOU_SEONHO_W.svg) no-repeat center center / contain;
 }
 header .gnb ul {
    display: flex;
@@ -34,4 +35,10 @@ header .gnb ul li {
 }
 header .gnb ul li a {
    line-height: 100px;
+}
+header.black {
+   color: #1d1d1d;
+}
+header.black .logo a {
+   background: url(../images/common/YOU_SEONHO.svg) no-repeat center center / contain;
 }
