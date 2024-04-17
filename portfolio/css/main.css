@@ -158,26 +158,51 @@
 }
 .about .progress li {
    position: relative;
+   margin: 0 15px;
 }
 .about .progress li .graph {
    position: relative;
-   display: block;
+   display: flex;
+   justify-content: center;
+   align-items: center;
    width: 70px;
    height: 70px;
-   transition: 10s;
+   border: 1px solid #3d3d3d;
    border-radius: 50%;
+   font-size: 15px;
 }
-.about .progress li .graph strong {
-   background: #fff;
-   display : block;
+.about .progress li .name {
+   display: block;
+   text-align: center;
+   font-size: 17px;
+}
+.about .progress li .last{
+   display: block;
+   text-align: center;
+   font-size: 17px;
+   margin-left: -22px;
+}
+.about .progress li svg {
    position: absolute;
-   top:50%; 
-   left:50%;
-   width:50px;
-   height:50px;
-   border-radius: 50%;
-   transform: translate(-50%, -50%);
+   left: -7px;
+   top: 15px;
+   stroke-dasharray: 500;
+   stroke-dashoffset: 500;
 }
+.swiper-slide-active .about .progress li svg {
+   animation-name: circle0;
+   animation-duration: 5s;
+   animation-fill-mode: forwards;
+   animation-timing-function: 1;
+}
+.about .progress li svg path {
+   fill:transparent;stroke:url(#SVGID_1_);stroke-width:5;stroke-linecap:round;stroke-miterlimit:10;
+}
+@keyframes circle0 {
+   0% { stroke-dashoffset: 500; }
+   100% { stroke-dashoffset: 0; }
+ }
+
 
 .portfolio1 {
    height: 1000px;
@@ -441,6 +466,32 @@
 .contact .text p {
    font-size: 35px;
    margin-bottom: 5px;
+}
+.page {
+	position: fixed;
+   right: 60px;
+	bottom: 40%;
+	z-index: 9999;
+   color: #fff;
+   text-align: right;
+}
+.page a {
+   display: block;
+   margin-bottom: 20px;
+   padding-right: 40px;
+}
+.page a span {
+   position: relative;
+}
+.page span::after {
+   position: absolute;
+   top: 4px;
+   right: -30px;
+   border-radius: 100%;
+   width: 10px;
+   height: 10px;
+   background-color: rgba(255, 255, 255, 0.5);
+   content: "";
 }
 
 
