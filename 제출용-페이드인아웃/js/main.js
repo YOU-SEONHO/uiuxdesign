@@ -33,7 +33,7 @@ $(document).ready(function(){
            }
            //console.log(idx)
            $('.visual ul li').removeClass('active')
-           $('.visual ul li').eq(idx-1).addClass('active')
+           $('.visual ul li').eq(idx-1).addClass('active') /* eq - ul li만 가능*/
        }, 3000)
    })
 
