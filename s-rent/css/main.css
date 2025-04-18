@@ -57,7 +57,7 @@
 }
 
 .biz {
-   margin: 40px 0 55px 0;
+   margin: 40px 0 110px 0;
 }
 .biz p {
    text-align: center;
@@ -70,7 +70,7 @@
    display: flex;
    justify-content: space-between;
    position: relative;
-   margin: 80px 0 30px 0;
+   margin: 130px 0 20px 0;
 }
 .biz .biz_tit h2 {
    font-size: 30px;
@@ -126,12 +126,12 @@
 .biz .inner .list ul li a strong {
    font-size: 18px;
    font-weight: 700;
-   margin: 10px 0 5px 0;
+   margin: 5px 0;
    display: block;
    color: #2d2d2d;
 }
 .biz .inner .list ul li a p {
-   margin-bottom: 25px;
+   margin-bottom: 20px;
    text-align: left;
    line-height: 1.2em;
 }
@@ -140,7 +140,7 @@
    font-size: 30px;
    font-weight: 700;
    color: #1d1d1d;
-   margin-bottom: 30px;
+   margin-bottom: 20px;
 }
 .reservation .inner {
    display: flex;
@@ -204,262 +204,13 @@
    font-size: 20px;
 }
 
-
-
-
-
-.notice {
+.location {
    margin: 130px 0 200px 0;
 }
-.notice .notice_tit {
-   text-align: center;
-   margin-bottom: 73px;
-}
-.notice .notice_tit h2 {
+.location h2 {
    font-size: 30px;
-   margin-bottom: 5px;
-}
-.notice .notice_list ul {
-   display: flex;
-   justify-content: space-between;
-}
-.notice .notice_list ul li {
-   width: calc(25% - 21px); /* 여백 * 3(콘텐츠사이여백개수) / 4(콘텐츠개수) */
-   position: relative;
-}
-.notice .notice_list ul li a {
-   display: block;
-   padding-top: 30px;
-   border-width: 299px;
-   border-top: 1px solid #7C6C5D;
-   transition: 0.5s;
-}
-.notice .notice_list ul li a:hover {
-   background-color: #7C6C5D;
-   width: 100%;
-   height: 187px;
-   border-radius: 10px;
-}
-.notice .notice_list ul li a:hover h3 {
-   color: #fff;
-   padding: 0 20px;
-}
-.notice .notice_list ul li a:hover p,
-.notice .notice_list ul li a:hover span {
-   display: none;
-}
-.notice .notice_list ul li a h3 {
-   font-size: 20px;
-   color: #4d4d4d;
    font-weight: 700;
-   white-space: nowrap;
-   overflow: hidden;
-   text-overflow: ellipsis;
-}
-.notice .notice_list ul li a:hover::after {
-   display: block;
-   position: absolute;
-   right: 20px;
-   bottom: 20px;
-   width: 18px;
-   height: 18px;
-   background-repeat: no-repeat;
-   background-position: center center;
-   background-size: contain;
-   content: "";
-   background-image: url("data:image/svg+xml,%3Csvg width='19' height='19' viewBox='0 0 19 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.52279 18.0748L0 16.552L14.3506 2.18743H1.30408V0H18.0748V16.7708H15.8874V3.72426L1.52279 18.0748Z' fill='white'/%3E%3C/svg%3E%0A");
-}
-.notice .notice_list ul li a p {
-   line-height: 1.2;
-   height: 3.6em;
-   overflow: hidden;
-   margin: 30px 0 30px 0;
-   color: #595959;
-}
-.notice .notice_list ul li a span {
-   text-align: right;
-   display: block;
-   color: #595959;
-}
-@media screen and (max-width:1320px) {
-   .notice {
-      margin: 110px 0 170px 0;
-   }
-   .notice .notice_tit {
-      margin-bottom: 65px;
-   }
-   .notice .notice_list ul li {
-      padding-top: 30px;
-   }
-   .notice .notice_list ul li a h3 {
-      font-size: 20px;
-   }
-   .notice .notice_list ul li a p {
-      margin: 30px 0 30px 0;
-   }
-}
-@media screen and (max-width:1024px) {
-   .notice {
-      margin: 90px 0 150px 0;
-   }
-   .notice .notice_tit {
-      margin-bottom: 50px;
-   }
-   .notice .notice_list ul li {
-      padding-top: 20px;
-      width: calc(50% - 21px); /* 여백 * 3(콘텐츠사이여백개수) / 4(콘텐츠개수) */
-   }
-   .notice .notice_list ul li.no_remove {
-      display: none;
-   }
-   .notice .notice_list ul li a h3 {
-      font-size: 18px;
-   }
-   .notice .notice_list ul li a p {
-      margin: 25px 0 25px 0;
-   }
-}
-@media screen and (max-width:768px) {
-   .notice {
-      margin: 60px 0 100px 0;
-   }
-   .notice .notice_tit {
-      margin-bottom: 20px;
-   }
-   .notice .notice_tit h2 {
-      font-size: 20px;
-      margin-bottom: 3px;
-   }
-   .notice .notice_list ul li {
-      padding-top: 20px;
-      width: calc(50% - 21px); /* 여백 * 3(콘텐츠사이여백개수) / 4(콘텐츠개수) */
-   }
-   .notice .notice_list ul li.no_remove {
-      display: none;
-   }
-   .notice .notice_list ul li a h3 {
-      font-size: 15px;
-   }
-}
-
-.service .service_tit {
+   color: #1d1d1d;
    text-align: center;
-   margin-bottom: 40px;
+   margin-bottom: 50px;
 }
-.service .service_tit h2 {
-   font-size: 30px;
-   margin-bottom: 5px;
-}
-.service .service_list ul {
-   display: flex;
-}
-.service .service_list ul li {
-   position: relative;
-   width: 33.33%;
-}
-.service .service_list ul li a {
-   display: block;
-}
-.service .service_list ul li a img {
-   width: 100%;
-   height: 800px;
-   object-fit: cover;
-   display: block;
-}
-.service .service_list ul li a:hover img {
-   opacity: 0.8;
-}
-.service .service_txt {
-   text-align: center;
-}
-.service .service_txt strong {
-   position: absolute;
-   font-size: 40px;
-   font-weight: 700;
-   left: 50%;
-   transform: translate(-50%, 0);
-   top: 400px;
-   color: rgba(255, 255, 255, 0.8);
-}
-.service .service_txt br {
-   display: none;
-}
-.service .service_txt span {
-   position: absolute;
-   left: calc(100% - 126px);
-   bottom: 20px;
-   color: #fff;
-}
-.service .service_txt span::after {
-   position: absolute;
-   right: -20px;
-   bottom: 1px;
-   width: 15px;
-   height: 15px;
-   background-repeat: no-repeat;
-   background-position: center center;
-   background-size: contain;
-   content: "";
-   background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.3918 7.96872H2.8125V7.03125H10.3918L6.83173 3.47114L7.49998 2.8125L12.1875 7.49998L7.49998 12.1875L6.83173 11.5288L10.3918 7.96872Z' fill='white'/%3E%3C/svg%3E%0A");
-}
-@media screen and (max-width:1320px) {
-   .service .service_list ul li a img {
-      height: 750px;
-   }
-   .service .service_txt strong {
-      font-size: 30px;
-      top: 350px;
-   }
-   .service .service_txt span {
-      left: calc(100% - 114px);
-      bottom: 15px;
-   }
-}
-@media screen and (max-width:1024px) {
-   .service .service_list ul li a img {
-      height: 650px;
-   }
-   .service .service_txt strong {
-      font-size: 25px;
-      top: 300px;
-   }
-   .service .service_txt span {
-      font-size: 0;
-      line-height: 0;
-   }
-   .service .service_txt span::after {
-      right: -106px;
-      bottom: 1px;
-      width: 18px;
-      height: 18px;
-   }
-}
-@media screen and (max-width:768px) {
-   .service .service_list ul li a img {
-      height: 300px;
-   }
-   .service .service_tit {
-      margin-bottom: 20px;
-   }
-   .service .service_tit h2 {
-      font-size: 20px;
-   }
-   .service .service_tit p {
-      padding: 0 20px;
-   }
-   .service .service_txt strong {
-      font-size: 15px;
-      top: 135px;
-   }
-   .service .service_txt br {
-      display: block;
-   }
-   .service .service_txt span::after {
-      right: -106px;
-      bottom: 1px;
-      width: 18px;
-      height: 18px;
-   }
-}
-
-

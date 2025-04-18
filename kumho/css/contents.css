@@ -1251,7 +1251,7 @@
    background-size: 7px auto;
 }
 .cts_brochure .board_paging .btn_prev:hover,
-.cts_brochure .board_paging .btn_next.hover {
+.cts_brochure .board_paging .btn_next:hover {
    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
    background-color: #1d1d1d;
 }
