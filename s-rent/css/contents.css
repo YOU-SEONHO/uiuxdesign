@@ -60,6 +60,9 @@
    line-height: 30px;
    text-align: center;
 }
+.cts_car .inner .board_paging .page:hover {
+   font-weight: 700;
+}
 .cts_car .inner .board_paging .page.on,
 .cts_car .inner .board_paging .page.on:hover {
    background-color: #0048FF;
