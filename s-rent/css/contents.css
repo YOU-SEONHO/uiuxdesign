@@ -7,9 +7,42 @@
 @import url(layout.css);
 
 
+.about {
+   margin: 100px 0 150px 0;
+}
+.about .rent,
+.about .pick {
+   display: flex;
+}
+.about .pick {
+   justify-content: flex-end; /* 오른쪽 정렬 */
+   margin: 60px 0 0 0;
+}
+.about .rent .inner{
+   margin-left: 80px;
+}
+.about .pick .inner{
+   margin-right: 80px;
+   /* width: 420px;
+   긴문장을 넓이를 제한해서 줄바꿈주기 */
+   text-align: right;
+}
+.about .rent h2,
+.about .pick h2 {
+   color: #1d1d1d;
+   font-size: 30px;
+   font-weight: 900;
+   margin: 105px 0 0 0;
+}
+.about .rent p,
+.about .pick p {
+   color: #1d1d1d;
+   font-size: 15px;
+   margin-top: 10px;
+}
 
 .cts_car .inner {
-   margin: 200px 0 400px 0;
+   margin: 100px 0 400px 0;
 }
 .cts_car .inner h2 {
    font-size: 30px;
@@ -26,8 +59,8 @@
 }
 .cts_car .inner .car_list ul li {
    width: 299px;
-   height: 235px;
-   margin: 0 28px 85px 0;
+   height: 100%;
+   margin-right: 28px;
 }
 .cts_car .inner .car_list ul .last {
    margin-right: 0;
@@ -46,7 +79,7 @@
 .cts_car .inner .car_list ul li a p {
    margin-bottom: 20px;
    text-align: left;
-   line-height: 1.2em;
+   line-height: 1.4em;
 }
 .cts_car .inner .board_paging {
    border-top: 1px solid rgb(204, 204, 204, 0.5);
@@ -65,9 +98,9 @@
 }
 .cts_car .inner .board_paging .page.on,
 .cts_car .inner .board_paging .page.on:hover {
-   background-color: #0048FF;
+   /* background-color: #0048FF; */
    border-radius: 100%;
-   color: #fff;
+   color: #3d3d3d;
    font-weight: 700;
 }
 
