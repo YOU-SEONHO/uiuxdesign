@@ -58,28 +58,28 @@
    flex-wrap: wrap;
    position: relative;
 }
-/* .cts_car .inner .car_list > ul > li {
-   width: 299px;
-   height: 100%;
-   margin-right: 28px;
-} */
 .cts_car .car_list > ul > li > button {
    display: flex;
    justify-content: flex-start;
-   padding: 7px 30px;
+   padding: 5px 30px;
    font-size: 20px;
    font-weight: 700;
    color: #1d1d1d;
+   position: absolute;
+   top: -55px;
+   left: 150px;
+   /* border: 1px solid; */
+}
+.cts_car .car_list > ul > li > .car2 {
+   left: 350px;
+}
+.cts_car .car_list > ul > li > .car3 {
+   left: 530px;
 }
 .cts_car .car_list > ul > li.active > button {
-   background-color: #0048FF;
-   border-radius: 40px;
-   color: #fff;
+   color: #0048ff;
 }
 .cts_car .car_list > ul > li .detail {
-   position: absolute;
-   left: 0;
-   top: 60px; /* tab 버튼에서 부터의 측정 */
    width: 100%;
    display: none;
 }
@@ -98,9 +98,20 @@
 .cts_car .inner .car_list > ul > li .detail ul .last {
    margin-right: 0;
 }
-.cts_car .inner .car_list > ul > li .detail ul li .photo {
+.cts_car .inner .car_list > ul > li .detail ul li a .photo {
    display: block;
    height: 100%;
+   overflow: hidden; /* 이미지가 확대 되었을때 밖으로 나가는것 막기 */
+   transition: 0.5s;
+}
+.cts_car .inner .car_list > ul > li .detail ul li a .photo img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   transition: 0.5s;
+}
+.cts_car .inner .car_list > ul > li .detail ul li a:hover .photo img {
+   transform: scale3d(1.1, 1.1, 1);
 }
 .cts_car .inner .car_list > ul > li .detail ul li a strong {
    font-size: 18px;
