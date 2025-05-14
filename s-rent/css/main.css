@@ -57,28 +57,28 @@
 }
 @media screen and (max-width:1320px) {
    .visual .swiper {
-      height: 600px
+      height: 500px
    }
    .visual .swiper-slide img {
-      height: 600px;
+      height: 500px;
    }
    .visual .visual_txt {
-      top: 350px;
+      top: 300px;
       right: 5%;
    }
    .visual .visual_txt strong {
-      font-size: 30px;
+      font-size: 27px;
    }
 }
 @media screen and (max-width:1024px) {
    .visual .swiper {
-      height: 550px
+      height: 450px
    }
    .visual .swiper-slide img {
-      height: 550px;
+      height: 450px;
    }
    .visual .visual_txt strong {
-      font-size: 28px;
+      font-size: 23px;
    }
 }
 @media screen and (max-width:768px) {
@@ -86,16 +86,16 @@
       margin-top: 50px;
    }
    .visual .swiper {
-      height:450px
+      height: 350px
    }
    .visual .swiper-slide img {
-      height:550px;
+      height: 350px;
    }
    .visual .visual_txt {
-      top: 270px;
+      top: 190px;
    }
    .visual .visual_txt strong {
-      font-size: 22px;
+      font-size: 18px;
    }
 }
 
@@ -144,8 +144,17 @@
    display: flex;
    justify-content: space-between;
 }
-.biz .inner .list {
-   width: calc(25% - 28px);
+.biz .inner .list ul {
+   display: flex;
+   flex-wrap: wrap;
+}
+.biz .inner .list ul li {
+   width: calc(25% - 0);
+   height: 100%;
+   margin-right: 28px;
+}
+.biz .inner .list ul .last{
+   margin-right: 0;
 }
 .biz .inner .list ul li a {
    display: block;
@@ -184,6 +193,27 @@
    }
    .biz .biz_tit {
       margin: 70px 0 20px 0;
+   }
+   .biz .inner .list ul li {
+      width: calc(25% - 21px);
+   }
+}
+@media screen and (max-width:1024px) {
+   .biz {
+      margin: 30px 0 50px 0;
+   }
+   .biz .biz_tit {
+      margin: 70px 0 10px 0;
+   }
+   .biz .biz_tit h2 {
+      font-size: 27px;
+   }
+   .biz .inner .list ul li {
+      width: 350px;
+      margin-right: 29px;
+   }
+   .biz .inner .list ul .m {
+      margin-right: 0;
    }
 }
 @media screen and (max-width:768px) {

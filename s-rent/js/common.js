@@ -69,12 +69,12 @@ $(document).ready(function(){
    /* 모바일메뉴
       1차 메뉴 a를 클릭하면 a링크는 작동이 안되어야 하고
       하위메뉴를 열어줘야함 */
-   $("header .gnb .depth1 > li > a").on("click", function(e){
-      if(device_status == 'mobile'){
-         e.preventDefault();		/* a 태그의 href를 작동 시키지 않음 */
-         $(this).parent().toggleClass('on')
-      }
-   });
+   // $("header .gnb .depth1 > li > a").on("click", function(e){
+   //    if(device_status == 'mobile'){
+   //       e.preventDefault();		/* a 태그의 href를 작동 시키지 않음 */
+   //       $(this).parent().toggleClass('on')
+   //    }
+   // });
 
    $('header .gnb .gnb_open').on('click',function(){
       $('header').addClass('menu_open')
