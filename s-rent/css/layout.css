@@ -54,11 +54,6 @@ header .gnb .depth1 > li.on > a {
    font-weight: 700;
    color: #0048FF;
 }
-header .gnb .gnb_open,
-header .gnb .gnb_close {
-   display: none;
-}
-
 @media screen and (min-width:1025px) {
    /************* 메뉴에 오버했을때 -- START ************/
    header.menu_over::before {
@@ -111,47 +106,24 @@ header.fixed.menu_over .depth1 {
 }
 /************* 메뉴가 상단에 고정되었을때 -- END ***********/
 @media screen and (max-width:1320px) {
-   header {
-      padding: 0 20px;
+   header .gnb .gnb_open,
+   header .gnb .gnb_close {
+      display: none;
    }
-   header .logo a {
-      width: 140px;
-      height: 70px;
-      margin: 15px 0;
-   }
-   header.fixed .logo a {
-      background-size: 140px auto;
-   }
-   header .logo a img {
-      width: 140px;
-      height: 70px;
-   }
-   header .gnb .depth1 > li > a {
-      padding: 40px 10px;
-      width: 120px;
-      font-size: 15px;
-   }
-   header .gnb .depth1 > li:last-child > a {
-      width: 170px;
-   }
-   header .tnb ul li {
-      margin: 40px 10px;
-   }
-   header .tnb ul li a {
-      width: 17px;
-      height: 17px;
+   header .gnb .depth1 > li:last-child {
+      margin-right: 0;
    }
 }
 @media screen and (max-width:1024px) {
    header .gnb .depth1 {
       text-align: center;
-      margin-top: 110px;
+      margin-top: 100px;
       height: calc(100% - 100px);
       overflow-x: hidden; /* 좌우는 스크롤 금지 */
       overflow-y: auto; /* 위아래는 스크롤 */
       flex-direction: column;
       /* display:flex를 유지하면서 아래로 정렬되도록 */
-   }  
+   }
    header .gnb .depth1 > li {
       width: auto;
    }
@@ -161,24 +133,6 @@ header.fixed.menu_over .depth1 {
       width: 100%;
       text-align: center;
    }
-   header .gnb .depth1 > li:last-child {
-      margin-right: 0;
-   }
-   header .gnb .depth1 > li:last-child > a {
-      width: 100%;
-   }
-   header .gnb .on .depth2 {
-      border: 1px solid #A79687;
-      border-radius: 10px;
-      background-color: #A79687;
-      width: calc(100% - 50%);
-      height: auto;
-      padding: 20px;
-      display: inline-block;
-   }
-   header .gnb .depth2 li a {
-      line-height: 30px;
-   }
    header .gnb .gnb_bg {
       display: block;
       position: absolute;
@@ -187,7 +141,7 @@ header.fixed.menu_over .depth1 {
       width: 55px;
       height: 55px;
       border-radius: 50%;
-      background-color: #7C6C5D;
+      background-color: #657cc7;
       transform: scale3d(0, 0, 1);
       transition: transform 0.5s;
    }
@@ -249,7 +203,7 @@ header.fixed.menu_over .depth1 {
       width: 55px;
       height: 55px;
       border-radius: 100%;
-      background-color: #7C6C5D;
+      background-color: #657cc7;
       content: "";
       transition: 0.5s;
    }
@@ -275,25 +229,20 @@ header.fixed.menu_over .depth1 {
    header.menu_open .gnb .gnb_bg {
       transform: scale3d(50,50,1);
    }
-   header .tnb {
-      display: none;
-   }
 }
 @media screen and (max-width:768px) {
    header {
       height: 50px;
+      padding: 0 20px;
    }
    header .logo a {
-      width: 89px;
-      height: 45px;
-      margin: 2px 0;
-   }
-   header.fixed .logo a {
-      background-size: 89px auto;
+      width: 117px;
+      height: 50px;
+      padding: 10px 0;
    }
    header .logo a img {
-      width: 89px;
-      height: 45px;
+      width: 117px;
+      height: 30px;
    }
    header .gnb .gnb_bg {
       right: 4px;
@@ -334,8 +283,12 @@ header.fixed.menu_over .depth1 {
    header .gnb ul {
       display: none;
    }
-   header .tnb {
-      display: none;
+   header.fixed {
+      height: 50px;
+}
+   header.fixed .logo a {
+      background-size: 117px auto;
+      padding: 0 0;
    }
 }
 
