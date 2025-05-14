@@ -285,7 +285,7 @@ header.fixed.menu_over .depth1 {
    }
    header.fixed {
       height: 50px;
-}
+   }
    header.fixed .logo a {
       background-size: 117px auto;
       padding: 0 0;

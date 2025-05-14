@@ -86,16 +86,16 @@
       margin-top: 50px;
    }
    .visual .swiper {
-      height: 350px
+      height: 300px
    }
    .visual .swiper-slide img {
-      height: 350px;
+      height: 300px;
    }
    .visual .visual_txt {
-      top: 190px;
+      top: 160px;
    }
    .visual .visual_txt strong {
-      font-size: 18px;
+      font-size: 15px;
    }
 }
 
@@ -188,9 +188,6 @@
    line-height: 1.2em;
 }
 @media screen and (max-width:1320px) {
-   .biz p {
-      line-height: 1.6em;
-   }
    .biz .biz_tit {
       margin: 70px 0 20px 0;
    }
@@ -220,77 +217,39 @@
    .biz {
       margin: 20px 0 50px 0;
    }
-   .biz p {
-      line-height: 1.4em;
-   }
    .biz span {
       font-size: 15px;
    }
    .biz .biz_tit {
-      margin: 50px 0 15px 0;
+      margin: 30px 0 10px 0;
    }
    .biz .biz_tit h2 {
-      font-size: 25px;
-      font-weight: 700;
-      color: #1d1d1d;
+      font-size: 18px;
    }
    .biz .biz_tit .more {
-      margin-top: 20px;
+      margin-top: 5px;
    }
    .biz .biz_tit .more {
-      position: relative;
-      display: inline-block;
-      width: 60px;
+      width: 50px;
    }
    .biz .biz_tit .more::after {
-      position: absolute;
-      right: 0;
-      top: 5px;
-      width: 10px;
-      height: 10px;
-      content: "";
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: contain;
-      background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='3d3d3d' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.08464 5.42444H0V4.4382H8.08464L4.2872 0.692902L5 0L10 4.93132L5 9.86264L4.2872 9.16973L8.08464 5.42444Z' fill='3d3d3d'/%3E%3C/svg%3E ");
+      top: 4px;
+      background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.42309 5.57691H0.576925C0.413463 5.57691 0.276443 5.5216 0.165866 5.41098C0.0552887 5.30035 0 5.16328 0 4.99975C0 4.83621 0.0552887 4.69922 0.165866 4.58877C0.276443 4.47832 0.413463 4.42309 0.576925 4.42309H4.42309V0.576925C4.42309 0.413463 4.4784 0.276443 4.58902 0.165866C4.69965 0.0552887 4.83672 0 5.00025 0C5.16379 0 5.30078 0.0552887 5.41123 0.165866C5.52168 0.276443 5.57691 0.413463 5.57691 0.576925V4.42309H9.42307C9.58654 4.42309 9.72356 4.4784 9.83413 4.58902C9.94471 4.69965 10 4.83672 10 5.00025C10 5.16379 9.94471 5.30078 9.83413 5.41123C9.72356 5.52168 9.58654 5.57691 9.42307 5.57691H5.57691V9.42307C5.57691 9.58654 5.5216 9.72356 5.41098 9.83413C5.30035 9.94471 5.16328 10 4.99975 10C4.83621 10 4.69922 9.94471 4.58877 9.83413C4.47832 9.72356 4.42309 9.58654 4.42309 9.42307V5.57691Z' fill='%233D3D3D'/%3E%3C/svg%3E%0A");
    }
-   .biz .inner {
-      display: flex;
-      justify-content: space-between;
-   }
-   .biz .inner .list {
-      width: calc(25% - 28px);
-   }
-   .biz .inner .list ul li a {
-      display: block;
-      text-align: left;
-   }
-   .biz .inner .list ul li a .photo {
-      display: block;
-      height: 100%;
-      overflow: hidden; /* 이미지가 확대 되었을때 밖으로 나가는것 막기 */
-      transition: 0.5s;
-   }
-   .biz .inner .list ul li a .photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: 0.5s;
-   }
-   .biz .inner .list ul li a:hover .photo img {
-      transform: scale3d(1.1, 1.1, 1);
+   .biz .inner .list ul li {
+      width: calc(50% - 5px);
+      margin-right: 10px;
    }
    .biz .inner .list ul li a strong {
-      font-size: 18px;
-      font-weight: 700;
       margin: 5px 0;
-      display: block;
-      color: #2d2d2d;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
    }
    .biz .inner .list ul li a p {
-      margin-bottom: 20px;
-      text-align: left;
-      line-height: 1.2em;
+      margin-bottom: 15px;
    }
 }
 
