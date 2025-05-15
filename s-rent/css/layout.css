@@ -19,9 +19,6 @@ header {
    color: #1d1d1d;
    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-header .inner {
-   display: flex;
-}
 header .logo a {
    display: block;
    width: 200px;
@@ -29,6 +26,9 @@ header .logo a {
    font-size: 0;
    line-height: 0;
    padding: 24px 0;
+}
+header .inner {
+   display: flex;
 }
 header .gnb .gnb_open,
 header .gnb .gnb_close {
@@ -487,7 +487,7 @@ footer .copyright {
 }
 @media screen and (max-width:768px) {
    footer {
-      height: 400px;
+      height: 300px;
    }
    footer button.m::before {
       top: 10px;
@@ -513,6 +513,25 @@ footer .copyright {
    background-size: cover;
    background-image: url(../images/common/about_visual.png);
 }
+.about_visual img {
+   width: 100%;
+   height: 700px;
+}
+@media screen and (max-width:1320px) {
+   .about_visual {
+      height: 500px;
+   }
+}
+@media screen and (max-width:1024px) {
+   .about_visual {
+      height: 450px;
+   }
+}
+@media screen and (max-width:768px) {
+   .about_visual {
+      height: 300px;
+   } 
+}
 
 .biz01_visual {
    margin-top: 100px;
@@ -522,6 +541,21 @@ footer .copyright {
    background-size: cover;
    background-image: url(../images/common/biz01_visual.png);
 }
+@media screen and (max-width:1320px) {
+   .biz01_visual {
+      height: 500px;
+   }
+}
+@media screen and (max-width:1024px) {
+   .biz01_visual {
+      height: 450px;
+   }
+}
+@media screen and (max-width:768px) {
+   .biz01_visual {
+      height: 300px;
+   } 
+}
 
 .biz02_visual {
    margin-top: 100px;
@@ -530,4 +564,43 @@ footer .copyright {
    background-position: center center;
    background-size: cover;
    background-image: url(../images/common/biz02_visual.png);
+}
+@media screen and (max-width:1320px) {
+   .biz02_visual {
+      height: 500px;
+   }
+}
+@media screen and (max-width:1024px) {
+   .biz02_visual {
+      height: 450px;
+   }
+}
+@media screen and (max-width:768px) {
+   .biz02_visual {
+      height: 300px;
+   } 
+}
+
+.location_visual {
+   margin-top: 100px;
+   height: 700px;
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-size: cover;
+   background-image: url(../images/common/location_visual.png);
+}
+@media screen and (max-width:1320px) {
+   .location_visual {
+      height: 500px;
+   }
+}
+@media screen and (max-width:1024px) {
+   .location_visual {
+      height: 450px;
+   }
+}
+@media screen and (max-width:768px) {
+   .location_visual {
+      height: 300px;
+   } 
 }

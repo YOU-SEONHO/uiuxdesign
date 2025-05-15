@@ -431,11 +431,12 @@
 }
 @media screen and (max-width:768px) {
    .location {
-      margin: 40px 0 7cqmax 0;
+      margin: 40px 0 70px 0;
    }
    .location h2 {
       font-size: 18px;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
+      text-align: left;
    }
    .location .map iframe {
       width: 100%;
