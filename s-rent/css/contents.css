@@ -295,7 +295,7 @@
 .location .inner {
    display: flex;
    justify-content: space-between;
-   margin: 200px 0 250px 0;
+   margin: 100px 0 250px 0;
 }
 .location .map_info h2 {
    font-size: 30px;
