@@ -280,8 +280,15 @@
    .cts_car .car_list > ul > li.active .detail ul li:nth-child(2n) {
       margin-right: 0;
    }
+   .cts_car .inner .car_list > ul > li .detail ul li a strong {
+      font-size: 15px;
+      margin: 5px 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+   }
    .cts_car .inner .board_paging {
-      padding: 10px 0 0 0;
+      display: none;
    }
 }
 
