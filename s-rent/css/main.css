@@ -209,7 +209,7 @@
       width: 350px;
       margin-right: 29px;
    }
-   .biz .inner .list ul .m {
+   .biz .inner .list ul li:nth-child(2n) {
       margin-right: 0;
    }
 }
