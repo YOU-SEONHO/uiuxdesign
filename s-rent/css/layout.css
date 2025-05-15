@@ -529,6 +529,7 @@ footer .copyright {
 }
 @media screen and (max-width:768px) {
    .about_visual {
+      margin-top: 50px;
       height: 300px;
    } 
 }
