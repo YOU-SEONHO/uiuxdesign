@@ -406,13 +406,39 @@
    margin-bottom: 50px;
 }
 @media screen and (max-width:1320px) {
-   
+   .location {
+      margin: 120px 0 200px 0;
+   }
+   .location h2 {
+      font-size: 30px;
+      margin-bottom: 30px;
+   }
+   .location .map iframe {
+      width: 100%;
+   }
 }
 @media screen and (max-width:1024px) {
-   
+   .location {
+      margin: 60px 0 120px 0;
+   }
+   .location h2 {
+      font-size: 27px;
+      margin-bottom: 20px;
+   }
+   .location .map iframe {
+      width: 100%;
+   }
 }
 @media screen and (max-width:768px) {
    .location {
-      margin: 50px 0 200px 0;
+      margin: 60px 0 100px 0;
+   }
+   .location h2 {
+      font-size: 18px;
+      margin-bottom: 15px;
+   }
+   .location .map iframe {
+      width: 100%;
+      height: 300px;
    }
 }
