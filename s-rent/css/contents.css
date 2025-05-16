@@ -283,6 +283,9 @@
    .cts_car .inner .car_list > ul > li .detail ul .first p > br {
       display: none;
    }
+   .cts_car .inner .car_list > ul > li .detail ul .last_0 p > br {
+      display: none;
+   }
    .cts_car .car_list > ul > li.active .detail ul li:nth-child(2n) {
       margin-right: 0;
    }
