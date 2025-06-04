@@ -289,6 +289,9 @@
    .cts_car .car_list > ul > li > .car2 {
       left: 175px;
    }
+   .cts_car .car_list > ul > li > .car2_1 {
+      left: 210px;
+   }
    .cts_car .car_list > ul > li > .car3 {
       left: 255px;
    }
@@ -301,9 +304,6 @@
    }
    .cts_car .inner .car_list > ul > li .detail ul .last_0 p > br {
       display: none;
-   }
-   .cts_car .car_list > ul > li.active .detail ul li:nth-child(2n) {
-      margin-right: 0;
    }
    .cts_car .inner .car_list > ul > li .detail ul li a strong {
       font-size: 15px;
