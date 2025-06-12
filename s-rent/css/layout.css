@@ -354,8 +354,8 @@ footer .f_info span {
    display: block;
    line-height: 28px;
 }
-footer .f_info em {
-   margin-left: 50px;
+footer .f_info .f_tel {
+   font-weight: 700;
 }
 footer .copyright {
    padding-bottom: 96px;
@@ -496,12 +496,17 @@ footer .copyright {
       height: 20px;
    }
    footer .f_sns ul {
-      right: calc(100% - 63%);
+      right: calc(100% - 65%);
       top: 20px;
    }
    footer .f_nav {
       position: relative;
       margin: 70px 0 20px 0;
+   }
+   footer .f_info .f_tel {
+      font-weight: 700;
+      font-size: 15px;
+      margin-top: 3px;
    }
 }
 
