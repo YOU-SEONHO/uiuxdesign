@@ -166,8 +166,7 @@
    height: 100%;
    margin-right: 28px;
 }
-.cts_car .inner .car_list > ul > li .detail ul .last,
-.cts_car .inner .car_list > ul > li .detail ul .last_0 {
+.cts_car .inner .car_list > ul > li .detail ul .last {
    margin-right: 0;
 }
 .cts_car .inner .car_list > ul > li .detail ul li a .photo {
