@@ -20,9 +20,6 @@
    }
 }
 
-.visual {
-   margin-top: 100px;
-}
 .visual .swiper {
    height:700px
 }
@@ -82,9 +79,6 @@
    }
 }
 @media screen and (max-width:768px) {
-   .visual {
-      margin-top: 50px;
-   }
    .visual .swiper {
       height: 300px
    }

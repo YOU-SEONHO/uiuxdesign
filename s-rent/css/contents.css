@@ -313,6 +313,23 @@
    }
 }
 
+.cts_car .inner .svc_text {
+   display: flex;
+}
+.cts_car .inner .svc_text p {
+   align-items: flex-end;
+}
+.cts_car .inner .svc_list ul {
+   display: flex;
+   justify-content: space-between;
+}
+.cts_car .inner .svc_list ul li h3 {
+   font-size: 20px;
+   text-align: center;
+   font-weight: 700;
+   margin-top: 10px;
+}
+
 .location h2 {
    font-size: 30px;
    font-weight: 700;
