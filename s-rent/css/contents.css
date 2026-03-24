@@ -481,6 +481,9 @@
       font-size: 13px;
       margin-bottom: 10px;
    }
+   .cts_car .inner .svc_list ul li {
+      width: calc((100% - 20px) / 3);
+   }
    .cts_car .inner .svc_list ul li h3 {
       font-size: 15px;
    }
@@ -543,6 +546,9 @@
    }
 }
 @media screen and (max-width:768px) {
+   .cts_car .inner .svc_list ul li {
+      width: calc((100% - 10px) / 3);
+   }
    .cts_car .inner .svc_list ul li h3 {
       font-size: 13px;
    }
