@@ -331,6 +331,21 @@
    display: flex;
    justify-content: space-between;
 }
+.cts_car .inner .svc_list ul li {
+   width: calc((100% - 56px) / 3);
+}
+.cts_car .inner .svc_list ul li .photo {
+   display: block;
+   font-size: 0;
+   line-height: 0;
+   overflow: hidden;
+}
+.cts_car .inner .svc_list ul li .photo img {
+   display: block;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
 .cts_car .inner .svc_list ul li h3 {
    font-size: 20px;
    text-align: center;
@@ -344,6 +359,9 @@
 }
 .cts_car .inner .ceo .photo {
    display: block;
+   font-size: 0;
+   line-height: 0;
+   overflow: hidden;
 }
 .cts_car .inner .ceo .photo img {
    display: block;
@@ -361,6 +379,7 @@
 }
 .cts_car .inner .ceo .inner span {
    position: relative;
+   display: block;
    line-height: 1.4;
    font-weight: 700;
    margin-left: 25px;
@@ -401,7 +420,7 @@
    letter-spacing: 0.4em;
 }
 .cts_car .inner .call {
-   width: 1280px;
+   width: 100%;
    height: 360px;
    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("../images/main/svc04.jpg");
    background-size: cover;
@@ -445,6 +464,142 @@
    background-repeat: no-repeat;
    background-position: center center;
    background-size: contain;
+}
+@media screen and (max-width:1320px) {
+   .cts_car .inner .svc_list ul li {
+      width: calc((100% - 30px) / 3);
+   }
+   .cts_car .inner .ceo {
+      margin: 40px 0;
+   }
+}
+@media screen and (max-width:1024px) {
+   .cts_car .inner .svc_tit {
+      margin-bottom: 3px;
+   }
+   .cts_car .inner .svc_text {
+      font-size: 13px;
+      margin-bottom: 10px;
+   }
+   .cts_car .inner .svc_list ul li h3 {
+      font-size: 15px;
+   }
+   .cts_car .inner .ceo {
+      display: block;
+      margin: 80px 0;
+   }
+   .cts_car .inner .ceo .photo img {
+      width: 50%;
+   }
+   .cts_car .inner .ceo .inner {
+      text-align: center;
+   }
+   .cts_car .inner .ceo .inner p {
+      margin-bottom: 15px;
+   }
+   .cts_car .inner .ceo .inner span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 0;
+      gap: 5px; /* 아이콘과 글자 간격 */
+   }
+   .cts_car .inner .ceo .inner span::before {
+      position: static; /* absolute 제거 */
+   }
+   .cts_car .inner .ceo .inner .red {
+      display: flex;
+      margin-bottom: 20px;
+   }
+   .cts_car .inner .ceo .inner .sign {
+      font-size: 18px;
+      margin: 10px 0 0 0;
+   }
+   .cts_car .inner .ceo .inner .name {
+      margin-left: 20px;
+   }
+   .cts_car .inner .call {
+      height: 250px;
+      padding: 33px;
+   }
+   .cts_car .inner .call h3 {
+      font-size: 25px;
+   }
+   .cts_car .inner .call a {
+      margin-top: 50px;
+      border-radius: 10px;
+      border: 1px solid #F5DC50;
+      background-color: #F5DC50;
+      width: 400px;
+      height: 70px;
+      font-size: 20px;
+      padding: 21px 0 20px 110px;
+   }
+   .cts_car .inner .call a span::before {
+      left: 60px;
+      top: 20px;
+      width: 28px;
+      height: 28px;
+   }
+}
+@media screen and (max-width:768px) {
+   .cts_car .inner .svc_list ul li h3 {
+      font-size: 13px;
+   }
+   .cts_car .inner .ceo {
+      margin: 30px 0;
+   }
+   .cts_car .inner .ceo .inner {
+      margin: 20px 0 0 0;
+   }
+   .cts_car .inner .ceo .inner p {
+      margin-bottom: 7px;
+   }
+   .cts_car .inner .ceo .inner br {
+      display: none;
+   }
+   .cts_car .inner .ceo .inner span {
+      display: inline-flex;
+      align-items: flex-start;
+      gap: 3px; /* 아이콘과 글자 간격 */
+   }
+   .cts_car .inner .ceo .inner span::before {
+      width: 10px;
+      height: 10px;
+      margin-top: 4px;
+   }
+   .cts_car .inner .ceo .inner .red {
+      margin-bottom: 10px;
+   }
+   .cts_car .inner .ceo .inner .sign {
+      font-size: 15px;
+      margin: 10px 0 0 0;
+   }
+   .cts_car .inner .ceo .inner .name {
+      margin-left: 15px;
+      letter-spacing: 0.3em;
+   }
+   .cts_car .inner .call {
+      height: 140px;
+      padding: 20px;
+   }
+   .cts_car .inner .call h3 {
+      font-size: 15px;
+   }
+   .cts_car .inner .call a {
+      margin-top: 20px;
+      border-radius: 5px;
+      width: 220px;
+      height: 30px;
+      font-size: 13px;
+      padding: 6px 0 6px 45px;
+   }
+   .cts_car .inner .call a span::before {
+      left: 20px;
+      top: 7px;
+      width: 15px;
+      height: 15px;
+   }   
 }
 
 .location h2 {
